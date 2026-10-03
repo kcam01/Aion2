@@ -1,10 +1,8 @@
+import { getMember } from '../members.js';
+
 const BASE = "https://aion2.plaync.com";
 const SEARCH_BASE = "https://api-search.plaync.com";
-const NAME = "Kcamyazimoto";
-const SERVER_ID = "2101";
-const REGION = "nae";
 const LANGUAGE = "en-US";
-const PROFILE_ID = "F0Ubce33Dq_LpNdYg_lVaqPZpJG8FPD3oqJ55tgv1cY=";
 
 async function nc(url) {
   const response = await fetch(url, {
@@ -31,22 +29,22 @@ async function nc(url) {
 
 function cleanName(v="") { return String(v).replace(/<[^>]*>/g,"").trim().toLowerCase(); }
 
-async function resolveCharacterId() {
+async function resolveCharacterId(member) {
   // Global search uses its own host, region and locale contract.
   const q = new URLSearchParams({
-    keyword: NAME, serverId: SERVER_ID, region: REGION,
+    keyword: member.name, serverId: member.serverId, region: member.region,
     localeInfo: LANGUAGE, page: "1", size: "20"
   });
   try {
     const data = await nc(`${SEARCH_BASE}/aion2global/search/v2/character?${q}`);
     const list = Array.isArray(data.list) ? data.list : [];
-    const hit = list.find(x => cleanName(x.name) === cleanName(NAME) &&
-      String(x.serverId) === SERVER_ID && x.region === REGION);
+    const hit = list.find(x => cleanName(x.name) === cleanName(member.name) &&
+      String(x.serverId) === member.serverId && x.region === member.region);
     if (hit?.characterId) return decodeURIComponent(String(hit.characterId));
   } catch (_) {
     // Search downtime must not prevent loading the supplied official profile.
   }
-  return PROFILE_ID;
+  return member.profileId;
 }
 
 export default async function handler(req, res) {
@@ -55,10 +53,14 @@ export default async function handler(req, res) {
   if (type !== "info" && type !== "equipment") {
     return res.status(400).json({ ok: false, error: "Unsupported character data type" });
   }
+  const member = getMember(req.query.member);
+  if (!member) {
+    return res.status(400).json({ ok: false, error: "Unknown guild member" });
+  }
   try {
-    const characterId = await resolveCharacterId();
+    const characterId = await resolveCharacterId(member);
     // The Global API requires the region and full language-country locale.
-    const q = new URLSearchParams({region: REGION, lang: LANGUAGE, characterId, serverId: SERVER_ID});
+    const q = new URLSearchParams({region: member.region, lang: LANGUAGE, characterId, serverId: member.serverId});
     const data = await nc(`${BASE}/api/character/${type}?${q}`);
     res.setHeader("Cache-Control", "s-maxage=300, stale-while-revalidate=600");
     return res.status(200).json(data);
@@ -68,8 +70,8 @@ export default async function handler(req, res) {
       error:e.message,
       upstreamStatus:e.status || null,
       upstreamPreview:e.body || null,
-      character:NAME,
-      serverId:SERVER_ID
+      character:member.name,
+      serverId:member.serverId
     });
   }
 }

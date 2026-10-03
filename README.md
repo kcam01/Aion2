@@ -1,9 +1,20 @@
-# Kcamyazimoto AION 2
+# Linden Order · AION 2
 
 The `main` branch deploys automatically to https://kcamyazimoto-aion2.vercel.app.
 
-The Vercel function at `/api/aion2?type=info` (or `type=equipment`) loads the
-public NA East character on server `2101`. PLAYNC Global requires `region=nae`
+The home page is the Linden Order guild directory. Member pages:
+
+- `/member?name=sarcodine` — Sarcodine, Zikel (`2102`).
+- `/member?name=kcamyazimoto` — KcamYazimoto, Israphel (`2101`).
+
+Both pages include live stats, gear images, skills, wings, and pets. The featured
+directory is maintained in `members.js`; it is not an automatic guild roster.
+The separate in-game guild field comes directly from PLAYNC.
+
+The Vercel function at `/api/aion2?type=info&member=sarcodine` (or `type=equipment`)
+loads the chosen public character. Omitting `member` preserves the original
+KcamYazimoto default. Unknown members and data types are rejected before any
+upstream call. PLAYNC Global requires `region=nae`
 and `lang=en-US` on `/api/character/info` and `/api/character/equipment`.
 Character search uses `https://api-search.plaync.com/aion2global/search/v2/character`
 with `region=nae` and `localeInfo=en-US`; the supplied official profile ID remains

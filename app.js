@@ -1,15 +1,23 @@
-import * as THREE from 'three';
+import { getMember, members, officialProfile } from './members.js';
+
+// The visual background is optional; profile data loads even without WebGL/CDN.
+async function background(){
+const THREE = await import('three');
 const r=new THREE.WebGLRenderer({canvas:document.querySelector('#bg'),alpha:true,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,1.7));const s=new THREE.Scene(),c=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,100);c.position.z=10;
 const n=900,p=new Float32Array(n*3);for(let i=0;i<p.length;i++)p[i]=(Math.random()-.5)*24;const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(p,3));const pts=new THREE.Points(g,new THREE.PointsMaterial({size:.025,color:0x72e9f0,transparent:true,opacity:.55}));s.add(pts);
-function resize(){r.setSize(innerWidth,innerHeight);c.aspect=innerWidth/innerHeight;c.updateProjectionMatrix()}addEventListener('resize',resize);resize();let mx=0,my=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});function loop(t){pts.rotation.y=t*.000025+mx*.08;pts.rotation.x=my*.04;r.render(s,c);requestAnimationFrame(loop)}requestAnimationFrame(loop);
+function resize(){r.setSize(innerWidth,innerHeight);c.aspect=innerWidth/innerHeight;c.updateProjectionMatrix()}addEventListener('resize',resize);resize();let mx=0,my=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});function loop(t){pts.rotation.y=t*.000025+mx*.08;pts.rotation.x=my*.04;r.render(s,c);requestAnimationFrame(loop)}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)r.render(s,c);else requestAnimationFrame(loop);
+}
+background().catch(()=>{});
 const $=id=>document.getElementById(id), fmt=x=>x==null?'—':(isNaN(Number(x))?x:Number(x).toLocaleString());
+const member = getMember(new URLSearchParams(location.search).get('name') ?? undefined);
 const pick=(o,...ks)=>{for(const k of ks){if(o&&o[k]!=null)return o[k]}};
-async function get(type){const r=await fetch('/api/aion2?type='+type,{cache:'no-store'});const t=await r.text();let j;try{j=JSON.parse(t)}catch{throw Error('Proxy returned '+r.status+': '+t.slice(0,100))}if(!r.ok)throw Error(j.error||('HTTP '+r.status));return j}
+async function get(type){const r=await fetch('/api/aion2?'+new URLSearchParams({type,member:member.slug}),{cache:'no-store',signal:AbortSignal.timeout(20000)});const t=await r.text();let j;try{j=JSON.parse(t)}catch{throw Error('Proxy returned '+r.status+': '+t.slice(0,100))}if(!r.ok)throw Error(j.error||('HTTP '+r.status));return j}
 async function load(){
  try{
   const [info,eq]=await Promise.all([get('info'),get('equipment')]);
   const x=info.profile||info.data?.profile||info.data||info;
-  $('character-name').textContent=x.characterName||'Kcamyazimoto';
+  $('character-name').textContent=x.characterName||member.name;
   $('server').textContent=x.serverName||'—';
   $('server-label').textContent=x.serverName||'—';
   $('cp').textContent=fmt(pick(x,'combatPower','combat_power'));
@@ -20,7 +28,7 @@ async function load(){
   $('race').textContent=pick(x,'raceName','race')||'—';
   $('guild').textContent=pick(x,'guildName','legionName','regionName')||'None';
   const img=pick(x,'profileImageUrl','profileImage','profileImg','imageUrl');
-  if(img){$('portrait').src=img;$('portrait').hidden=false;$('fallback').hidden=true}
+  if(img){$('portrait').onerror=()=>{$('portrait').hidden=true;$('fallback').hidden=false};$('portrait').src=img;$('portrait').alt=member.name+' character portrait';$('portrait').hidden=false;$('fallback').hidden=true}
   renderStats(info);renderEquipment(eq);renderExtras(eq);
   $('status').textContent='Live PLAYNC data';
  }catch(e){$('status').textContent='PLAYNC connection error: '+e.message;console.error(e)}
@@ -74,4 +82,19 @@ function renderExtras(raw){
   }else{img.removeAttribute('src');link.removeAttribute('href')}
  }
 }
-load();
+if(member){
+ document.title=member.name+' · Linden Order';
+ $('character-name').textContent=member.name;
+ $('fallback').querySelector('i').textContent=member.name[0];
+ $('server-label').textContent=member.serverName;
+ $('official-profile').href=officialProfile(member);
+ $('official-profile').hidden=false;
+ const other=members.find(x=>x.slug!==member.slug);
+ $('other-member').href='/member?name='+other.slug;
+ $('other-member').textContent=other.name+' ↗';
+ load();
+}else{
+ document.title='Member not found · Linden Order';
+ $('character-name').textContent='Member not found';
+ $('status').textContent='Choose Sarcodine or KcamYazimoto from the Linden Order home page.';
+}

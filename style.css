@@ -8,3 +8,19 @@
 .gear-art:focus-visible,.collection-art:focus-visible{outline:2px solid var(--c);outline-offset:4px}
 .twocol>span{text-align:center;min-width:0}
 .twocol b{line-height:1.4;overflow-wrap:anywhere}
+
+/* Shared guild identity for both character pages. */
+:root{--c:#c7b383;--g:#dfcfa7;--m:#adb7a8;--l:#c7b38330}
+html{background:#101e19}
+body{background:radial-gradient(circle at 50% 15%,#294336,#13251c 45%,#101e19);color:#f0eddf}
+.glass{background:linear-gradient(135deg,#1b3025bb,#101e1966)}
+.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1.1fr) minmax(0,.8fr)}
+.intro h1{font-size:clamp(32px,3.6vw,53px);overflow-wrap:anywhere;letter-spacing:-.035em}
+.profile dl div{gap:12px}.profile dd{text-align:right;overflow-wrap:anywhere}
+header .guild-home{border:0;padding:12px 0;color:#f0eddf}
+footer a{color:var(--m);text-decoration:none}
+a:focus-visible{outline:2px solid var(--c);outline-offset:5px}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:600px){header{letter-spacing:.12em;font-size:9px}.intro h1{font-size:35px}.profile,.intro{padding:24px}.hero{padding-bottom:25px}}
+@media(prefers-reduced-motion:reduce){.ring{animation:none}}
+@media(max-width:600px){.intro h1{font-size:clamp(27px,8.7vw,35px)}.twocol span{padding:12px}}

@@ -7,19 +7,19 @@ const foundId = 'resolved+character/token=';
 const profile = { profile: { characterName: 'KcamYazimoto', characterLevel: 17 } };
 const equipment = { equipment: { equipmentList: [{ name: 'Strange Karma Mace' }] } };
 
-async function request(type) {
+async function request(type, member) {
   const response = {
     headers: {},
     setHeader(name, value) { this.headers[name] = value; },
     status(code) { this.statusCode = code; return this; },
     json(data) { this.body = data; return this; },
   };
-  await handler({ query: { type } }, response);
+  await handler({ query: { type, member } }, response);
   return response;
 }
 
 // Contract verified against PLAYNC's public Global character client and live API.
-function mockPlaync(t, { searchStatus = 200, characterStatus = 200, searchList } = {}) {
+function mockPlaync(t, { searchStatus = 200, characterStatus = 200, searchList, serverId = '2101', characterName = 'KcamYazimoto' } = {}) {
   const requests = [];
   t.mock.method(globalThis, 'fetch', async (input, options) => {
     const url = new URL(input);
@@ -29,7 +29,7 @@ function mockPlaync(t, { searchStatus = 200, characterStatus = 200, searchList }
         url.searchParams.get('region') === 'nae' &&
         url.searchParams.get('localeInfo') === 'en-US') {
       return Response.json({ list: searchList ?? [{
-        name: '<strong>KcamYazimoto</strong>', serverId: 2101, region: 'nae',
+        name: `<strong>${characterName}</strong>`, serverId: Number(serverId), region: 'nae',
         characterId: encodeURIComponent(foundId),
       }] }, { status: searchStatus });
     }
@@ -37,8 +37,8 @@ function mockPlaync(t, { searchStatus = 200, characterStatus = 200, searchList }
     if (url.origin === 'https://aion2.plaync.com' && type &&
         url.searchParams.get('region') === 'nae' &&
         url.searchParams.get('lang') === 'en-US' &&
-        url.searchParams.get('serverId') === '2101') {
-      return Response.json(characterStatus === 200 ? (type === 'info' ? profile : equipment) :
+        url.searchParams.get('serverId') === serverId) {
+      return Response.json(characterStatus === 200 ? (type === 'info' ? { profile: { ...profile.profile, characterName } } : equipment) :
         { error: 'Upstream unavailable' }, { status: characterStatus });
     }
     return Response.json({ error: 'No matching Global endpoint' }, { status: 404 });
@@ -88,3 +88,38 @@ test('unsupported request types are rejected without contacting PLAYNC', async t
   assert.equal(response.statusCode, 400);
   assert.equal(requests.length, 0);
 });
+
+for (const type of ['info', 'equipment']) {
+  test(`Sarcodine ${type} uses Zikel for search and character data`, async t => {
+    const requests = mockPlaync(t, { serverId: '2102', characterName: 'Sarcodine' });
+    const response = await request(type, 'sarcodine');
+    assert.equal(response.statusCode, 200);
+    assert.equal(requests[0].url.searchParams.get('keyword'), 'Sarcodine');
+    assert.equal(requests[0].url.searchParams.get('serverId'), '2102');
+    assert.equal(requests[1].url.searchParams.get('serverId'), '2102');
+    assert.equal(requests[1].url.searchParams.get('characterId'), foundId);
+    if (type === 'info') assert.equal(response.body.profile.characterName, 'Sarcodine');
+  });
+}
+
+test('Sarcodine search failure uses Sarcodine official profile, never KcamYazimoto', async t => {
+  const requests = mockPlaync(t, { searchStatus: 503, serverId: '2102', characterName: 'Sarcodine' });
+  assert.equal((await request('info', 'sarcodine')).statusCode, 200);
+  assert.equal(requests.at(-1).url.searchParams.get('characterId'), '8iCddEXDDnuEC1Z-27KJQCcDEUHKdMFWgFqSCrcOm7A=');
+});
+
+test('explicit KcamYazimoto requests preserve the original profile', async t => {
+  mockPlaync(t);
+  const response = await request('info', 'kcamyazimoto');
+  assert.equal(response.statusCode, 200);
+  assert.deepEqual(response.body, profile);
+});
+
+for (const member of ['unknown', '__proto__', ['sarcodine', 'kcamyazimoto']]) {
+  test(`invalid member ${JSON.stringify(member)} is rejected without contacting PLAYNC`, async t => {
+    const requests = mockPlaync(t);
+    const response = await request('info', member);
+    assert.equal(response.statusCode, 400);
+    assert.equal(requests.length, 0);
+  });
+}
