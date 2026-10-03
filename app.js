@@ -42,7 +42,22 @@ function renderEquipment(raw){
  const d=raw.data||raw, bucket=d.equipment||d.equipmentList||d.items||[];
  const items=Array.isArray(bucket)?bucket:(bucket.equipmentList||bucket.itemList||bucket.list||[]);
  if(!items.length)return;
- $('gear').innerHTML=items.slice(0,16).map(x=>`<div class="card">${(x.iconUrl||x.icon)?`<img src="${x.iconUrl||x.icon}" loading="lazy">`:''}<b>${x.name||x.itemName||'Equipment'}</b><i>${x.enchantLevel!=null?'+'+x.enchantLevel:''}</i></div>`).join('');
+ $('gear').replaceChildren(...items.map(x=>{
+  const card=document.createElement('div'),name=document.createElement('b'),level=document.createElement('i');
+  card.className='card';
+  name.textContent=x.name||x.itemName||'Equipment';
+  level.textContent=x.enchantLevel!=null?'+'+x.enchantLevel:'';
+  const icon=x.iconUrl||x.icon;
+  if(icon){
+   const link=document.createElement('a'),img=document.createElement('img');
+   link.className='gear-art';link.href=icon;link.target='_blank';link.rel='noopener noreferrer';
+   link.title='Open '+name.textContent+' image';
+   img.src=icon;img.alt=name.textContent;img.loading='lazy';img.width=80;img.height=80;
+   img.addEventListener('error',()=>{link.hidden=true},{once:true});
+   link.append(img);card.append(link);
+  }
+  card.append(name,level);return card;
+ }));
 }
 function renderExtras(raw){
  const d=raw.data||raw, sk=d.skill||d.skills||{}, list=Array.isArray(sk)?sk:(sk.skillList||sk.list||[]);
@@ -50,5 +65,13 @@ function renderExtras(raw){
  const pw=d.petWing||d.petwing||{}, wing=pw.wing||d.wing, pet=pw.pet||d.pet;
  if(wing)$('wings').textContent=wing.name||wing.itemName||wing.wingName||'Equipped';
  if(pet)$('pet').textContent=pet.name||pet.petName||'Equipped';
+ for(const [id,item] of [['wings',wing],['pet',pet]]){
+  const link=$(id+'-art'),img=link.querySelector('img'),icon=item?.iconUrl||item?.icon;
+  link.hidden=!icon;
+  if(icon){
+   link.href=icon;link.title='Open '+$(id).textContent+' image';
+   img.alt=$(id).textContent;img.onerror=()=>{link.hidden=true};img.src=icon;
+  }else{img.removeAttribute('src');link.removeAttribute('href')}
+ }
 }
 load();
