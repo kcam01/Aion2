@@ -9,36 +9,44 @@ async function load(){
  try{
   const [info,eq]=await Promise.all([get('info'),get('equipment')]);
   const x=info.profile||info.data?.profile||info.data||info;
+  $('character-name').textContent=x.characterName||'Kcamyazimoto';
+  $('server').textContent=x.serverName||'—';
+  $('server-label').textContent=x.serverName||'—';
   $('cp').textContent=fmt(pick(x,'combatPower','combat_power'));
   $('level').textContent=fmt(pick(x,'level','characterLevel'));
   const cls=pick(x,'className','jobName','class')||'—';
   $('class').textContent=cls==='—'?'AION 2 CHARACTER':cls.toUpperCase();
   $('class2').textContent=cls;
   $('race').textContent=pick(x,'raceName','race')||'—';
-  $('guild').textContent=pick(x,'guildName','legionName')||'—';
+  $('guild').textContent=pick(x,'guildName','legionName','regionName')||'None';
   const img=pick(x,'profileImageUrl','profileImage','profileImg','imageUrl');
   if(img){$('portrait').src=img;$('portrait').hidden=false;$('fallback').hidden=true}
   renderStats(info);renderEquipment(eq);renderExtras(eq);
-  $('status').textContent='Live PLAYNC data · refreshed automatically';
+  $('status').textContent='Live PLAYNC data';
  }catch(e){$('status').textContent='PLAYNC connection error: '+e.message;console.error(e)}
 }
 function renderStats(info){
  const raw=info.stat||info.stats||info.data?.stat||info.data?.stats||{};
  let list=Array.isArray(raw)?raw:(raw.statList||raw.list||raw.totalStat||[]);
  if(!Array.isArray(list)) list=Object.entries(list).map(([name,value])=>({name,value}));
- const m={}; for(const z of list){m[String(z.name||z.statName||z.key||'').toLowerCase()]=z.value??z.statValue??z.totalValue}
- const aliases=[['attack','atk'],['defense','def'],['hp','maxhp'],['critical','crit'],['accuracy','hit'],['evasion','dodge']];
- [...document.querySelectorAll('#stats span b')].forEach((el,i)=>{for(const k of aliases[i])if(m[k]!=null){el.textContent=fmt(m[k]);break}})
+ const primary=list.filter(x=>['STR','DEX','INT','CON','AGI','WIS'].includes(x.type));
+ const shown=primary.length?primary:list.slice(0,6);
+ $('stats').replaceChildren(...shown.map(x=>{
+  const row=document.createElement('span'),value=document.createElement('b');
+  value.textContent=fmt(x.value??x.statValue??x.totalValue);
+  row.append(document.createTextNode((x.name||x.statName||x.type)+' '),value);
+  return row;
+ }));
 }
 function renderEquipment(raw){
  const d=raw.data||raw, bucket=d.equipment||d.equipmentList||d.items||[];
- const items=Array.isArray(bucket)?bucket:(bucket.itemList||bucket.list||[]);
+ const items=Array.isArray(bucket)?bucket:(bucket.equipmentList||bucket.itemList||bucket.list||[]);
  if(!items.length)return;
  $('gear').innerHTML=items.slice(0,16).map(x=>`<div class="card">${(x.iconUrl||x.icon)?`<img src="${x.iconUrl||x.icon}" loading="lazy">`:''}<b>${x.name||x.itemName||'Equipment'}</b><i>${x.enchantLevel!=null?'+'+x.enchantLevel:''}</i></div>`).join('');
 }
 function renderExtras(raw){
  const d=raw.data||raw, sk=d.skill||d.skills||{}, list=Array.isArray(sk)?sk:(sk.skillList||sk.list||[]);
- if(list.length)$('skills').innerHTML=list.slice(0,12).map(x=>`<div class="card">${(x.iconUrl||x.icon)?`<img src="${x.iconUrl||x.icon}" loading="lazy">`:''}<b>${x.name||x.skillName||'Skill'}</b><i>${x.level!=null?'Lv. '+x.level:''}</i></div>`).join('');
+ if(list.length)$('skills').innerHTML=list.slice(0,12).map(x=>`<div class="card">${(x.iconUrl||x.icon)?`<img src="${x.iconUrl||x.icon}" loading="lazy">`:''}<b>${x.name||x.skillName||'Skill'}</b><i>${(x.skillLevel??x.level)!=null?'Lv. '+(x.skillLevel??x.level):''}</i></div>`).join('');
  const pw=d.petWing||d.petwing||{}, wing=pw.wing||d.wing, pet=pw.pet||d.pet;
  if(wing)$('wings').textContent=wing.name||wing.itemName||wing.wingName||'Equipped';
  if(pet)$('pet').textContent=pet.name||pet.petName||'Equipped';

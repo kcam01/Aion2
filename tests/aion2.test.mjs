@@ -1,0 +1,90 @@
+import assert from 'node:assert/strict';
+import { test } from 'node:test';
+import handler from '../api/aion2.js';
+
+const characterId = 'F0Ubce33Dq_LpNdYg_lVaqPZpJG8FPD3oqJ55tgv1cY=';
+const foundId = 'resolved+character/token=';
+const profile = { profile: { characterName: 'KcamYazimoto', characterLevel: 17 } };
+const equipment = { equipment: { equipmentList: [{ name: 'Strange Karma Mace' }] } };
+
+async function request(type) {
+  const response = {
+    headers: {},
+    setHeader(name, value) { this.headers[name] = value; },
+    status(code) { this.statusCode = code; return this; },
+    json(data) { this.body = data; return this; },
+  };
+  await handler({ query: { type } }, response);
+  return response;
+}
+
+// Contract verified against PLAYNC's public Global character client and live API.
+function mockPlaync(t, { searchStatus = 200, characterStatus = 200, searchList } = {}) {
+  const requests = [];
+  t.mock.method(globalThis, 'fetch', async (input, options) => {
+    const url = new URL(input);
+    requests.push({ url, options });
+    if (url.origin === 'https://api-search.plaync.com' &&
+        url.pathname === '/aion2global/search/v2/character' &&
+        url.searchParams.get('region') === 'nae' &&
+        url.searchParams.get('localeInfo') === 'en-US') {
+      return Response.json({ list: searchList ?? [{
+        name: '<strong>KcamYazimoto</strong>', serverId: 2101, region: 'nae',
+        characterId: encodeURIComponent(foundId),
+      }] }, { status: searchStatus });
+    }
+    const type = url.pathname.match(/^\/api\/character\/(info|equipment)$/)?.[1];
+    if (url.origin === 'https://aion2.plaync.com' && type &&
+        url.searchParams.get('region') === 'nae' &&
+        url.searchParams.get('lang') === 'en-US' &&
+        url.searchParams.get('serverId') === '2101') {
+      return Response.json(characterStatus === 200 ? (type === 'info' ? profile : equipment) :
+        { error: 'Upstream unavailable' }, { status: characterStatus });
+    }
+    return Response.json({ error: 'No matching Global endpoint' }, { status: 404 });
+  });
+  return requests;
+}
+
+for (const type of ['info', 'equipment']) {
+  test(`${type} returns the Global NA East data using the resolved character ID`, async t => {
+    const requests = mockPlaync(t);
+    const response = await request(type);
+    assert.equal(response.statusCode, 200);
+    assert.deepEqual(response.body, type === 'info' ? profile : equipment);
+    assert.equal(requests.length, 2);
+    assert.equal(requests[1].url.searchParams.get('characterId'), foundId,
+      'The encoded search token must be decoded once before URLSearchParams encodes it');
+    assert.match(response.headers['Cache-Control'], /s-maxage=300/);
+  });
+}
+
+test('a failed search still loads the known official profile', async t => {
+  const requests = mockPlaync(t, { searchStatus: 503 });
+  const response = await request('info');
+  assert.equal(response.statusCode, 200);
+  assert.equal(requests.at(-1).url.searchParams.get('characterId'), characterId);
+});
+
+test('a same-name result from another region is not used', async t => {
+  const requests = mockPlaync(t, { searchList: [{
+    name: 'KcamYazimoto', serverId: 2101, region: 'eu', characterId: 'wrong-character',
+  }] });
+  assert.equal((await request('info')).statusCode, 200);
+  assert.equal(requests.at(-1).url.searchParams.get('characterId'), characterId);
+});
+
+test('upstream failures stay visible and are not cached as successful data', async t => {
+  mockPlaync(t, { characterStatus: 503 });
+  const response = await request('info');
+  assert.equal(response.statusCode, 502);
+  assert.equal(response.body.upstreamStatus, 503);
+  assert.equal(response.headers['Cache-Control'], 'no-store');
+});
+
+test('unsupported request types are rejected without contacting PLAYNC', async t => {
+  const requests = mockPlaync(t);
+  const response = await request('../other');
+  assert.equal(response.statusCode, 400);
+  assert.equal(requests.length, 0);
+});
