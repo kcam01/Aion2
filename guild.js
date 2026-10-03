@@ -23,6 +23,7 @@ async function loadMember(member) {
     field('power').textContent = profile.combatPower == null ? '—' : Number(profile.combatPower).toLocaleString();
     field('class').textContent = profile.className || member.className;
     field('server').textContent = profile.serverName || member.serverName;
+    field('title').textContent = profile.titleName || 'No displayed title';
     field('status').textContent = 'Live character data';
     field('status').dataset.state = 'ready';
   } catch {

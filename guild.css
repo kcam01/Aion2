@@ -32,3 +32,5 @@ h1{font:normal clamp(86px,9vw,130px)/.86 var(--serif);letter-spacing:-.06em;marg
 .hero-art{overflow:hidden;pointer-events:none}
 .art-wordmark{pointer-events:none}
 @media(max-width:380px){h3{font-size:clamp(20px,6vw,24px)}}
+.member-title{font:italic 13px/1.5 var(--serif);color:var(--gold);margin:8px 0 0;overflow-wrap:anywhere}
+.member-title:empty{display:none}

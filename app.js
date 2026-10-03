@@ -18,6 +18,7 @@ async function load(){
   const [info,eq]=await Promise.all([get('info'),get('equipment')]);
   const x=info.profile||info.data?.profile||info.data||info;
   $('character-name').textContent=x.characterName||member.name;
+  $('character-title').textContent=x.titleName||'No displayed title';
   $('server').textContent=x.serverName||'—';
   $('server-label').textContent=x.serverName||'—';
   $('cp').textContent=fmt(pick(x,'combatPower','combat_power'));
@@ -29,9 +30,37 @@ async function load(){
   $('guild').textContent=pick(x,'guildName','legionName','regionName')||'None';
   const img=pick(x,'profileImageUrl','profileImage','profileImg','imageUrl');
   if(img){$('portrait').onerror=()=>{$('portrait').hidden=true;$('fallback').hidden=false};$('portrait').src=img;$('portrait').alt=member.name+' character portrait';$('portrait').hidden=false;$('fallback').hidden=true}
-  renderStats(info);renderEquipment(eq);renderExtras(eq);
+  renderStats(info);renderTitles(info);renderEquipment(eq);renderExtras(eq);
   $('status').textContent='Live PLAYNC data';
- }catch(e){$('status').textContent='PLAYNC connection error: '+e.message;console.error(e)}
+ }catch(e){$('status').textContent='PLAYNC connection error: '+e.message;$('title-summary').textContent='Titles unavailable';$('title-list').textContent='Title data could not be loaded. Try refreshing the page.';console.error(e)}
+}
+function renderTitles(info){
+ const data=info.data||info,profile=data.profile||{},titles=data.title;
+ const text=(tag,className,value)=>{const el=document.createElement(tag);el.className=className;el.textContent=value;return el};
+ const count=(owned,total)=>owned==null?'Collection count unavailable':total==null?`${fmt(owned)} collected`:`${fmt(owned)} / ${fmt(total)} collected`;
+ $('title-summary').textContent=count(titles?.ownedCount,titles?.totalCount);
+ $('displayed-title').textContent=profile.titleName||'No displayed title';
+ $('displayed-title-grade').textContent=profile.titleName?(profile.titleGrade||''):'';
+ const list=Array.isArray(titles?.titleList)?[...titles.titleList]:[];
+ const order={Attack:0,Defense:1,Etc:2},categories={Attack:'Attack',Defense:'Defense',Etc:'Other'};
+ list.sort((a,b)=>(order[a.equipCategory]??99)-(order[b.equipCategory]??99));
+ if(!list.length){$('title-list').replaceChildren(text('li','title-empty','No equipped title details were returned by PLAYNC.'));return}
+ $('title-list').replaceChildren(...list.map(title=>{
+  const card=text('li','title-card',''),top=text('div','title-card-top','');
+  top.append(text('span','title-category',categories[title.equipCategory]||title.equipCategory||'Title'),text('span','title-grade',title.grade||''));
+  card.append(top,text('h3','title-name',title.name||'No title equipped'),text('p','title-slot-status',title.name?'Equipped title':'Empty slot'));
+  const effects=text('dl','title-effects','');
+  for(const [label,stats] of [['Equipped effect',title.equipStatList],['Title effect',title.statList]]){
+   if(!Array.isArray(stats))continue;
+   const descriptions=stats.map(stat=>stat.desc).filter(Boolean);
+   if(!descriptions.length)continue;
+   const effect=text('div','','');effect.append(text('dt','',label));
+   for(const description of descriptions)effect.append(text('dd','',description));
+   effects.append(effect);
+  }
+  card.append(effects,text('p','title-category-count',count(title.ownedCount,title.totalCount)));
+  return card;
+ }));
 }
 function renderStats(info){
  const raw=info.stat||info.stats||info.data?.stat||info.data?.stats||{};
@@ -97,4 +126,6 @@ if(member){
  document.title='Member not found · Linden Order';
  $('character-name').textContent='Member not found';
  $('status').textContent='Choose Sarcodine or KcamYazimoto from the Linden Order home page.';
+ $('title-summary').textContent='Member not found';
+ $('title-list').textContent='Choose a member to see their titles.';
 }

@@ -11,6 +11,12 @@ Both pages include live stats, gear images, skills, wings, and pets. The feature
 directory is maintained in `members.js`; it is not an automatic guild roster.
 The separate in-game guild field comes directly from PLAYNC.
 
+Character Titles displays every entry returned in `info.title.titleList`, its
+category, rarity, effects, and collection counts. The profile's displayed title
+is shown separately and on the guild member card. PLAYNC's public response only
+contains equipped title details, not the names of every unlocked title; owned
+counts must not be presented as the number of named titles available to display.
+
 The Vercel function at `/api/aion2?type=info&member=sarcodine` (or `type=equipment`)
 loads the chosen public character. Omitting `member` preserves the original
 KcamYazimoto default. Unknown members and data types are rejected before any
