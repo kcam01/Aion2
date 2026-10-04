@@ -1,6 +1,6 @@
 # Exalted · AION 2
 
-The `main` branch deploys automatically to https://kcamyazimoto-aion2.vercel.app.
+The `main` branch deploys automatically to https://exalted-aion2.vercel.app.
 
 The home page is the Exalted guild directory. Member pages:
 
