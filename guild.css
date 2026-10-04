@@ -35,3 +35,15 @@ h1{font:normal clamp(74px,8vw,116px)/1 var(--serif);letter-spacing:-.055em;margi
 @media(max-width:380px){h3{font-size:clamp(20px,6vw,24px)}}
 .member-title{font:italic 13px/1.5 var(--serif);color:var(--gold);margin:8px 0 0;overflow-wrap:anywhere}
 .member-title:empty{display:none}
+.rules-section{padding:60px 0 50px;border-top:1px solid var(--line)}
+.rules-intro{max-width:720px;color:var(--muted);margin:0 0 32px;font-size:15px}
+.rules-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;list-style:none;padding:0;margin:0;counter-reset:guild-rule}
+.rules-list li{position:relative;padding:24px 0 26px 42px;border-top:1px solid var(--line);counter-increment:guild-rule;min-width:0}
+.rules-list li:before{content:counter(guild-rule,decimal-leading-zero);position:absolute;left:0;top:25px;color:var(--gold);font:italic 19px var(--serif)}
+.rules-list h3{font:normal 24px/1.25 var(--serif);letter-spacing:-.015em;margin:0 0 10px}
+.rules-list p{font-size:13px;line-height:1.85;color:var(--muted);margin:0}
+.rules-list a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.rules-enforcement{margin:12px 0 0;padding:24px 0 0;border-top:1px solid var(--line);max-width:920px;color:var(--muted);font-size:12px;line-height:1.85}
+.rules-enforcement strong{color:var(--ink);font-weight:500}
+@media(max-width:760px){.rules-section{padding:42px 0 36px}.rules-list{grid-template-columns:1fr}.rules-intro{font-size:14px}.rules-list li{padding-top:22px;padding-bottom:22px}.rules-list h3{font-size:23px}.rules-section .section-heading>.profile-link{display:inline-block;margin-top:12px}}
+@media(max-width:380px){nav{gap:12px;font-size:10px}}

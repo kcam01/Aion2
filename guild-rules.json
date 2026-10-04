@@ -1,0 +1,17 @@
+{
+  "title": "Exalted Guild Rules",
+  "intro": "Welcome to Exalted! We’re here to enjoy AION 2, improve together, and build a guild people want to log in for.",
+  "rules": [
+    {"title": "Respect everyone", "text": "No harassment, hate speech, threats, bullying, or personal attacks. Friendly banter should be fun for everyone involved."},
+    {"title": "Keep disagreements constructive", "text": "Discuss problems calmly. Take disputes to an officer instead of starting arguments in public channels."},
+    {"title": "Play fairly", "text": "No cheating, botting, scams, or deliberate abuse of exploits."},
+    {"title": "Respect group commitments", "text": "Arrive prepared for scheduled runs. If you’ll be late or can’t attend, let the group know. Real life comes first—communication matters."},
+    {"title": "Follow the run leader", "text": "During organized activities, keep voice chat clear when calls are being made. Offer feedback respectfully."},
+    {"title": "Agree on loot rules first", "text": "Follow the loot arrangements announced before a run. Ask if anything is unclear, and bring disputes to an officer."},
+    {"title": "Help members learn", "text": "Give useful advice without insulting someone’s class, gear, damage, or experience. Everyone starts somewhere."},
+    {"title": "Use the right channels", "text": "Keep posts relevant. No spam, unsolicited advertising, explicit content, or sharing someone’s private information."},
+    {"title": "Set up your guild profile", "text": "Choose your classes, party roles, and optional alerts in #role-requests. Follow START HERE to link your own character."},
+    {"title": "Represent Exalted well", "text": "Compete hard and treat allies, opponents, and other guilds with respect."}
+  ],
+  "enforcement": "Officers may issue warnings, timeouts, removal from activities, kicks, or bans depending on the situation. Serious violations may result in immediate removal. Contact an officer privately with concerns or appeals."
+}
