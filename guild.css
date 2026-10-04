@@ -47,3 +47,5 @@ h1{font:normal clamp(74px,8vw,116px)/1 var(--serif);letter-spacing:-.055em;margi
 .rules-enforcement strong{color:var(--ink);font-weight:500}
 @media(max-width:760px){.rules-section{padding:42px 0 36px}.rules-list{grid-template-columns:1fr}.rules-intro{font-size:14px}.rules-list li{padding-top:22px;padding-bottom:22px}.rules-list h3{font-size:23px}.rules-section .section-heading>.profile-link{display:inline-block;margin-top:12px}}
 @media(max-width:380px){nav{gap:12px;font-size:10px}}
+/* Keep every section reachable as the guild navigation grows. */
+@media(max-width:760px){.site-header{flex-wrap:wrap;padding:17px 0;gap:8px 16px}.site-header nav{width:100%;justify-content:space-between;gap:12px}.site-header nav a:first-child{display:block}.site-header nav a{padding:9px 0}.site-header nav a span{display:none}}

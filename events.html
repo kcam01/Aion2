@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101e19">
+  <meta name="description" content="Exalted’s AION 2 Global event and Twitch Drops schedule. Find participation windows, reward highlights and claim deadlines in Central time.">
+  <meta property="og:site_name" content="Exalted">
+  <meta property="og:title" content="Events &amp; Drops · Exalted">
+  <meta property="og:description" content="Plan your next adventure. AION 2 Global events, Twitch Drops and reward deadlines.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exalted-aion2.vercel.app/events">
+  <meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png">
+  <link rel="canonical" href="https://exalted-aion2.vercel.app/events">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png">
+  <title>Events &amp; Drops · Exalted</title>
+  <link rel="stylesheet" href="/guild.css">
+  <link rel="stylesheet" href="/events.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
+      <nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/#members">Our members</a><a href="/events" aria-current="page">Events &amp; Drops</a><a href="/#rules">Guild rules</a></nav>
+      <span class="region">NA EAST <span aria-hidden="true">/</span> ASMODIANS</span>
+    </header>
+    <main id="main" data-events-page>
+      <section class="events-hero" aria-labelledby="events-title">
+        <div><p class="eyebrow">YOUR NEXT ADVENTURE IN ATREIA</p><h1 id="events-title">Events &amp; Drops<span class="title-period">.</span></h1><p class="events-lede">Make time for the good loot.<br>In-game challenges, community events, and rewards worth watching for.</p></div>
+        <aside class="schedule-guide"><p class="eyebrow">AION 2 GLOBAL</p><p>Confirmed times use <strong>Central time (Chicago)</strong>. Date-only windows follow the official announcement and aren’t converted.</p><p>For Drops, finish watching before the watch window ends, then claim earned rewards before the separate claim deadline.</p><a href="https://aion2.plaync.com/en-us/twitchdrops/index">Account linking &amp; Drops guide ↗</a></aside>
+      </section>
+      <div class="schedule-toolbar">
+        <div class="event-filters" role="group" aria-label="Filter events"><button type="button" data-kind="all" aria-pressed="true">All events</button><button type="button" data-kind="drops" aria-pressed="false">Twitch Drops</button><button type="button" data-kind="in-game" aria-pressed="false">In-game</button><button type="button" data-kind="community" aria-pressed="false">Community</button></div>
+        <a class="profile-link" href="https://discord.com/channels/1556392756836966481/1556395533910810715">Updates in Discord ↗</a>
+      </div>
+      <p class="schedule-freshness" data-event-freshness>Loading the latest published schedule…</p>
+      <p class="schedule-warning" data-event-warning role="status" hidden></p>
+      <section class="schedule-section" aria-labelledby="current-title"><div class="schedule-section-heading"><h2 id="current-title">Current &amp; upcoming</h2><p data-event-count role="status" aria-live="polite"></p></div><div data-event-list="schedule" aria-busy="true"></div></section>
+      <section class="schedule-section" data-claim-section aria-labelledby="claim-title" hidden><div class="schedule-section-heading"><h2 id="claim-title">Still time to claim</h2></div><p class="schedule-note">These earning windows have passed. Collect rewards you already earned before the claim deadline.</p><div data-event-list="claim"></div></section>
+      <details class="event-archive" data-archive-section hidden><summary>Past events <span data-archive-count></span></summary><div data-event-list="archive"></div></details>
+      <noscript><p class="schedule-warning">Enable JavaScript to view the schedule. You can also read <a href="https://store.steampowered.com/news/app/3393110/">official AION 2 announcements</a> or <a href="https://www.twitch.tv/drops/campaigns">Twitch campaigns</a>.</p></noscript>
+      <aside class="schedule-sources"><p>Official events for AION 2 Global. Each listing links to its announcement for full eligibility, rewards and any changes.</p><a href="https://store.steampowered.com/news/app/3393110/">Official announcements ↗</a><a href="https://www.twitch.tv/drops/inventory">Twitch Drops inventory ↗</a></aside>
+    </main>
+    <footer class="site-footer"><span>EXALTED <span class="footer-divider">/</span> AION 2</span><p>A community guild site. AION 2 belongs to NC.</p><a href="/">Back to the guild ↑</a></footer>
+  </div>
+  <script type="module" src="/events.js"></script>
+</body>
+</html>

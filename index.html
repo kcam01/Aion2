@@ -19,13 +19,14 @@
   <link rel="apple-touch-icon" href="/assets/exalted-crest-192.png">
   <link rel="preconnect" href="https://profileimg.plaync.com">
   <link rel="stylesheet" href="/guild.css">
+  <link rel="stylesheet" href="/events.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
-      <nav aria-label="Main navigation"><a href="#about">The guild</a><a href="#members">Our members <span aria-hidden="true">↗</span></a><a href="#rules">Guild rules</a></nav>
+      <nav aria-label="Main navigation"><a href="#about">The guild</a><a href="#members">Our members <span aria-hidden="true">↗</span></a><a href="/events">Events &amp; Drops</a><a href="#rules">Guild rules</a></nav>
       <span class="region">NA EAST <span aria-hidden="true">/</span> ASMODIANS</span>
     </header>
     <main id="main">
@@ -74,6 +75,13 @@
         <p class="data-note">Character stats from PLAYNC · May take a few minutes to reflect in-game changes.</p>
         <noscript><p>Enable JavaScript for live stats, or visit <a href="https://aion2.plaync.com/en-us/characters">PLAYNC’s character archive</a>.</p></noscript>
       </section>
+      <section class="events-preview-section" id="events" aria-labelledby="events-preview-title">
+        <div class="section-heading"><div><p class="eyebrow">WHAT’S ON IN ATREIA</p><h2 id="events-preview-title">Events &amp; Drops<span>.</span></h2></div><a class="profile-link" href="/events">See the full schedule <span aria-hidden="true">↗</span></a></div>
+        <div class="event-preview-grid" data-events-preview aria-busy="true"></div>
+        <p class="schedule-freshness" data-event-freshness>Loading the latest published schedule…</p>
+        <p class="schedule-warning" data-event-warning role="status" hidden></p>
+        <noscript><p>View event sources and participation links on the <a href="/events">Events &amp; Drops page</a>.</p></noscript>
+      </section>
       <section class="rules-section" id="rules" aria-labelledby="rules-title">
         <div class="section-heading"><div><p class="eyebrow">HOW WE PLAY TOGETHER</p><h2 id="rules-title">Guild rules<span>.</span></h2></div><a class="profile-link" href="https://discord.com/channels/1556392756836966481/1556395531448619102">Read in Discord <span aria-hidden="true">↗</span></a></div>
         <p class="rules-intro">Welcome to Exalted! We’re here to enjoy AION 2, improve together, and build a guild people want to log in for.</p>
@@ -96,5 +104,6 @@
     <footer class="site-footer"><span>EXALTED <span class="footer-divider">/</span> AION 2</span><p>A community guild site. AION 2 and character artwork belong to NC.</p><a href="https://aion2.plaync.com/en-us" target="_blank" rel="noopener noreferrer">Explore AION 2 ↗</a></footer>
   </div>
   <script type="module" src="/guild.js"></script>
+  <script type="module" src="/events.js"></script>
 </body>
 </html>
