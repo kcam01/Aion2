@@ -112,7 +112,7 @@ function renderExtras(raw){
  }
 }
 if(member){
- document.title=member.name+' · Linden Order';
+ document.title=member.name+' · Exalted';
  $('character-name').textContent=member.name;
  $('fallback').querySelector('i').textContent=member.name[0];
  $('server-label').textContent=member.serverName;
@@ -123,9 +123,9 @@ if(member){
  $('other-member').textContent=other.name+' ↗';
  load();
 }else{
- document.title='Member not found · Linden Order';
+ document.title='Member not found · Exalted';
  $('character-name').textContent='Member not found';
- $('status').textContent='Choose Sarcodine or KcamYazimoto from the Linden Order home page.';
+ $('status').textContent='Choose Sarcodine or KcamYazimoto from the Exalted home page.';
  $('title-summary').textContent='Member not found';
  $('title-list').textContent='Choose a member to see their titles.';
 }

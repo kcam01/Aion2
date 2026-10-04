@@ -1,8 +1,8 @@
-# Linden Order · AION 2
+# Exalted · AION 2
 
 The `main` branch deploys automatically to https://kcamyazimoto-aion2.vercel.app.
 
-The home page is the Linden Order guild directory. Member pages:
+The home page is the Exalted guild directory. Member pages:
 
 - `/member?name=sarcodine` — Sarcodine, Zikel (`2102`).
 - `/member?name=kcamyazimoto` — KcamYazimoto, Israphel (`2101`).
@@ -10,6 +10,9 @@ The home page is the Linden Order guild directory. Member pages:
 Both pages include live stats, gear images, skills, wings, and pets. The featured
 directory is maintained in `members.js`; it is not an automatic guild roster.
 The separate in-game guild field comes directly from PLAYNC.
+
+Exalted uses the same gold winged E crest on the website, Discord server, and
+guild bot. Browser-ready logo sizes are in `assets/exalted-crest-*.png`.
 
 Character Titles displays every entry returned in `info.title.titleList`, its
 category, rarity, effects, and collection counts. The profile's displayed title

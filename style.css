@@ -17,7 +17,8 @@ body{background:radial-gradient(circle at 50% 15%,#294336,#13251c 45%,#101e19);c
 .hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1.1fr) minmax(0,.8fr)}
 .intro h1{font-size:clamp(32px,3.6vw,53px);overflow-wrap:anywhere;letter-spacing:-.035em}
 .profile dl div{gap:12px}.profile dd{text-align:right;overflow-wrap:anywhere}
-header .guild-home{border:0;padding:12px 0;color:#f0eddf}
+header .guild-home{border:0;padding:12px 0;color:#f0eddf;display:flex;align-items:center;gap:10px;flex:none}
+.guild-home img{display:block;border-radius:50%;object-fit:cover}
 footer a{color:var(--m);text-decoration:none}
 a:focus-visible{outline:2px solid var(--c);outline-offset:5px}
 @media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
