@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-10-05T00:15:24Z",
+  "verified_at": "2026-10-05T13:22:07Z",
   "events": [
     {
       "id": "advanced-access-drops-2026",
@@ -136,6 +136,20 @@
       "details": ["October 5–11: The World", "October 12–18: Characters", "October 19–25: Pets", "November 2–9: Community Vote"],
       "participation": "Post a screenshot matching the current theme in the official AION 2 Discord event channel, or on X/Instagram with #BeautyOfAtreia. Include your region, server and character name.",
       "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/680761758839734417"
+    },
+    {
+      "id": "launch-attendance-2026",
+      "kind": "in-game",
+      "title": "Launch attendance rewards",
+      "summary": "Collect growth items through the 7-day Shugo and 14-day Daily Attendance logs highlighted in the global launch notice.",
+      "start_date": "2026-09-30",
+      "end_date": "2026-12-15",
+      "starts_at": "2026-09-30T13:00:00Z",
+      "ends_at": "2026-12-16T06:30:00Z",
+      "timing_note": "Both logs close December 15 at 10:30 PM PST (December 16 at 12:30 AM Central). Daily reset is 11:00 PM Pacific, or 1:00 AM the following day in Central time. No separate later claim deadline is published.",
+      "rewards": ["7-day Shugo log: Kina, Soul Crystals, Centuryroot Tokens, Phantasmal Fragments and Abyss Points; day 7 grants 1,000,000 Kina", "14-day Daily log: Life Crystals, Battle Enhance Scrolls, Resurrection Spiritstones, Hidden Cube keys, Skin Chests, Unknown Fissure Challenge Tickets and Odyle Energy"],
+      "participation": "Log in and open the in-game Attendance menu to claim each day's reward. Attendance rewards can be claimed once per server, arrive immediately in inventory and cannot be traded. See the official tables for daily quantities.",
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=6abc1b35d8339a6f921097db"
     },
     {
       "id": "launch-rewards-2026",
