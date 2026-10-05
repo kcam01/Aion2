@@ -2,13 +2,15 @@
 
 The `main` branch deploys automatically to https://exalted-aion2.vercel.app.
 
-The home page is the Exalted guild directory. Member pages:
+The home page lists characters linked in Discord and approved by an officer. Member pages include:
 
 - `/member?name=sarcodine` — Sarcodine, Zikel (`2102`).
 - `/member?name=kcamyazimoto` — KcamYazimoto, Israphel (`2101`).
 
 Both pages include live stats, gear images, skills, wings, and pets. The featured
-directory is maintained in `members.js`; it is not an automatic guild roster.
+directory comes from `members.json`, which is maintained automatically from approved Discord links. A service on the bot host checks every minute and pushes only changed public character data to this repository, triggering Vercel. New members normally appear within a couple of minutes; unlinking removes their current roster entry. Pending requests never appear. Existing member URLs are preserved and new URLs use a stable character identity, so identical names on different servers work.
+
+Only public character names, classes, server identities, portrait URLs and PLAYNC profile IDs are published. Discord account IDs, officer decisions and bot state stay on the bot host. Previously published public roster entries remain in Git history. If GitHub or Vercel is unavailable, the last deployed roster remains available and synchronization retries automatically. `members.js` validates the shared roster for both the browser and character API.
 The separate in-game guild field comes directly from PLAYNC.
 
 Exalted uses the same gold winged E crest on the website, Discord server, and

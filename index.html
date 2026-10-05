@@ -62,22 +62,17 @@
         </div>
       </section>
       <section class="members-section" id="members" aria-labelledby="members-title">
-        <div class="section-heading"><div><p class="eyebrow">THE PEOPLE BEHIND THE BANNER</p><h2 id="members-title">Meet Exalted<span>.</span></h2></div><p>Two adventurers. Their stories, gear,<br>and companions, all in one place.</p></div>
-        <div class="member-grid">
-          <article class="member-card" data-member="sarcodine">
-            <div class="member-heading"><span class="member-index">01</span><span class="member-world">NA EAST / <span data-field="server">Zikel</span></span></div>
-            <div class="member-identity"><div class="member-avatar"><span aria-hidden="true">S</span><img src="https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2102&amp;charKey=591660401046099066" alt="" width="104" height="104" loading="lazy"></div><div><p class="member-class" data-field="class">Gladiator</p><h3><a href="/member?name=sarcodine">Sarcodine</a></h3><p class="member-faction">Asmodians</p><p class="member-title" data-field="title" aria-label="Displayed title"></p></div></div>
+        <div class="section-heading"><div><p class="eyebrow">THE PEOPLE BEHIND THE BANNER</p><h2 id="members-title">Meet Exalted<span>.</span></h2></div><p><span data-member-summary>Characters linked and approved in Discord.</span></p></div>
+        <div class="member-grid" data-member-list aria-busy="true"></div>
+        <template id="member-card-template">
+          <article class="member-card">
+            <div class="member-heading"><span class="member-index"></span><span class="member-world">NA EAST / <span data-field="server"></span></span></div>
+            <div class="member-identity"><div class="member-avatar"><span aria-hidden="true"></span><img alt="" width="104" height="104" loading="lazy"></div><div><p class="member-class" data-field="class"></p><h3><a></a></h3><p class="member-faction">Approved guild member</p><p class="member-title" data-field="title" aria-label="Displayed title"></p></div></div>
             <dl class="member-stats"><div><dt>LEVEL</dt><dd data-field="level">—</dd></div><div><dt>COMBAT POWER</dt><dd data-field="power">—</dd></div></dl>
-            <div class="member-bottom"><span class="data-status" data-field="status" role="status">Loading stats…</span><a class="profile-link" href="/member?name=sarcodine" aria-label="View Sarcodine profile">View profile <span aria-hidden="true">↗</span></a></div>
+            <div class="member-bottom"><span class="data-status" data-field="status" role="status">Loading stats…</span><a class="profile-link">View profile <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="member-card" data-member="kcamyazimoto">
-            <div class="member-heading"><span class="member-index">02</span><span class="member-world">NA EAST / <span data-field="server">Israphel</span></span></div>
-            <div class="member-identity"><div class="member-avatar"><span aria-hidden="true">K</span><img src="https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2101&amp;charKey=591378926069487453" alt="" width="104" height="104" loading="lazy"></div><div><p class="member-class" data-field="class">Cleric</p><h3><a href="/member?name=kcamyazimoto">KcamYazimoto</a></h3><p class="member-faction">Asmodians</p><p class="member-title" data-field="title" aria-label="Displayed title"></p></div></div>
-            <dl class="member-stats"><div><dt>LEVEL</dt><dd data-field="level">—</dd></div><div><dt>COMBAT POWER</dt><dd data-field="power">—</dd></div></dl>
-            <div class="member-bottom"><span class="data-status" data-field="status" role="status">Loading stats…</span><a class="profile-link" href="/member?name=kcamyazimoto" aria-label="View KcamYazimoto profile">View profile <span aria-hidden="true">↗</span></a></div>
-          </article>
-        </div>
-        <p class="data-note">Character stats from PLAYNC · May take a few minutes to reflect in-game changes.</p>
+        </template>
+        <p class="data-note">Members appear after officer approval in Discord. Character stats from PLAYNC may take a few minutes to reflect in-game changes.</p>
         <noscript><p>Enable JavaScript for live stats, or visit <a href="https://aion2.plaync.com/en-us/characters">PLAYNC’s character archive</a>.</p></noscript>
       </section>
       <section class="events-preview-section" id="events" aria-labelledby="events-preview-title">

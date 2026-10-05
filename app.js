@@ -119,13 +119,13 @@ if(member){
  $('official-profile').href=officialProfile(member);
  $('official-profile').hidden=false;
  const other=members.find(x=>x.slug!==member.slug);
- $('other-member').href='/member?name='+other.slug;
- $('other-member').textContent=other.name+' ↗';
+ $('other-member').href=other?'/member?name='+encodeURIComponent(other.slug):'/#members';
+ $('other-member').textContent=other?other.name+' ↗':'Back to the guild ↗';
  load();
 }else{
  document.title='Member not found · Exalted';
  $('character-name').textContent='Member not found';
- $('status').textContent='Choose Sarcodine or KcamYazimoto from the Exalted home page.';
+ $('status').textContent='Choose an approved member from the Exalted home page.';
  $('title-summary').textContent='Member not found';
  $('title-list').textContent='Choose a member to see their titles.';
 }
