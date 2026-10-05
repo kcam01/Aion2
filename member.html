@@ -1,17 +1,93 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Member Profile · Exalted</title><meta name="description" content="Explore Exalted's AION 2 member profiles, live character stats, gear, titles, wings, and companions."><meta name="theme-color" content="#101e19"><meta property="og:site_name" content="Exalted"><meta property="og:title" content="Member Profile · Exalted"><meta property="og:type" content="website"><meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png"><meta property="og:image:alt" content="Exalted gold winged E crest on deep emerald"><meta name="twitter:card" content="summary"><link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png"><link rel="apple-touch-icon" href="/assets/exalted-crest-192.png"><link rel="stylesheet" href="style.css"></head>
-<body><noscript><p>Enable JavaScript to view the live character profile. <a href="/">Return to Exalted</a>.</p></noscript><canvas id="bg"></canvas><main><header><a class="guild-home" href="/" aria-label="Return to Exalted"><span aria-hidden="true">←</span><img src="/assets/exalted-crest-64.png" alt="" width="38" height="38"> EXALTED</a><a id="official-profile" target="_blank" rel="noopener noreferrer" hidden>OFFICIAL PROFILE ↗</a></header>
-<section class="hero"><article class="glass intro"><small>NA EAST · <span id="server-label">—</span></small><p id="character-title" class="character-title"></p><h1 id="character-name">Character</h1><p id="class">AION 2 CHARACTER</p><hr><div class="numbers"><span>COMBAT POWER<strong id="cp">—</strong></span><span>LEVEL<strong id="level">—</strong></span></div><em id="status">Loading character data…</em></article>
-<div class="stage"><div class="ring"></div><img id="portrait" alt="Character portrait" hidden><div id="fallback"><i>E</i><span>CHARACTER PORTRAIT</span></div></div>
-<article class="glass profile"><h2>PROFILE</h2><dl><div><dt>Region</dt><dd>NA East</dd></div><div><dt>Server</dt><dd id="server">—</dd></div><div><dt>Class</dt><dd id="class2">—</dd></div><div><dt>Race</dt><dd id="race">—</dd></div><div><dt>In-game guild</dt><dd id="guild">—</dd></div></dl></article></section>
-<section class="glass titles-section" id="character-titles" aria-labelledby="titles-heading">
-<div class="titles-heading"><div><small>HONORS</small><h2 id="titles-heading">Character Titles</h2></div><p id="title-summary" class="title-summary" role="status">Loading title collection…</p></div>
-<div class="displayed-title-row"><span>Displayed title</span><strong id="displayed-title">—</strong><span id="displayed-title-grade" class="title-grade"></span></div>
-<ul id="title-list" class="title-list"><li class="title-empty">Loading equipped titles…</li></ul>
-<p class="title-note">PLAYNC shares the displayed title, equipped titles, and collection counts. The full list of unlocked title names is not included in public character data.</p>
-</section>
-<section class="grid"><article class="glass gear"><small>LOADOUT</small><h2>Equipment</h2><div id="gear" class="cards"><p>Equipment will populate from PLAYNC.</p></div></article>
-<article class="glass"><small>ATTRIBUTES</small><h2>Character Stats</h2><div id="stats" class="stats"><span>Might <b>—</b></span><span>Dexterity <b>—</b></span><span>Intelligence <b>—</b></span><span>Constitution <b>—</b></span><span>Precision <b>—</b></span><span>Willpower <b>—</b></span></div></article>
-<article class="glass gear"><small>ARSENAL</small><h2>Skills & Stigmas</h2><div id="skills" class="cards"><p>Skill data will populate from PLAYNC.</p></div></article>
-<article class="glass"><small>COLLECTION</small><h2>Wings & Companion</h2><div class="twocol"><span>WINGS<a id="wings-art" class="collection-art" target="_blank" rel="noopener noreferrer" hidden><img width="112" height="112" alt="" loading="lazy"></a><b id="wings">—</b></span><span>PET<a id="pet-art" class="collection-art" target="_blank" rel="noopener noreferrer" hidden><img width="112" height="112" alt="" loading="lazy"></a><b id="pet">—</b></span></div></article></section>
-<footer><a href="/">EXALTED · AION 2</a><a id="other-member" href="/">OUR MEMBERS ↗</a></footer></main>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script><script type="module" src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Character Sheet · Exalted</title>
+  <meta name="description" content="Explore Exalted's AION 2 character sheets: live equipment, attributes, Daevanion, skills, and titles from PLAYNC.">
+  <meta name="theme-color" content="#0c0d14">
+  <meta property="og:site_name" content="Exalted"><meta property="og:title" content="Character Sheet · Exalted"><meta property="og:type" content="website">
+  <meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png"><meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png"><link rel="apple-touch-icon" href="/assets/exalted-crest-192.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#sheet">Skip to character sheet</a>
+  <noscript><p class="notice">Enable JavaScript to load the character sheet. <a href="/">Return to Exalted</a>.</p></noscript>
+  <div class="profile-backdrop" aria-hidden="true"><img id="backdrop-portrait" alt="" hidden></div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="guild-home" href="/#members"><span aria-hidden="true">←</span><img src="/assets/exalted-crest-64.png" alt="" width="28" height="28"><span>EXALTED <small>Character sheets</small></span></a>
+      <a id="official-profile" class="official-link" target="_blank" rel="noopener noreferrer" hidden>View on PLAYNC <span aria-hidden="true">↗</span></a>
+    </header>
+    <section class="profile-header" aria-labelledby="character-name">
+      <div class="identity">
+        <div class="portrait-frame"><span id="portrait-fallback" aria-hidden="true">E</span><img id="portrait" alt="Character portrait" hidden></div>
+        <div class="identity-copy">
+          <div class="badges"><span id="faction" class="badge faction">AION 2</span><span id="server" class="badge server">NA East</span><span id="character-title" class="badge honor" hidden></span></div>
+          <h1 id="character-name">Character</h1>
+          <div class="character-meta"><strong id="class">—</strong><span>Level <b id="level">—</b></span><span id="status" role="status">Loading character…</span></div>
+        </div>
+      </div>
+      <div class="headline-stats">
+        <div class="headline-stat power"><span>Combat power</span><strong id="cp">—</strong><small id="power-note">From PLAYNC</small></div>
+        <div class="headline-stat"><span>Item level</span><strong id="item-level">—</strong><small>Equipped gear</small></div>
+      </div>
+    </section>
+    <main id="sheet">
+      <div class="sheet-toolbar">
+        <div class="tabs" role="tablist" aria-label="Character details">
+          <button type="button" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" data-tab="overview">Overview</button>
+          <button type="button" role="tab" id="tab-daevanion" aria-controls="panel-daevanion" aria-selected="false" tabindex="-1" data-tab="daevanion">Daevanion</button>
+          <button type="button" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1" data-tab="skills">Skills</button>
+          <button type="button" role="tab" id="tab-titles" aria-controls="panel-titles" aria-selected="false" tabindex="-1" data-tab="titles">Titles</button>
+          <button type="button" role="tab" id="tab-history" aria-controls="panel-history" aria-selected="false" tabindex="-1" data-tab="history">History</button>
+        </div>
+        <div class="toolbar-actions">
+          <button type="button" id="compare" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 3v14M14 3v14M3 7h6m2 6h6"/></svg>Compare</button>
+          <button type="button" id="refresh" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 8a6 6 0 1 0 0 5M16 3v5h-5"/></svg><span>Refresh</span></button>
+        </div>
+      </div>
+      <p id="data-message" class="notice" role="status" hidden></p>
+      <section id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+        <article class="panel equipment-panel">
+          <div class="panel-heading"><h2>Equipment</h2><span>Hover or tap a piece to inspect it</span></div>
+          <div id="gear" class="equipment-grid" aria-busy="true"><p class="empty-state">Loading equipment…</p></div>
+        </article>
+        <div class="overview-columns">
+          <article class="panel attributes-panel">
+            <div class="panel-heading"><h2>Attributes</h2></div>
+            <div id="stats" class="attribute-grid"></div>
+            <h3 class="eyebrow">Divine stats</h3><div id="divine-stats" class="divine-stats"><p class="empty-state">Loading attributes…</p></div>
+          </article>
+          <div class="overview-side">
+            <article class="panel"><div class="panel-heading"><h2>Daevanion</h2><button type="button" class="text-button" data-open-tab="daevanion">Open boards <span aria-hidden="true">→</span></button></div><div id="board-preview" class="board-list"><p class="empty-state">Loading Daevanion…</p></div></article>
+            <article class="panel"><div class="panel-heading"><h2>Skills</h2><button type="button" class="text-button" data-open-tab="skills">All skills <span aria-hidden="true">→</span></button></div><div id="skill-preview" class="skill-list"><p class="empty-state">Loading skills…</p></div></article>
+          </div>
+        </div>
+      </section>
+      <section id="panel-daevanion" role="tabpanel" aria-labelledby="tab-daevanion" tabindex="0" hidden>
+        <article class="panel"><div class="panel-heading"><h2>Daevanion</h2><span id="board-summary">Board progress</span></div><p class="section-description">Your character's progress across the Empyrean Lords' boards.</p><div id="boards" class="board-detail-grid"></div><p class="data-note">Node counts are shared by PLAYNC. Individual node selections are not included in this character summary.</p></article>
+      </section>
+      <section id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" tabindex="0" hidden>
+        <article class="panel"><div class="panel-heading"><h2>Skills &amp; Stigmas</h2><span id="skill-count">—</span></div>
+          <div class="filter-bar" role="group" aria-label="Filter skills"><button type="button" data-skill-filter="All" aria-pressed="true">All skills</button><button type="button" data-skill-filter="Active" aria-pressed="false">Active</button><button type="button" data-skill-filter="Passive" aria-pressed="false">Passive</button><button type="button" data-skill-filter="DP" aria-pressed="false">DP</button></div>
+          <div id="skills" class="skill-detail-grid"></div>
+        </article>
+      </section>
+      <section id="panel-titles" role="tabpanel" aria-labelledby="tab-titles" tabindex="0" hidden>
+        <article class="panel" id="character-titles"><div class="panel-heading"><h2>Character Titles</h2><span id="title-summary">—</span></div>
+          <div class="displayed-title-row"><span>Displayed title</span><strong id="displayed-title">—</strong><span id="displayed-title-grade" class="badge honor"></span></div><ul id="title-list" class="title-list"></ul>
+          <p class="data-note">PLAYNC shares your displayed title, equipped titles, and collection counts. The full list of unlocked title names is not included in public character data.</p>
+        </article>
+      </section>
+      <section id="panel-history" role="tabpanel" aria-labelledby="tab-history" tabindex="0" hidden>
+        <article class="panel"><div class="panel-heading"><h2>Character History</h2><span>Saved in this browser</span></div><p class="section-description">A snapshot is saved when your level, combat power, or item level changes during a visit. This is a local record of observed stats, not an in-game activity log.</p><div id="history"></div><p class="data-note" id="history-note">Up to 20 snapshots are stored on this device. PLAYNC data can take time to reflect in-game changes.</p></article>
+      </section>
+    </main>
+    <footer><a href="/#members">← Guild roster</a><p>Character data &amp; artwork © NCSOFT. Profiles may be cached for up to 5 minutes.</p><span>EXALTED · NA EAST</span></footer>
+  </div>
+  <dialog id="item-dialog" aria-labelledby="item-dialog-title"><div class="dialog-heading"><h2 id="item-dialog-title">Equipment</h2><button type="button" class="close-dialog" aria-label="Close item details">×</button></div><div id="item-details"></div></dialog>
+  <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title"><div class="dialog-heading"><h2 id="compare-title">Compare Characters</h2><button type="button" class="close-dialog" aria-label="Close comparison">×</button></div><label for="compare-member">Compare with a guild member</label><select id="compare-member"></select><div id="comparison" aria-live="polite"></div></dialog>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
