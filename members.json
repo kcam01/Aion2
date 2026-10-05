@@ -3,16 +3,6 @@
   "source": "discord-approved",
   "members": [
     {
-      "slug": "sarcodine",
-      "name": "Sarcodine",
-      "className": "Gladiator",
-      "serverId": "2102",
-      "serverName": "Zikel",
-      "region": "nae",
-      "profileId": "8iCddEXDDnuEC1Z-27KJQCcDEUHKdMFWgFqSCrcOm7A=",
-      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2102&charKey=591660401046099066"
-    },
-    {
       "slug": "kcamyazimoto",
       "name": "KcamYazimoto",
       "className": "Cleric",
@@ -21,6 +11,16 @@
       "region": "nae",
       "profileId": "Zsn8h9AG5LlhlxxIRVIxDk4PBUQpNQEmlWjvWQNCGCM=",
       "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952919228"
+    },
+    {
+      "slug": "char-nae-2106-ad98f4dc135a131f566a",
+      "name": "Sarcodine",
+      "className": "Assassin",
+      "serverId": "2106",
+      "serverName": "Azphel",
+      "region": "nae",
+      "profileId": "Zsn8h9AG5LlhlxxIRVIxDgctVKBYNhFB2BOy75t5Y3A=",
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952906799"
     }
   ]
 }
