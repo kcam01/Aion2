@@ -4,8 +4,8 @@ The `main` branch deploys automatically to https://exalted-aion2.vercel.app.
 
 The home page lists characters linked in Discord and approved by an officer. Member pages include:
 
-- `/member?name=sarcodine` — Sarcodine, Zikel (`2102`).
-- `/member?name=kcamyazimoto` — KcamYazimoto, Israphel (`2101`).
+- `/member?name=char-nae-2106-ad98f4dc135a131f566a` — Sarcodine, Assassin on Azphel (`2106`). The older `/member?name=sarcodine` link is an alias for this approved character.
+- `/member?name=kcamyazimoto` — KcamYazimoto, Cleric on Azphel (`2106`).
 
 Both pages include live stats, gear images, skills, wings, and pets. The featured
 directory comes from `members.json`, which is maintained automatically from approved Discord links. A service on the bot host checks every minute and pushes only changed public character data to this repository, triggering Vercel. New members normally appear within a couple of minutes; unlinking removes their current roster entry. Pending requests never appear. Existing member URLs are preserved and new URLs use a stable character identity, so identical names on different servers work.

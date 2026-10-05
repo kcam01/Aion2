@@ -4,8 +4,14 @@ import {validateRoster, findMember} from './member-roster.js';
 // Public character identities from officer-approved Discord links.
 export const members = Object.freeze(validateRoster(roster));
 
+// Keep shared profile links working after an approved character changes server.
+const legacySlugs = new Map([
+  ['sarcodine', 'char-nae-2106-ad98f4dc135a131f566a'],
+]);
+
 export function getMember(slug) {
-  return findMember(members, slug);
+  const canonicalSlug = typeof slug === 'string' ? legacySlugs.get(slug.toLowerCase()) ?? slug : slug;
+  return findMember(members, canonicalSlug);
 }
 
 export function officialProfile(member) {

@@ -89,23 +89,33 @@ test('unsupported request types are rejected without contacting PLAYNC', async t
   assert.equal(requests.length, 0);
 });
 
-for (const type of ['info', 'equipment']) {
-  test(`Sarcodine ${type} uses Zikel for search and character data`, async t => {
-    const requests = mockPlaync(t, { serverId: '2102', characterName: 'Sarcodine' });
-    const response = await request(type, 'sarcodine');
-    assert.equal(response.statusCode, 200);
-    assert.equal(requests[0].url.searchParams.get('keyword'), 'Sarcodine');
-    assert.equal(requests[0].url.searchParams.get('serverId'), '2102');
-    assert.equal(requests[1].url.searchParams.get('serverId'), '2102');
-    assert.equal(requests[1].url.searchParams.get('characterId'), foundId);
-    if (type === 'info') assert.equal(response.body.profile.characterName, 'Sarcodine');
-  });
+for (const member of ['sarcodine', 'char-nae-2106-ad98f4dc135a131f566a']) {
+  for (const type of ['info', 'equipment']) {
+    test(`Sarcodine ${type} uses Azphel through ${member}`, async t => {
+      const requests = mockPlaync(t, { serverId: '2106', characterName: 'Sarcodine' });
+      const response = await request(type, member);
+      assert.equal(response.statusCode, 200);
+      assert.equal(requests[0].url.searchParams.get('keyword'), 'Sarcodine');
+      assert.equal(requests[0].url.searchParams.get('serverId'), '2106');
+      assert.equal(requests[1].url.searchParams.get('serverId'), '2106');
+      assert.equal(requests[1].url.searchParams.get('characterId'), foundId);
+      if (type === 'info') assert.equal(response.body.profile.characterName, 'Sarcodine');
+    });
+  }
 }
 
 test('Sarcodine search failure uses Sarcodine official profile, never KcamYazimoto', async t => {
-  const requests = mockPlaync(t, { searchStatus: 503, serverId: '2102', characterName: 'Sarcodine' });
+  const requests = mockPlaync(t, { searchStatus: 503, serverId: '2106', characterName: 'Sarcodine' });
   assert.equal((await request('info', 'sarcodine')).statusCode, 200);
-  assert.equal(requests.at(-1).url.searchParams.get('characterId'), '8iCddEXDDnuEC1Z-27KJQCcDEUHKdMFWgFqSCrcOm7A=');
+  assert.equal(requests.at(-1).url.searchParams.get('characterId'), 'Zsn8h9AG5LlhlxxIRVIxDgctVKBYNhFB2BOy75t5Y3A=');
+});
+
+test('the old Zikel character cannot replace Sarcodine on Azphel', async t => {
+  const requests = mockPlaync(t, {characterName:'Sarcodine', searchList:[{
+    name:'Sarcodine', serverId:2102, region:'nae', characterId:'old-zikel-character'
+  }]});
+  assert.equal((await request('info', 'sarcodine')).statusCode, 200);
+  assert.equal(requests.at(-1).url.searchParams.get('characterId'), 'Zsn8h9AG5LlhlxxIRVIxDgctVKBYNhFB2BOy75t5Y3A=');
 });
 
 test('the existing KcamYazimoto URL resolves the Azphel character', async t => {
