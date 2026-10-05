@@ -166,6 +166,21 @@
       "rewards": ["Pet: Pagati plus a choice of one additional pet", "Wishlist chest of potions, scrolls and Resurrection Spiritstones"],
       "participation": "Create an account and log in before the cutoff. Rewards arrive automatically by in-game mail; collect them before that mail expires.",
       "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/712288224875118658"
+    },
+    {
+      "id": "graphics-card-giveaway-2026",
+      "kind": "community",
+      "title": "AION 2 graphics card giveaway",
+      "summary": "Enter the official launch giveaway for a chance to win one NVIDIA GeForce RTX 5080.",
+      "start_date": "2026-10-05",
+      "end_date": "2026-10-12",
+      "ends_at": "2026-10-13T06:59:00Z",
+      "timing_note": "The published Pacific window is October 5–12, ending October 12 at 11:59 PM PDT (October 13 at 1:59 AM Central). No exact opening time or separate prize-claim deadline is published.",
+      "rewards": [
+        "One NVIDIA GeForce RTX 5080 graphics card for the giveaway winner"
+      ],
+      "participation": "Use the Gleam Giveaway link in the official notice and complete at least one listed entry action. Playing AION 2 on Steam for one hour awards 10 entries; official community follow/join actions are also listed. NC lists residents of the United States, Canada and Europe as eligible, excluding Belgium, Netherlands, Serbia, Slovakia, Italy and Portugal. Check the full entry rules on the giveaway page.",
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6ab3f7806b722c561dc6a621"
     }
   ]
 }
