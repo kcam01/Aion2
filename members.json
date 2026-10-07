@@ -71,6 +71,26 @@
       "region": "nae",
       "profileId": "Zsn8h9AG5LlhlxxIRVIxDgh7MLMkQNuMtqiSFR4ZmCQ=",
       "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952971357"
+    },
+    {
+      "slug": "char-nae-2106-cf9984241c8fee72423e",
+      "name": "Fubuki",
+      "className": "Cleric",
+      "serverId": "2106",
+      "serverName": "Azphel",
+      "region": "nae",
+      "profileId": "Zsn8h9AG5LlhlxxIRVIxDnZrBa0LKGWxTWWf8Wf8DY0=",
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952949274"
+    },
+    {
+      "slug": "char-nae-2106-fea4b8e71a55f6a50f3f",
+      "name": "Grimm",
+      "className": "Gladiator",
+      "serverId": "2106",
+      "serverName": "Azphel",
+      "region": "nae",
+      "profileId": "Zsn8h9AG5LlhlxxIRVIxDjaBbkTuC1F4vyA5B1EBMQE=",
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952908012"
     }
   ]
 }
