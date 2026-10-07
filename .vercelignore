@@ -1,2 +1,5 @@
 tests/
 docs/
+output/
+.env*
+LindenOrder.png

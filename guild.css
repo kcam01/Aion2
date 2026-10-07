@@ -36,6 +36,17 @@ h1{font:normal clamp(74px,8vw,116px)/1 var(--serif);letter-spacing:-.055em;margi
 @media(max-width:380px){h3{font-size:clamp(20px,6vw,24px)}}
 .member-title{font:italic 13px/1.5 var(--serif);color:var(--gold);margin:8px 0 0;overflow-wrap:anywhere}
 .member-title:empty{display:none}
+.creation-status{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.creation-status-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.creation-status-heading>span{font-size:9px;letter-spacing:.12em;color:var(--muted)}
+.creation-status-heading strong{font-size:13px;color:var(--gold)}
+.creation-status[data-state=open] [data-creation]{color:#b6d9a6}
+.creation-status[data-state=blocked] [data-creation]{color:#efbe98}
+.guild-home .creation-status-time,.guild-home .creation-status-source{font-size:10px;margin-top:8px}
+.creation-status-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:11px;font-size:11px;color:var(--gold)}
+.creation-status-actions button{font:inherit;cursor:pointer;color:var(--gold);border:1px solid var(--line);background:transparent;padding:8px 11px;min-height:36px}
+.creation-status-actions button:hover{border-color:var(--gold)}
+.creation-status-actions button:disabled{opacity:.6;cursor:wait}
 .rules-section{padding:60px 0 50px;border-top:1px solid var(--line)}
 .rules-intro{max-width:720px;color:var(--muted);margin:0 0 32px;font-size:15px}
 .rules-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;list-style:none;padding:0;margin:0;counter-reset:guild-rule}
