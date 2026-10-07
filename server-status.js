@@ -15,8 +15,8 @@ if (panel) {
     const timestamp = data?.observedAt;
     if (timestamp && Number.isFinite(Date.parse(timestamp))) {
       time.dateTime = timestamp;
-      time.textContent = `Source updated ${new Date(timestamp).toLocaleTimeString([], {hour:'numeric',minute:'2-digit',second:'2-digit'})}`;
-      time.title = new Date(timestamp).toLocaleString();
+      time.textContent = `Source time (approx.) ${new Date(timestamp).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})}`;
+      time.title = `${new Date(timestamp).toLocaleString()} — Questlog timestamps can be up to five minutes ahead.`;
     } else {
       time.removeAttribute('datetime');
       time.textContent = 'No current observation';
