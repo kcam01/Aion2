@@ -32,6 +32,28 @@ for (const img of document.querySelectorAll('.member-avatar img')) {
   if (img.complete && !img.naturalWidth) fallback();
 }
 
+const emblem = document.querySelector('[data-crest-motion]');
+if (emblem) {
+  const toggle = emblem.querySelector('.crest-motion-toggle');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let userPaused = false;
+  let visible = true;
+  const syncMotion = () => {
+    emblem.dataset.motion = userPaused || reducedMotion.matches || !visible || document.hidden ? 'paused' : 'running';
+    emblem.dataset.userPaused = String(userPaused);
+    toggle.hidden = reducedMotion.matches;
+    toggle.setAttribute('aria-label', userPaused ? 'Play emblem animation' : 'Pause emblem animation');
+    toggle.title = toggle.getAttribute('aria-label');
+  };
+  toggle.addEventListener('click', () => { userPaused = !userPaused; syncMotion(); });
+  reducedMotion.addEventListener('change', syncMotion);
+  document.addEventListener('visibilitychange', syncMotion);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; syncMotion(); }).observe(emblem);
+  }
+  syncMotion();
+}
+
 async function loadMember(member) {
   const card = document.querySelector(`[data-member="${member.slug}"]`);
   if (!card) return;
