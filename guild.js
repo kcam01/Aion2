@@ -26,7 +26,7 @@ grid.setAttribute('aria-busy', 'false');
 // A profile outage does not hide the rest of the approved roster.
 for (const member of members) loadMember(member);
 
-for (const img of document.querySelectorAll('.portrait-panel img, .member-avatar img')) {
+for (const img of document.querySelectorAll('.member-avatar img')) {
   const fallback = () => { img.hidden = true; img.style.display = 'none'; };
   img.addEventListener('error', fallback, { once: true });
   if (img.complete && !img.naturalWidth) fallback();
