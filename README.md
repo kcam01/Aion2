@@ -20,6 +20,14 @@ The separate in-game guild field comes directly from PLAYNC.
 Exalted uses the same gold winged E crest on the website, Discord server, and
 guild bot. Browser-ready logo sizes are in `assets/exalted-crest-*.png`.
 
+The home, events, and character pages share an original AION 2-inspired Atreia
+background generated with ChatGPT imagegen. `background.css` applies the artwork
+with dark reading overlays and an opaque fallback. Desktop uses
+`assets/atreia-background.webp` (177 KB); screens up to 760px load only the
+portrait crop `assets/atreia-background-mobile.webp` (107 KB). The decoration
+has no animation and cannot intercept clicks. Use ChatGPT imagegen for future
+image generation and edits, as recorded in `AGENTS.md`.
+
 Character Titles displays every entry returned in `info.title.titleList`, its
 category, rarity, effects, and collection counts. The profile's displayed title
 is shown separately and on the guild member card. PLAYNC's public response only

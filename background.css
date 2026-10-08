@@ -1,0 +1,72 @@
+/* Original AION 2-inspired artwork, generated with ChatGPT imagegen.
+   Keep decoration in its own layer so it never intercepts a control. */
+body.aion-world {
+  --world-shade: 16, 30, 25;
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.aion-world::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(180deg, rgba(var(--world-shade), .48), transparent 24%, rgba(var(--world-shade), .76)),
+    linear-gradient(90deg, rgba(var(--world-shade), .88), rgba(var(--world-shade), .65) 38%, rgba(var(--world-shade), .22) 75%, rgba(var(--world-shade), .32)),
+    url("/assets/atreia-background.webp");
+  background-position: center, center, right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Long-form guild and event copy needs a stable, quiet reading surface. */
+.aion-world .members-section,
+.aion-world .events-preview-section,
+.aion-world .rules-section,
+.aion-world .schedule-section {
+  background: rgba(var(--world-shade), .78);
+  box-shadow: 28px 0 42px rgba(var(--world-shade), .55), -28px 0 42px rgba(var(--world-shade), .55);
+}
+
+.aion-world .member-card,
+.aion-world .event-preview-card {
+  background: rgba(var(--world-shade), .88);
+}
+
+.aion-world .schedule-guide {
+  padding: 24px;
+  background: rgba(var(--world-shade), .90);
+}
+
+/* Character sheets retain their own palette and personal portrait layer. */
+body.aion-world--profile {
+  --world-shade: 12, 13, 20;
+}
+
+.aion-world--profile::before {
+  opacity: .62;
+}
+
+.aion-world--profile .profile-backdrop {
+  background: linear-gradient(180deg, #10141f66, transparent);
+  mask-image: linear-gradient(#000, transparent);
+}
+
+@media (max-width: 760px) {
+  .aion-world::before {
+    background-image:
+      linear-gradient(180deg, rgba(var(--world-shade), .54), rgba(var(--world-shade), .42) 32%, rgba(var(--world-shade), .90)),
+      linear-gradient(90deg, rgba(var(--world-shade), .78), rgba(var(--world-shade), .38)),
+      url("/assets/atreia-background-mobile.webp");
+    background-position: center;
+  }
+}
+
+@media print {
+  .aion-world::before { display: none; }
+}
