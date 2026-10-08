@@ -12,24 +12,14 @@ nav{display:flex;gap:38px;font-size:13px}nav a{padding:12px 0}nav a span{margin-
 .eyebrow{font-size:9px;letter-spacing:.2em;font-weight:500;color:var(--gold);margin:0 0 26px}.hero-copy .eyebrow{display:flex;align-items:center;gap:12px}.eyebrow>span{width:24px;height:1px;background:var(--gold)}
 h1{font:normal clamp(74px,8vw,116px)/1 var(--serif);letter-spacing:-.055em;margin:22px 0 28px}.title-period{color:var(--gold)}
 .hero-copy{min-width:0}.hero-crest{display:block;width:180px;height:180px;border-radius:50%;object-fit:cover}.closing-crest{display:block;border-radius:50%;object-fit:cover;flex:none}
-/* Higgsfield-generated motion, with the original crest as a static fallback. */
+/* The Higgsfield crest is a looping GIF with no player controls. */
 .animated-crest{position:relative;width:180px;height:180px;flex:none}
 .crest-float{position:relative;width:100%;height:100%;isolation:isolate}
 .crest-float::before{content:'';position:absolute;inset:-6px;z-index:-1;pointer-events:none;border:1px solid #dcc58535;border-radius:50%;box-shadow:0 0 22px #d5b86320;opacity:.45}
 .crest-face{position:relative;overflow:hidden;border-radius:50%;width:100%;height:100%}
-.crest-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none}
-.animated-crest[data-video-ready=true] .crest-video{opacity:1}
 .animated-crest .hero-crest{width:100%;height:100%}
-.crest-motion-toggle{position:absolute;right:-8px;bottom:-8px;display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid #c7b38366;border-radius:50%;background:#101e19;color:var(--gold);cursor:pointer;z-index:1}
-.crest-motion-toggle[hidden],.crest-play-icon{display:none}
-.crest-motion-toggle:hover{border-color:var(--gold);background:#22352a}
-.crest-motion-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-.animated-crest[data-user-paused=true] .crest-pause-icon{display:none}
-.animated-crest[data-user-paused=true] .crest-play-icon{display:block}
 .animated-crest--small{width:64px;height:64px}
-.animated-crest--small .crest-motion-toggle{width:22px;height:22px;right:-5px;bottom:-5px}
 @media(max-width:760px){.animated-crest{width:140px;height:140px}}
-@media(prefers-reduced-motion:reduce){.animated-crest:not([data-motion-opt-in=true]) .crest-video{display:none}}
 .hero-description{color:#bbc3b6;max-width:340px;line-height:1.9;font-size:15px}.primary-link{display:flex;justify-content:space-between;align-items:center;gap:45px;background:var(--gold);color:#17261d;width:fit-content;min-height:54px;padding:13px 23px;margin-top:30px;font-size:12px;font-weight:600;transition:background .2s,transform .2s}.primary-link:hover{background:#e0cda2;color:#17261d;transform:translateY(-2px)}.primary-link span{font-size:22px;font-weight:normal}.hero-footnote{font-size:8px;letter-spacing:.23em;color:var(--muted);margin:27px 0 0}
 .guild-home{margin:26px 0 0;padding:3px 0 3px 18px;border-left:2px solid var(--gold);max-width:440px}.guild-home .eyebrow{margin:0 0 8px}.guild-home p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}.guild-home .guild-home-path{display:flex;align-items:center;flex-wrap:wrap;gap:5px 9px;margin:0 0 8px;color:var(--ink);font-size:15px}.guild-home-path strong{white-space:nowrap}.guild-home-path span{color:var(--gold)}
 .hero-invitation{align-self:end;justify-self:end;width:min(100%,440px);margin:0 0 70px;padding-top:28px;border-top:1px solid #c7b38370;text-shadow:0 2px 24px #081812cc}
