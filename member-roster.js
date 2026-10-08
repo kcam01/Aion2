@@ -3,8 +3,8 @@ const fields = new Set(['slug','name','className','serverId','serverName','regio
 export function validateRoster(roster) {
   if (!roster || roster.schema_version !== 1 || !Array.isArray(roster.members)) throw Error('Invalid member roster');
   const slugs = new Set(), identities = new Set();
-  return roster.members.map(member => {
-    if (!member || Object.keys(member).some(key => !fields.has(key)) || [...fields].some(key => typeof member[key] !== 'string')) throw Error('Invalid public member fields');
+  function validateCharacter(member, allowAlts) {
+    if (!member || Object.keys(member).some(key => !fields.has(key) && !(allowAlts && key === 'alts')) || [...fields].some(key => typeof member[key] !== 'string')) throw Error('Invalid public member fields');
     if (!/^[a-z0-9][a-z0-9-]{0,95}$/.test(member.slug) || !/^\d{1,8}$/.test(member.serverId) || member.region !== 'nae') throw Error('Invalid character identity');
     for (const key of ['name','className','serverName','profileId']) {
       if (!member[key].trim() || member[key].length > 250 || /[\u0000-\u001f]/.test(member[key])) throw Error('Invalid character data');
@@ -16,11 +16,28 @@ export function validateRoster(roster) {
     const identity = JSON.stringify([member.region,member.serverId,member.profileId]);
     if (slugs.has(member.slug) || identities.has(identity)) throw Error('Duplicate member');
     slugs.add(member.slug); identities.add(identity);
-    return Object.freeze({...member});
-  });
+    const value = {...member};
+    if (Object.hasOwn(member, 'alts')) {
+      if (!allowAlts || !Array.isArray(member.alts)) throw Error('Invalid alternate characters');
+      value.alts = Object.freeze(member.alts.map(alt => validateCharacter(alt, false)));
+    }
+    return Object.freeze(value);
+  }
+  return roster.members.map(member => validateCharacter(member, true));
+}
+
+export function allCharacters(members) {
+  return members.flatMap(member => [member, ...(member.alts || [])]);
 }
 
 export function findMember(members, slug) {
   if (slug === undefined) return members.find(m => m.slug === 'kcamyazimoto') ?? members[0];
-  return typeof slug === 'string' ? members.find(member => member.slug === slug.toLowerCase()) : undefined;
+  return typeof slug === 'string' ? allCharacters(members).find(member => member.slug === slug.toLowerCase()) : undefined;
+}
+
+export function findCharacterFamily(members, slug) {
+  const character = findMember(members, slug);
+  if (!character) return undefined;
+  const main = members.find(member => member.slug === character.slug || member.alts?.some(alt => alt.slug === character.slug));
+  return {main, alts: main.alts || []};
 }

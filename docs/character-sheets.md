@@ -4,6 +4,8 @@
 
 The page uses `member.html`, `style.css`, and `app.js`. Pure data normalization and browser-history validation live in `character-sheet.js`.
 
+`character-family.js` renders the main's linked alt portraits between the identity/summary header and the detail tabs. Each portrait opens an independent character sheet. Alt sheets include the main and siblings with the current character marked. Empty families are hidden; missing portraits use initials. The roster validator accepts one level of public `alts` records, and API/profile lookup resolves these alongside mains. The guild homepage continues displaying/counting mains only. Members add alts automatically with `/linkalts character server` after their main is approved; `/unlinkalt character` removes one.
+
 - Overview: compact identity header, combat power, item level, equipment ordered by slot, wings/pet, primary and divine attributes, Daevanion progress, and acquired-skill preview.
 - Equipment: native hover descriptions and keyboard/touch-accessible inspection dialogs. Only supplied rarity, level, enchantment, and exceed values are shown.
 - Daevanion: reported board counts and progress. The summary API does not include individual node selections.

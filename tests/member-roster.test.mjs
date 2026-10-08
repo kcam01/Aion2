@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
-import {validateRoster, findMember} from '../member-roster.js';
+import * as rosterTools from '../member-roster.js';
+const {validateRoster, findMember} = rosterTools;
 import {mkdtemp, mkdir, copyFile, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join, resolve} from 'node:path';
@@ -8,6 +9,31 @@ import {pathToFileURL} from 'node:url';
 
 const member = {slug:'char-nae-2106-abc123',name:'NewMember',className:'Cleric',serverId:'2106',serverName:'Azphel',region:'nae',profileId:'public+id=',portrait:'https://profileimg.plaync.com/avatar.png'};
 const roster = entries => ({schema_version:1,members:entries});
+
+const alt = {...member,slug:'alt-cleric',name:'AltCleric',profileId:'alt-public-id='};
+
+test('alts resolve to independent profiles while the roster still counts mains only',()=>{
+  const values=validateRoster(roster([{...member,alts:[alt]}]));
+  assert.equal(values.length,1);
+  assert.equal(findMember(values,'ALT-CLERIC').profileId,alt.profileId);
+  assert.equal(findMember(values,undefined).slug,member.slug);
+  assert.deepEqual(rosterTools.allCharacters(values).map(x=>x.slug),[member.slug,alt.slug]);
+  assert.deepEqual(rosterTools.findCharacterFamily(values,alt.slug),{main:values[0],alts:values[0].alts});
+  assert.equal(rosterTools.findCharacterFamily(values,'missing'),undefined);
+  assert.ok(Object.isFrozen(values[0].alts));
+  assert.ok(Object.isFrozen(values[0].alts[0]));
+});
+
+test('alt identities and slugs must be globally unique and nested private data is rejected',()=>{
+  for(const alts of [null,{},'bad',[member],[{...alt,slug:member.slug}],[{...alt,profileId:member.profileId}],
+      [alt,alt],[{...alt,user_id:'private'}],[{...alt,alts:[]}],[{...alt,portrait:'https://evil.test/x'}]]) {
+    assert.throws(()=>validateRoster(roster([{...member,alts}])));
+  }
+  assert.throws(()=>validateRoster(roster([{...member,alts:[alt]},alt])));
+  const other={...member,slug:'another-main',profileId:'different='};
+  assert.throws(()=>validateRoster(roster([{...member,alts:[alt]},{...other,alts:[alt]}])));
+  assert.doesNotThrow(()=>validateRoster(roster([{...member,alts:[]}])));
+});
 
 test('new approved characters and duplicate names on different servers have distinct profile routes',()=>{
   const other={...member,slug:'char-nae-2102-def456',serverId:'2102',serverName:'Zikel',profileId:'another='};
@@ -41,19 +67,19 @@ test('publishing a new roster entry enables its live profile API without a code 
   await mkdir(join(directory,'api'));
   await writeFile(join(directory,'package.json'),'{"type":"module"}');
   for(const file of ['members.js','member-roster.js','api/aion2.js']) await copyFile(new URL('../'+file,import.meta.url),join(directory,file));
-  await writeFile(join(directory,'members.json'),JSON.stringify(roster([member])));
+  await writeFile(join(directory,'members.json'),JSON.stringify(roster([{...member,alts:[alt]}])));
   const {default:handler}=await import(pathToFileURL(join(directory,'api/aion2.js')).href);
   const requests=[];
   t.mock.method(globalThis,'fetch',async input=>{
     const url=new URL(input); requests.push(url);
-    assert.equal(url.searchParams.get('serverId'),member.serverId);
-    if(url.hostname==='api-search.plaync.com') return Response.json({list:[{name:member.name,serverId:member.serverId,region:'nae',characterId:encodeURIComponent(member.profileId)}]});
-    assert.equal(url.searchParams.get('characterId'),member.profileId);
-    return Response.json({profile:{characterName:member.name}});
+    assert.equal(url.searchParams.get('serverId'),alt.serverId);
+    if(url.hostname==='api-search.plaync.com') return Response.json({list:[{name:alt.name,serverId:alt.serverId,region:'nae',characterId:encodeURIComponent(alt.profileId)}]});
+    assert.equal(url.searchParams.get('characterId'),alt.profileId);
+    return Response.json({profile:{characterName:alt.name}});
   });
   const response={setHeader(){},status(code){this.code=code;return this;},json(body){this.body=body;return this;}};
-  await handler({query:{member:member.slug,type:'info'}},response);
+  await handler({query:{member:alt.slug,type:'info'}},response);
   assert.equal(response.code,200);
-  assert.equal(response.body.profile.characterName,member.name);
+  assert.equal(response.body.profile.characterName,alt.name);
   assert.equal(requests.length,2);
 });

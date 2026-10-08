@@ -1,4 +1,5 @@
-import { getMember, members, officialProfile } from './members.js';
+import { getMember, characters, getCharacterFamily, officialProfile } from './members.js';
+import { renderCharacterFamily } from './character-family.js';
 import { buildSheet, formatNumber as fmt, appendHistory, parseHistory } from './character-sheet.js';
 
 const $ = id => document.getElementById(id);
@@ -243,7 +244,7 @@ async function load() {
     renderHistory();
   }
   $('refresh').disabled = false; $('refresh').setAttribute('aria-busy', 'false'); $('refresh').querySelector('span').textContent = 'Refresh';
-  $('compare').disabled = !info || members.length < 2;
+  $('compare').disabled = !info || characters.length < 2;
   loading = false;
 }
 function selectTab(name, focus = false, updateHash = true) {
@@ -315,9 +316,10 @@ setInterval(() => {
 }, 60000);
 hashTab();
 if (member) {
+  renderCharacterFamily($('character-family'), getCharacterFamily(member.slug), member.slug);
   renderHeader();
   $('official-profile').href = officialProfile(member); $('official-profile').hidden = false;
-  const others = members.filter(x => x.slug !== member.slug);
+  const others = characters.filter(x => x.slug !== member.slug);
   $('compare-member').replaceChildren(...others.map(x => { const option = el('option', '', x.name + ' · ' + x.className); option.value = x.slug; return option; }));
   if (!others.length) $('compare').title = 'Comparison is available when another guild member is linked.';
   load();

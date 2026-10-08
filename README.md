@@ -17,6 +17,10 @@ directory comes from `members.json`, which is maintained automatically from appr
 Only public character names, classes, server identities, portrait URLs and PLAYNC profile IDs are published. Discord account IDs, officer decisions and bot state stay on the bot host. Previously published public roster entries remain in Git history. If GitHub or Vercel is unavailable, the last deployed roster remains available and synchronization retries automatically. `members.js` validates the shared roster for both the browser and character API.
 The separate in-game guild field comes directly from PLAYNC.
 
+Members with an approved main can use `/linkalts character:YourAlt server:Azphel` in Discord. Alts are linked automatically after the bot validates the public character; no separate officer approval is needed. Use `/unlinkalt character` to remove an individual alt. A character can belong to only one main/account. Removing the main also removes its alt links.
+
+The main character sheet displays linked alt portraits directly below its identity and headline stats, above the detail tabs. Click a portrait to open that alt's full sheet, with navigation back to the main and other alts. The row appears after the first alt is linked and roster synchronization deploys it. Alts have independent profile URLs and history, and are available for comparison; the guild roster still counts and displays mains only. `members.json` supports an optional `alts` array containing public character records under each main, without nested alt groups.
+
 Exalted uses the same gold winged E crest on the website, Discord server, and
 guild bot. Browser-ready logo sizes are in `assets/exalted-crest-*.png`.
 
