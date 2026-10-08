@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101e19">
+  <meta name="description" content="Find AION 2 class builds, progression guides, videos and tools shared by the Exalted guild.">
+  <meta property="og:site_name" content="Exalted">
+  <meta property="og:title" content="Builds &amp; Guides · Exalted">
+  <meta property="og:description" content="Knowledge worth sharing. AION 2 builds, guides and tools from the guild.">
+  <meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png">
+  <title>Builds &amp; Guides · Exalted</title>
+  <link rel="canonical" href="https://exalted-aion2.vercel.app/builds">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png">
+  <link rel="stylesheet" href="/guild.css">
+  <link rel="stylesheet" href="/background.css">
+  <link rel="stylesheet" href="/builds.css">
+</head>
+<body class="aion-world">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
+      <nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/#members">Our members</a><a href="/events">Timers &amp; Events</a><a href="/builds" aria-current="page">Builds &amp; Guides</a><a href="/#rules">Guild rules</a></nav>
+      <span class="region">NA EAST <span aria-hidden="true">/</span> ASMODIANS <span aria-hidden="true">/</span> AZPHEL</span>
+    </header>
+    <main id="main">
+      <section class="guides-hero" aria-labelledby="guides-title">
+        <div><p class="eyebrow">KNOWLEDGE WORTH SHARING</p><h1 id="guides-title">Builds &amp; Guides</h1><p class="guides-lede">Find your build. Learn the world.<br>A shared library for the journey through Atreia.</p></div>
+        <aside class="guides-share"><span class="eyebrow">FROM THE GUILD</span><p>Found something useful?</p><a href="https://discord.com/channels/1556392756836966481/1556395669348942025">Share in #builds-and-guides <span aria-hidden="true">↗</span></a></aside>
+      </section>
+      <section class="guide-library" aria-label="Guild resource library">
+        <div class="guides-toolbar">
+          <label class="guides-search"><span>SEARCH THE LIBRARY</span><input id="guide-search" type="search" placeholder="Build, class, gear, creator…" autocomplete="off"></label>
+          <label class="guides-class"><span>YOUR CLASS</span><select id="guide-class"><option value="all">All classes</option></select></label>
+        </div>
+        <div class="guides-browse"><div class="guide-filters" role="group" aria-label="Resource category"><button type="button" data-category="all" aria-pressed="true">All resources</button><button type="button" data-category="builds" aria-pressed="false">Builds</button><button type="button" data-category="guides" aria-pressed="false">Guides</button><button type="button" data-category="tools" aria-pressed="false">Tools</button></div><p id="guide-count" role="status" aria-live="polite">Loading the library…</p></div>
+        <div id="guide-grid" class="guide-grid"></div>
+        <div id="guide-empty" class="guide-empty" hidden><h2>No matching resources</h2><p>Try another search or class, or explore the full library.</p><button id="guide-clear" type="button">Clear filters <span aria-hidden="true">↗</span></button></div>
+        <div id="guide-error" class="guide-empty" hidden><h2>The library couldn’t load</h2><p>Try again, or browse the links in Discord.</p><button id="guide-retry" type="button">Try again</button></div>
+        <div class="guides-library-note"><p>Shared by Exalted. Community advice may vary by region and patch.</p><p id="guide-updated"></p></div>
+        <noscript><p>Enable JavaScript to search the library, or <a href="https://discord.com/channels/1556392756836966481/1556395669348942025">browse #builds-and-guides in Discord ↗</a>.</p></noscript>
+      </section>
+      <aside class="guides-next"><p>The right knowledge. The right party.</p><a href="/events">Plan your next adventure <span aria-hidden="true">↗</span></a></aside>
+    </main>
+    <footer class="site-footer"><span>EXALTED <span class="footer-divider">/</span> AION 2</span><p>A community guild site. AION 2 belongs to NC.</p><a href="/">Back to the guild ↑</a></footer>
+  </div>
+  <script type="module" src="/builds.js"></script>
+</body>
+</html>

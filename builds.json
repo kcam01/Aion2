@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-08T18:29:10.045Z",
+  "links": [
+    {
+      "id": "aion2hub-event-timer",
+      "url": "https://aion2hub.com/tools/event-timer",
+      "title": "Rift & event timers",
+      "description": "Community countdowns for rifts, timed activities and server resets. Choose your region and timezone.",
+      "source": "Aion2Hub",
+      "category": "tools",
+      "format": "tool",
+      "classes": [],
+      "tags": [
+        "Rifts",
+        "Events"
+      ],
+      "shared_at": "2026-10-08T14:26:29.497Z"
+    },
+    {
+      "id": "questlog-character-builder",
+      "url": "https://questlog.gg/aion-2/en/character-builder",
+      "title": "Character builder",
+      "description": "Explore character builds with Questlog’s AION 2 builder. A starting point for planning your setup.",
+      "source": "Questlog",
+      "category": "tools",
+      "format": "tool",
+      "classes": [],
+      "tags": [
+        "Build planning"
+      ],
+      "shared_at": "2026-10-07T16:27:11.605Z"
+    },
+    {
+      "id": "sorcerer-build-guide",
+      "url": "https://aion2-meta.com/guides/sorcerer/",
+      "title": "The Sorcerer build guide",
+      "description": "Skills, stigmas, gear and Daevanion choices for Sorcerer, with separate Global and Korean data where available.",
+      "source": "AION 2 Meta",
+      "category": "builds",
+      "format": "article",
+      "classes": [
+        "Sorcerer"
+      ],
+      "tags": [
+        "Skills",
+        "Gear"
+      ],
+      "shared_at": "2026-10-07T14:12:05.319Z"
+    },
+    {
+      "id": "hidden-cube-farm",
+      "url": "https://www.youtube.com/watch?v=OsCO3G3Gi68",
+      "title": "Hidden cube farming",
+      "description": "A video guide to hidden cube farming, with a map and tips from Savvvo Games.",
+      "source": "YouTube · Savvvo Games",
+      "category": "guides",
+      "format": "video",
+      "classes": [],
+      "tags": [
+        "Exploration",
+        "Cubes"
+      ],
+      "shared_at": "2026-10-07T00:03:50.845Z"
+    },
+    {
+      "id": "ultimate-progression-guide",
+      "url": "https://www.youtube.com/watch?v=COrI0hUcFng",
+      "title": "The progression & gearing guide",
+      "description": "Medieval Marty’s AION 2 progression guide, focused on gearing up and planning your next upgrades.",
+      "source": "YouTube · Medieval Marty",
+      "category": "guides",
+      "format": "video",
+      "classes": [],
+      "tags": [
+        "Progression",
+        "Gear"
+      ],
+      "shared_at": "2026-10-06T23:57:41.561Z"
+    },
+    {
+      "id": "starter-macros-all-classes",
+      "url": "https://www.youtube.com/watch?v=m0FOykgTV6s",
+      "title": "Starter macros for all 8 classes",
+      "description": "DrybearGamers walks through starter macros for each AION 2 class.",
+      "source": "YouTube · DrybearGamers",
+      "category": "guides",
+      "format": "video",
+      "classes": [],
+      "tags": [
+        "Macros",
+        "Getting started"
+      ],
+      "shared_at": "2026-10-06T23:57:06.363Z"
+    }
+  ]
+}
