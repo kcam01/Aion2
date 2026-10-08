@@ -146,14 +146,19 @@ if (fullPage || preview) {
     });
   }
   await loadSchedule();
-  // Resolve a homepage deep link after the manifest has rendered its target.
-  let target;
-  try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { /* Ignore a malformed URL fragment. */ }
-  if (target && fullPage) {
-    const archive = target.closest('details.event-archive');
-    if (archive) archive.open = true;
-    target.scrollIntoView();
+  // Resolve saved campaign links after loading, and when navigating within this page.
+  function revealLinkedEvent() {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { /* Ignore a malformed URL fragment. */ }
+    if (target?.closest('#events') && fullPage) {
+      const archive = target.closest('details.event-archive');
+      if (archive) archive.open = true;
+      target.scrollIntoView();
+    }
   }
+  revealLinkedEvent();
+  window.addEventListener('hashchange', revealLinkedEvent);
+  window.addEventListener('popstate', revealLinkedEvent);
   setInterval(render, 60000);
   setInterval(loadSchedule, 300000);
 }

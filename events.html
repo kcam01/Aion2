@@ -4,35 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#101e19">
-  <meta name="description" content="Exalted’s AION 2 Global event and Twitch Drops schedule. Find participation windows, reward highlights and claim deadlines in Central time.">
+  <meta name="description" content="Plan your time in Atreia with Exalted’s AION 2 rift countdowns, activity timers, daily and weekly resets, events and Twitch Drops.">
   <meta property="og:site_name" content="Exalted">
-  <meta property="og:title" content="Events &amp; Drops · Exalted">
-  <meta property="og:description" content="Plan your next adventure. AION 2 Global events, Twitch Drops and reward deadlines.">
+  <meta property="og:title" content="Timers &amp; Events · Exalted">
+  <meta property="og:description" content="Your next adventure, on time. Rift countdowns, game timers, events and Twitch Drops for the guild.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://exalted-aion2.vercel.app/events">
   <meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png">
   <link rel="canonical" href="https://exalted-aion2.vercel.app/events">
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png">
-  <title>Events &amp; Drops · Exalted</title>
+  <title>Timers &amp; Events · Exalted</title>
   <link rel="stylesheet" href="/guild.css">
   <link rel="stylesheet" href="/events.css">
   <link rel="preload" as="image" href="/assets/atreia-background.webp" media="(min-width: 761px)">
   <link rel="preload" as="image" href="/assets/atreia-background-mobile.webp" media="(max-width: 760px)">
   <link rel="stylesheet" href="/background.css">
+  <link rel="stylesheet" href="/timers.css">
 </head>
 <body class="aion-world">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
-      <nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/#members">Our members</a><a href="/events" aria-current="page">Events &amp; Drops</a><a href="/#rules">Guild rules</a></nav>
+      <nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/#members">Our members</a><a href="/events" aria-current="page">Timers &amp; Events</a><a href="/#rules">Guild rules</a></nav>
       <span class="region">NA EAST <span aria-hidden="true">/</span> ASMODIANS <span aria-hidden="true">/</span> AZPHEL</span>
     </header>
     <main id="main" data-events-page>
-      <section class="events-hero" aria-labelledby="events-title">
-        <div><p class="eyebrow">YOUR NEXT ADVENTURE IN ATREIA</p><h1 id="events-title">Events &amp; Drops<span class="title-period">.</span></h1><p class="events-lede">Make time for the good loot.<br>In-game challenges, community events, and rewards worth watching for.</p></div>
-        <aside class="schedule-guide"><p class="eyebrow">AION 2 GLOBAL</p><p>Confirmed times use <strong>Central time (Chicago)</strong>. Date-only windows follow the official announcement and aren’t converted.</p><p>For Drops, finish watching before the watch window ends, then claim earned rewards before the separate claim deadline.</p><a href="https://aion2.plaync.com/en-us/twitchdrops/index">Account linking &amp; Drops guide ↗</a></aside>
+      <section class="events-hero timers-hero" aria-labelledby="events-title">
+        <div><p class="eyebrow">MAKE EVERY ADVENTURE COUNT</p><h1 id="events-title">Timers &amp; Events</h1><p class="events-lede">A world worth showing up for.<br>Rifts, resets, and the next adventure with your guild.</p></div>
+        <div class="timer-guild-mark"><img src="/assets/exalted-crest-192.png" width="64" height="64" alt=""><div><span class="eyebrow">THE EXALTED FIELD GUIDE</span><p>NA East <span aria-hidden="true">/</span> Azphel</p><small>Asmodians. One banner.</small></div></div>
       </section>
+      <div class="schedule-tabs" role="tablist" aria-label="Timers and events">
+        <button type="button" role="tab" id="timers-tab" aria-controls="timers" aria-selected="true" tabindex="0">Game timers <span aria-hidden="true">↗</span></button>
+        <button type="button" role="tab" id="events-tab" aria-controls="events" aria-selected="false" tabindex="-1">Events &amp; Drops</button>
+      </div>
+      <section id="timers" role="tabpanel" aria-labelledby="timers-tab" tabindex="0">
+        <div class="timer-toolbar">
+          <div class="timer-region"><span class="timer-dot" aria-hidden="true"></span><strong>North America</strong><span>Global schedule</span></div>
+          <label class="timezone-control" for="timer-timezone">Show times in <select id="timer-timezone"><option value="America/Chicago">Central · Chicago</option><option value="local">My local timezone</option><option value="America/New_York">Eastern · New York</option><option value="America/Los_Angeles">Pacific · Los Angeles</option><option value="UTC">UTC</option><option value="Asia/Seoul">Server clock · GMT+9</option></select></label>
+        </div>
+        <p class="timer-source-note"><span>COMMUNITY SCHEDULE</span> Estimates from <a href="https://aion2hub.com/tools/event-timer">Aion2Hub ↗</a>. Confirm availability in game.</p>
+        <p class="timer-loading" data-timer-loading>Loading game timers…</p>
+        <div class="timer-dashboard" data-timer-dashboard hidden>
+          <section class="rift-panel" aria-labelledby="rift-title">
+            <div class="rift-heading"><p class="eyebrow">CROSS INTO ENEMY TERRITORY</p><span class="timer-tag">PvP</span></div>
+            <h2 id="rift-title">Spacetime Rift</h2>
+            <p class="rift-description">Gather your party. The next crossing awaits.</p>
+            <div class="rift-countdown-wrap"><p class="countdown-label">NEXT SCHEDULED OPENING IN</p><p class="rift-countdown" data-rift-countdown role="timer" aria-label="Time until next scheduled rift">—</p><p class="rift-next"><time data-rift-next>—</time><span>Every 3 hours</span></p></div>
+            <div class="rift-today"><div class="timer-section-label"><h3>Today’s openings</h3><span data-timer-zone-label>Central time</span></div><div class="rift-slots" data-rift-slots></div><p class="rift-footnote">Opening times only. Portal availability and entry limits are set in game.</p></div>
+          </section>
+          <aside class="reset-stack" aria-label="Reset timers">
+            <article class="reset-card" data-reset="daily-reset"><div class="reset-heading"><span class="timer-symbol" aria-hidden="true">↻</span><h2>Daily reset</h2></div><p class="reset-countdown" data-countdown role="timer" aria-label="Time until daily reset">—</p><time data-next>—</time><p>Daily · 16:00 server clock (GMT+9)</p></article>
+            <article class="reset-card" data-reset="weekly-reset"><div class="reset-heading"><span class="timer-symbol" aria-hidden="true">↻</span><h2>Weekly reset</h2></div><p class="reset-countdown" data-countdown role="timer" aria-label="Time until weekly reset">—</p><time data-next>—</time><p>Wednesday · 16:00 server clock (GMT+9)</p></article>
+          </aside>
+          <section class="upcoming-rifts" aria-labelledby="upcoming-rifts-title"><div class="timer-section-label"><h2 id="upcoming-rifts-title">On the horizon</h2><span>Next 6 rifts</span></div><ol data-upcoming-rifts></ol></section>
+        </div>
+        <section class="field-section" aria-labelledby="field-title" data-field-section hidden>
+          <div class="field-heading"><div><p class="eyebrow">FIND YOUR NEXT CHALLENGE</p><h2 id="field-title">Around Atreia</h2></div><div class="event-filters timer-filters" role="group" aria-label="Filter game timers"><button type="button" data-timer-kind="all" aria-pressed="true">All timers</button><button type="button" data-timer-kind="pvp" aria-pressed="false">PvP</button><button type="button" data-timer-kind="field" aria-pressed="false">Field events</button><button type="button" data-timer-kind="activities" aria-pressed="false">Activities</button></div></div>
+          <p class="field-note">Recurring activity windows. Simultaneous listings may be alternatives in a rotation; check the in-game event notice.</p>
+          <p class="sr-only" data-timer-filter-status role="status"></p>
+          <div class="field-grid" data-field-timers></div>
+        </section>
+        <details class="timer-provenance"><summary>About these times &amp; sources</summary><p>These North America estimates follow <a href="https://aion2hub.com/tools/event-timer">Aion2Hub’s Global timer schedule</a>, checked October 8, 2026. The reference attributes its Global data to the September 19 Launch Scale Test client. They are not a live server feed and may change after patches.</p><p>The source schedule uses a fixed GMT+9 clock. Your selected timezone changes the displayed times, including daylight saving time, but never the event schedule. “Scheduled now” means the estimated window has started; it does not confirm that an activity is available.</p></details>
+      </section>
+      <section id="events" role="tabpanel" aria-labelledby="events-tab" tabindex="0" hidden>
+      <div class="campaign-intro"><div><p class="eyebrow">REWARDS WORTH RETURNING FOR</p><h2>Events &amp; Drops</h2><p>Official campaigns, watch windows, and claim deadlines.</p></div><p>Confirmed campaign times use <strong>Central time (Chicago)</strong>. Finish watching before a Drops watch window ends, then claim before its separate deadline.</p></div>
       <div class="schedule-toolbar">
         <div class="event-filters" role="group" aria-label="Filter events"><button type="button" data-kind="all" aria-pressed="true">All events</button><button type="button" data-kind="drops" aria-pressed="false">Twitch Drops</button><button type="button" data-kind="in-game" aria-pressed="false">In-game</button><button type="button" data-kind="community" aria-pressed="false">Community</button></div>
         <a class="profile-link" href="https://discord.com/channels/1556392756836966481/1556395533910810715">Updates in Discord ↗</a>
@@ -42,11 +78,13 @@
       <section class="schedule-section" aria-labelledby="current-title"><div class="schedule-section-heading"><h2 id="current-title">Current &amp; upcoming</h2><p data-event-count role="status" aria-live="polite"></p></div><div data-event-list="schedule" aria-busy="true"></div></section>
       <section class="schedule-section" data-claim-section aria-labelledby="claim-title" hidden><div class="schedule-section-heading"><h2 id="claim-title">Still time to claim</h2></div><p class="schedule-note">These earning windows have passed. Collect rewards you already earned before the claim deadline.</p><div data-event-list="claim"></div></section>
       <details class="event-archive" data-archive-section hidden><summary>Past events <span data-archive-count></span></summary><div data-event-list="archive"></div></details>
-      <noscript><p class="schedule-warning">Enable JavaScript to view the schedule. You can also read <a href="https://store.steampowered.com/news/app/3393110/">official AION 2 announcements</a> or <a href="https://www.twitch.tv/drops/campaigns">Twitch campaigns</a>.</p></noscript>
       <aside class="schedule-sources"><p>Official events for AION 2 Global. Each listing links to its announcement for full eligibility, rewards and any changes.</p><a href="https://store.steampowered.com/news/app/3393110/">Official announcements ↗</a><a href="https://www.twitch.tv/drops/inventory">Twitch Drops inventory ↗</a></aside>
+      </section>
+      <noscript><p class="schedule-warning">Enable JavaScript to view countdowns and switch tabs. Read <a href="https://aion2hub.com/tools/event-timer">the community timer reference</a>, <a href="https://store.steampowered.com/news/app/3393110/">official AION 2 announcements</a>, or <a href="https://www.twitch.tv/drops/campaigns">Twitch campaigns</a>.</p></noscript>
     </main>
     <footer class="site-footer"><span>EXALTED <span class="footer-divider">/</span> AION 2</span><p>A community guild site. AION 2 belongs to NC.</p><a href="/">Back to the guild ↑</a></footer>
   </div>
+  <script type="module" src="/timers.js"></script>
   <script type="module" src="/events.js"></script>
 </body>
 </html>

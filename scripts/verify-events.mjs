@@ -14,10 +14,14 @@ assert.match(home, /href="\/events"/);
 assert.match(home, /data-events-preview/);
 assert.match(page, /data-events-page/);
 assert.match(page, /data-event-list="claim"/);
+assert.match(page, /Timers &amp; Events/);
+assert.match(page, /id="timers" role="tabpanel"/);
+assert.match(page, /id="events" role="tabpanel"/);
+assert.match(page, /data-rift-countdown/);
 assert.match(page, /https:\/\/exalted-aion2\.vercel\.app\/events/);
 const data = validateSchedule(JSON.parse(manifest));
 assert.deepEqual(data, JSON.parse(await readFile(new URL('../events.json', import.meta.url), 'utf8')), 'Deployed schedule must match reviewed local data');
-for (const path of ['/events.js', '/event-schedule.js', '/events.css']) {
+for (const path of ['/events.js', '/event-schedule.js', '/events.css', '/timers.js', '/timer-schedule.js', '/timers.css']) {
   assert.equal(normalize(await get(path)), normalize(await readFile(new URL(`..${path}`, import.meta.url), 'utf8')), `${path} must match the reviewed implementation`);
 }
 console.log(JSON.stringify({ origin, verified: true, events: data.events.length, sources_checked: data.verified_at }));
