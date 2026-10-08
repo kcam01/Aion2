@@ -30,7 +30,19 @@
       "serverName": "Azphel",
       "region": "nae",
       "profileId": "Zsn8h9AG5LlhlxxIRVIxDpBtorwRt18vM-4Ni4Osdmo=",
-      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952923525"
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952923525",
+      "alts": [
+        {
+          "slug": "char-nae-2106-bfd119195c0afe976728",
+          "name": "XiePaladin",
+          "className": "Templar",
+          "serverId": "2106",
+          "serverName": "Azphel",
+          "region": "nae",
+          "profileId": "Zsn8h9AG5LlhlxxIRVIxDt70KYnZYbu4n2PoYzxXedI=",
+          "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952961378"
+        }
+      ]
     },
     {
       "slug": "char-nae-2106-56c7ce677a0cb5fa8528",
