@@ -66,5 +66,6 @@ h1{font:normal clamp(74px,8vw,116px)/1 var(--serif);letter-spacing:-.055em;margi
 /* Keep every section reachable as the guild navigation grows. */
 .site-header nav a{white-space:nowrap}.site-header nav a[aria-current=page]{color:var(--gold)}
 @media(max-width:1300px){.site-header .region{display:none}}
+@media(min-width:951px) and (max-width:1450px){.site-header .region{display:none}.site-header nav{gap:26px}}
 @media(max-width:950px){.site-header{flex-wrap:wrap;padding:17px 0;gap:8px 16px}.site-header nav{width:100%;justify-content:space-between;gap:16px}}
 @media(max-width:760px){.site-header{flex-wrap:wrap;padding:17px 0;gap:8px 16px}.site-header nav{width:100%;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:0 22px}.site-header nav a:first-child{display:block}.site-header nav a{padding:10px 0;min-height:38px;white-space:nowrap}.site-header nav a span{display:none}}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08T22:04:17.931Z",
+  "creators": [
+    {
+      "id": "creator-07419b33-e5ec-4a2d-8187-bc6908ed204b",
+      "displayName": "FubukiShinko",
+      "character": {
+        "slug": "char-nae-2106-cf9984241c8fee72423e",
+        "name": "Fubuki",
+        "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952949274",
+        "alts": []
+      },
+      "accounts": [
+        {
+          "platform": "twitch",
+          "handle": "fubukishinko",
+          "url": "https://www.twitch.tv/fubukishinko"
+        }
+      ]
+    }
+  ]
+}

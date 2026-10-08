@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101e19">
+  <meta name="description" content="Meet the content creators of Exalted. Watch live streams and discover the channels and socials shared by our AION 2 guild.">
+  <meta property="og:site_name" content="Exalted">
+  <meta property="og:title" content="Content Creators · Exalted">
+  <meta property="og:description" content="From Atreia, on air. Streams, stories and the people behind them.">
+  <meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png">
+  <title>Content Creators · Exalted</title>
+  <link rel="canonical" href="https://exalted-aion2.vercel.app/creators">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png">
+  <link rel="stylesheet" href="/guild.css">
+  <link rel="stylesheet" href="/background.css">
+  <link rel="stylesheet" href="/creators.css">
+</head>
+<body class="aion-world">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
+      <nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/#members">Our members</a><a href="/events">Timers &amp; Events</a><a href="/builds">Builds &amp; Guides</a><a href="/creators" aria-current="page">Creators</a><a href="/#rules">Guild rules</a></nav>
+      <span class="region">NA EAST <span aria-hidden="true">/</span> ASMODIANS <span aria-hidden="true">/</span> AZPHEL</span>
+    </header>
+    <main id="main">
+      <section class="creators-hero" aria-labelledby="creators-title">
+        <div><p class="eyebrow">THE PEOPLE BEHIND THE PLAY</p><h1 id="creators-title">Content Creators<span>.</span></h1><p class="creators-lede">From Atreia, on air.<br>Streams, stories, and familiar faces from Exalted.</p></div>
+        <a class="share-creator" href="https://discord.com/channels/1556392756836966481/1557808999049592952"><span class="eyebrow">YOUR NEXT AUDIENCE IS HERE</span><strong>Share your channel <span aria-hidden="true">↗</span></strong><span>Post in #content-creators on Discord</span></a>
+      </section>
+      <section class="live-section" aria-labelledby="live-title">
+        <div class="creators-section-heading"><div><p class="eyebrow"><span class="on-air-dot" aria-hidden="true"></span> GUILD BROADCASTS</p><h2 id="live-title">Live now</h2></div><div class="live-check"><p id="live-summary" role="status">Checking the airwaves…</p><button id="refresh-streams" type="button">Refresh <span aria-hidden="true">↻</span></button></div></div>
+        <div id="live-stage" class="live-stage" hidden>
+          <div class="live-feature"><div id="stream-player" class="stream-player"></div><div class="stream-caption"><div><span id="stream-platform" class="eyebrow"></span><h3 id="stream-title"></h3><p id="stream-byline"></p></div><a id="stream-open" target="_blank" rel="noopener noreferrer">Open stream ↗</a></div><p class="playback-note">Starts muted. Use the player controls for sound or playback. On smaller screens, open the stream to watch.</p></div>
+          <aside class="live-lineup"><p class="eyebrow">ON AIR</p><div id="live-list" aria-label="Choose a live stream"></div></aside>
+        </div>
+        <div id="live-empty" class="live-empty"><img src="/assets/exalted-crest-192.png" alt="" width="72" height="72"><div><h3 id="live-empty-title">Tuning in…</h3><p id="live-empty-copy">Finding the guild’s live streams.</p></div><a href="#directory">Meet the creators <span aria-hidden="true">↓</span></a></div>
+      </section>
+      <section id="directory" class="creator-directory" aria-labelledby="directory-title">
+        <div class="creators-section-heading"><div><p class="eyebrow">OUR CORNER OF THE INTERNET</p><h2 id="directory-title">Meet the creators</h2></div><label class="creator-search"><span>FIND A CREATOR</span><input id="creator-search" type="search" placeholder="Name, character or platform…" autocomplete="off"></label></div>
+        <p id="creator-count" role="status" aria-live="polite">Loading creators…</p>
+        <div id="creator-grid" class="creator-grid"></div>
+        <div id="directory-empty" class="directory-empty" hidden><h3>No creators found</h3><p>Try another name, character or platform.</p><button id="clear-search" type="button">Clear search</button></div>
+        <div id="directory-error" class="directory-empty" hidden><h3>The directory couldn’t load</h3><p>Try again, or visit #content-creators in Discord.</p><button id="retry-directory" type="button">Try again</button></div>
+        <div class="directory-note"><p>Channels shared in #content-creators, grouped by Discord member.<br>Approved characters appear alongside their guildmate.</p><p id="directory-updated"></p></div>
+      </section>
+      <noscript><p>Enable JavaScript to see live streams and the directory, or <a href="https://discord.com/channels/1556392756836966481/1557808999049592952">visit #content-creators on Discord ↗</a>.</p></noscript>
+    </main>
+    <footer class="site-footer"><span>EXALTED <span class="footer-divider">/</span> AION 2</span><p>A community guild site. AION 2 belongs to NC.</p><a href="/">Back to the guild ↑</a></footer>
+  </div>
+  <script type="module" src="/creators.js"></script>
+</body>
+</html>

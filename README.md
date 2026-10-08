@@ -6,6 +6,14 @@ The joining instructions show character-creation availability for NA East / Asmo
 
 Run the website regression suite with `node --test tests/*.test.mjs`.
 
+The `/creators` page groups streams and social accounts shared in Discord
+`#content-creators` by member and approved linked character. A 15-minute Codex
+heartbeat scans additions, edits and removals; repeated links are deduplicated.
+The live section checks Twitch/YouTube independently every minute while visible
+and starts one muted stream on supported desktop browsers. Narrow Twitch layouts
+offer a direct watch button. Failed/stale provider checks are shown as unavailable.
+See `docs/creators-maintenance.md` for scanning, publication and provider limits.
+
 The home page lists characters linked in Discord and approved by an officer. Member pages include:
 
 - `/member?name=char-nae-2106-ad98f4dc135a131f566a` — Sarcodine, Assassin on Azphel (`2106`). The older `/member?name=sarcodine` link is an alias for this approved character.
