@@ -153,6 +153,26 @@
       "region": "nae",
       "profileId": "Zsn8h9AG5LlhlxxIRVIxDlJKQHsmWuCrHA-2ps-3c_c=",
       "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952981051"
+    },
+    {
+      "slug": "char-nae-2106-811494bb7f2f11986959",
+      "name": "Desimas",
+      "className": "Gladiator",
+      "serverId": "2106",
+      "serverName": "Azphel",
+      "region": "nae",
+      "profileId": "Zsn8h9AG5LlhlxxIRVIxDsAT_wHenNqnZrMQtc1ySPw=",
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952967654"
+    },
+    {
+      "slug": "char-nae-2106-17835b165f4f49dd5c4f",
+      "name": "Firecurser",
+      "className": "Gladiator",
+      "serverId": "2106",
+      "serverName": "Azphel",
+      "region": "nae",
+      "profileId": "Zsn8h9AG5LlhlxxIRVIxDg9g5CyUUWDFj0q1l3NARhs=",
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952956562"
     }
   ]
 }
