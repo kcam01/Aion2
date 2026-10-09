@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#101e19">
-  <meta name="description" content="Plan your time in Atreia with Exalted’s AION 2 rift countdowns, activity timers, daily and weekly resets, events and Twitch Drops.">
+  <meta name="description" content="AION 2 Global world boss timers, Immortal Gartua respawn tracking, rift countdowns, daily and weekly resets, events and Twitch Drops for Exalted.">
   <meta property="og:site_name" content="Exalted">
   <meta property="og:title" content="Timers &amp; Events · Exalted">
   <meta property="og:description" content="Your next adventure, on time. Rift countdowns, game timers, events and Twitch Drops for the guild.">
@@ -43,6 +43,7 @@
           <div class="timer-region"><span class="timer-dot" aria-hidden="true"></span><strong>North America</strong><span>Global schedule</span></div>
           <label class="timezone-control" for="timer-timezone">Show times in <select id="timer-timezone"><option value="America/Chicago">Central · Chicago</option><option value="local">My local timezone</option><option value="America/New_York">Eastern · New York</option><option value="America/Los_Angeles">Pacific · Los Angeles</option><option value="UTC">UTC</option><option value="Asia/Seoul">Server clock · GMT+9</option></select></label>
         </div>
+        <p class="boss-jump"><a href="#world-bosses">Global world bosses ↓</a></p>
         <p class="timer-source-note"><span>COMMUNITY SCHEDULE</span> Estimates from <a href="https://aion2hub.com/tools/event-timer">Aion2Hub ↗</a>. Confirm availability in game.</p>
         <p class="timer-loading" data-timer-loading>Loading game timers…</p>
         <div class="timer-dashboard" data-timer-dashboard hidden>
@@ -59,6 +60,24 @@
           </aside>
           <section class="upcoming-rifts" aria-labelledby="upcoming-rifts-title"><div class="timer-section-label"><h2 id="upcoming-rifts-title">On the horizon</h2><span>Next 6 rifts</span></div><ol data-upcoming-rifts></ol></section>
         </div>
+        <section id="world-bosses" class="field-section world-boss-section" aria-labelledby="world-boss-title" hidden>
+          <div class="field-heading"><div><p class="eyebrow">RALLY FOR THE HUNT</p><h2 id="world-boss-title">Global world bosses</h2></div><span class="timer-tag">North America · Global</span></div>
+          <p class="field-note">Estimated Abyss spawn schedules in your selected timezone. Gartua’s respawn starts from a recorded kill. Confirm each boss on the in-game map.</p>
+          <div class="field-grid" data-world-boss-grid>
+            <article class="field-timer-card gartua-card" data-gartua>
+              <div class="field-card-meta"><span class="field-category">Altgard · Azphel</span><span class="field-status" data-gartua-status>Needs kill time</span></div>
+              <h3>Immortal Gartua</h3>
+              <p class="field-description">Isle of Immortality · Estimated 12 hours after its last kill.</p>
+              <p class="countdown-label" data-gartua-label>RECORD A KILL TO START</p><p class="field-countdown" data-gartua-countdown role="timer" aria-label="Immortal Gartua estimated respawn countdown">—</p>
+              <time class="field-next" data-gartua-next hidden></time><p class="boss-last-kill" data-gartua-last hidden></p>
+              <div class="boss-actions"><button type="button" class="boss-primary" data-gartua-killed>Killed just now</button><button type="button" data-gartua-clear disabled>Clear</button></div>
+              <form class="boss-kill-form"><label for="gartua-kill-time">Or enter the last kill <span>Device time · <span data-device-zone>local</span></span></label><div class="boss-kill-input"><input type="datetime-local" id="gartua-kill-time" required><button type="submit">Set time</button></div></form>
+              <p class="boss-feedback" data-gartua-feedback role="status"></p>
+              <p class="field-cadence" data-gartua-storage>Saved on this device for Azphel. Not shared with the guild.</p>
+            </article>
+          </div>
+          <p class="boss-sources">Community estimates · checked October 9, 2026. <a href="https://aion2hub.com/tools/world-bosses">Abyss schedules ↗</a> <a href="https://aion2guidance.com/en/bosses/">Gartua respawn reference ↗</a><br>Abyss times use the source’s September 19 Global client and GMT+9 clock. Gartua’s reported 12-hour interval is unverified on Azphel; an elapsed timer does not confirm a spawn.</p>
+        </section>
         <section class="field-section" aria-labelledby="field-title" data-field-section hidden>
           <div class="field-heading"><div><p class="eyebrow">FIND YOUR NEXT CHALLENGE</p><h2 id="field-title">Around Atreia</h2></div><div class="event-filters timer-filters" role="group" aria-label="Filter game timers"><button type="button" data-timer-kind="all" aria-pressed="true">All timers</button><button type="button" data-timer-kind="pvp" aria-pressed="false">PvP</button><button type="button" data-timer-kind="field" aria-pressed="false">Field events</button><button type="button" data-timer-kind="activities" aria-pressed="false">Activities</button></div></div>
           <p class="field-note">Recurring activity windows. Simultaneous listings may be alternatives in a rotation; check the in-game event notice.</p>

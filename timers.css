@@ -1,4 +1,15 @@
 /* Guild timer dashboard. Existing generated Atreia artwork remains the backdrop. */
+.boss-jump{margin:0 0 17px;font-size:12px}.boss-jump a,.boss-sources a{color:var(--gold);text-underline-offset:3px}
+.world-boss-section{scroll-margin-top:24px}.world-boss-section[hidden]{display:none}
+.boss-schedule-card .field-cadence{margin-top:auto}.boss-schedule-card .field-next{margin-bottom:18px}
+.gartua-card{border-color:#c7b38366}.gartua-card .field-description{flex:0;min-height:0}.gartua-card .field-countdown{font-size:28px}
+.boss-last-kill{font-size:10px;color:var(--muted);margin:8px 0 0}.boss-actions{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 12px}
+.boss-actions button,.boss-kill-input button{min-height:44px;padding:10px 13px;border:1px solid var(--line);background:#0c1b16;color:var(--ink);font:11px Arial,sans-serif;cursor:pointer}
+.boss-actions .boss-primary{border-color:#c7b38380;color:var(--gold);background:#c7b38312}.boss-actions button:disabled{opacity:.4;cursor:default}.boss-actions button:hover:enabled,.boss-kill-input button:hover{border-color:var(--gold)}
+.boss-kill-form label{display:block;font-size:11px;color:var(--ink)}.boss-kill-form label>span{display:block;font-size:9px;color:var(--muted);margin:5px 0 9px}
+.boss-kill-input{display:flex;gap:7px;min-width:0}.boss-kill-input input{min-width:0;width:100%;flex:1;min-height:44px;padding:8px;border:1px solid var(--line);background:#0c1b16;color:var(--ink);font:11px Arial,sans-serif;color-scheme:dark}.boss-kill-input button{flex:none;padding:10px}
+.boss-feedback{font-size:11px;line-height:1.6;color:var(--gold);margin:10px 0 0}.boss-feedback:empty{display:none}.boss-sources{font-size:11px;line-height:1.9;color:var(--muted);margin:20px 0 0;max-width:960px}.boss-sources a{display:inline-block;margin-left:8px}
+.boss-actions button:focus-visible,.boss-kill-input button:focus-visible,.boss-kill-input input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .timer-guild-mark .animated-crest{width:64px;height:64px}
 @media(max-width:1050px){.timer-guild-mark .animated-crest{width:48px;height:48px}}
 .timers-hero{padding:52px 0 36px;grid-template-columns:1fr auto;gap:40px}

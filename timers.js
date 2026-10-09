@@ -1,4 +1,5 @@
 import { TIMERS, timerState, upcomingOccurrences, occurrencesOnDate, formatCountdown, formatTimerMoment, resolveTimeZone } from './timer-schedule.js';
+import { mountWorldBossTimers } from './world-boss-timers.js';
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 const panels = [...document.querySelectorAll('[role="tabpanel"]')];
@@ -97,6 +98,7 @@ const riftNext = document.querySelector('[data-rift-next]');
 const resetCards = [...document.querySelectorAll('[data-reset]')].map(card => ({
   timer: TIMERS.find(timer => timer.id === card.dataset.reset), countdown: card.querySelector('[data-countdown]'), time: card.querySelector('[data-next]'),
 }));
+const updateWorldBosses = mountWorldBossTimers(document.getElementById('world-bosses'));
 
 function renderRiftSchedule(now, next) {
   const slots = occurrencesOnDate(rift, now, zone);
@@ -124,6 +126,7 @@ function renderRiftSchedule(now, next) {
 function tick() {
   if (timerPanel.hidden || document.hidden) return;
   const now = Date.now();
+  updateWorldBosses(now, zone);
   const next = timerState(rift, now).next;
   updateText(riftCountdown, formatCountdown(next - now));
   updateTime(riftNext, next);
