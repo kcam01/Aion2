@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080f10">
+  <meta name="description" content="Browse Exalted’s AION 2 guild roster. Search members and sort by class, level, item level, combat power or server.">
+  <meta property="og:site_name" content="Exalted">
+  <meta property="og:title" content="Guild Members · Exalted">
+  <meta property="og:description" content="The Exalted roster: characters, classes and public profile stats, ready to sort and explore.">
+  <meta property="og:image" content="https://exaltedguild.gg/assets/exalted-crest-512.png">
+  <title>Guild Members · Exalted</title>
+  <link rel="canonical" href="https://exaltedguild.gg/members">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png">
+  <link rel="stylesheet" href="/guild.css">
+  <link rel="stylesheet" href="/background.css">
+  <link rel="stylesheet" href="/member-directory.css">
+</head>
+<body class="aion-world roster-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
+      <nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/members" aria-current="page">Our members</a><a href="/events">Timers &amp; Events</a><a href="/builds">Builds &amp; Guides</a><a href="/creators">Creators</a><a href="/#rules">Guild rules</a></nav>
+      <span class="region">NA EAST <span aria-hidden="true">/</span> ASMODIANS <span aria-hidden="true">/</span> AZPHEL</span>
+    </header>
+    <main id="main">
+      <header class="roster-heading">
+        <div><p class="eyebrow">EXALTED / GUILD ROSTER</p><h1><span aria-hidden="true">✦</span> Members</h1><p>Find your guildmates. Compare their progress. Plan your next party.</p></div>
+        <div class="roster-total"><strong id="roster-total">—</strong><span>approved members</span></div>
+      </header>
+      <section class="roster-directory" aria-label="Guild member directory">
+        <div class="roster-toolbar">
+          <label class="roster-search" for="roster-search">Find a character<input id="roster-search" type="search" autocomplete="off" placeholder="Name, class or title…"></label>
+          <label for="roster-class">Class<select id="roster-class"><option value="all">All classes</option></select></label>
+          <label class="roster-alts"><input id="roster-alts" type="checkbox"> Include linked alts <span id="roster-alt-count"></span></label>
+          <button id="roster-refresh" type="button">Refresh stats <span aria-hidden="true">↻</span></button>
+        </div>
+        <div class="roster-results"><p id="roster-count" role="status">Loading the guild roster…</p><label class="roster-sort-mobile" for="roster-sort">Sort by<select id="roster-sort"><option value="level:desc">Level · high to low</option><option value="level:asc">Level · low to high</option><option value="name:asc">Name · A–Z</option><option value="name:desc">Name · Z–A</option><option value="className:asc">Class · A–Z</option><option value="className:desc">Class · Z–A</option><option value="itemLevel:desc">Item level · high to low</option><option value="itemLevel:asc">Item level · low to high</option><option value="combatPower:desc">Combat power · high to low</option><option value="combatPower:asc">Combat power · low to high</option><option value="serverName:asc">Server · A–Z</option><option value="serverName:desc">Server · Z–A</option></select></label><p class="roster-sort-hint">Select a column to sort <span aria-hidden="true">↕</span></p></div>
+        <p id="roster-error" class="roster-error" role="status" hidden></p>
+        <div class="roster-table-scroll" role="region" aria-label="Scrollable guild roster" tabindex="0">
+          <table class="roster-table">
+            <caption class="roster-sr-only">Approved Exalted characters. Select a column heading to change the sort order. Character names open their profile.</caption>
+            <thead><tr>
+              <th scope="col" data-sort-column="name" aria-sort="none"><button type="button" data-sort="name">Character name <span aria-hidden="true">↕</span></button></th>
+              <th scope="col" data-sort-column="className" aria-sort="none"><button type="button" data-sort="className">Class <span aria-hidden="true">↕</span></button></th>
+              <th scope="col" data-sort-column="level" aria-sort="descending" class="roster-number"><button type="button" data-sort="level">Level <span aria-hidden="true">▼</span></button></th>
+              <th scope="col" data-sort-column="itemLevel" aria-sort="none" class="roster-number"><button type="button" data-sort="itemLevel">Item level <span aria-hidden="true">↕</span></button></th>
+              <th scope="col" data-sort-column="combatPower" aria-sort="none" class="roster-number"><button type="button" data-sort="combatPower">Combat power <span aria-hidden="true">↕</span></button></th>
+              <th scope="col" data-sort-column="serverName" aria-sort="none"><button type="button" data-sort="serverName">Server <span aria-hidden="true">↕</span></button></th>
+              <th scope="col">Profile data</th>
+            </tr></thead>
+            <tbody id="roster-rows"></tbody>
+          </table>
+        </div>
+        <div id="roster-empty" class="roster-empty" hidden><h2>No matching characters</h2><p>Try another name or class.</p><button id="roster-clear" type="button">Clear filters</button></div>
+        <div class="roster-notes"><p id="roster-freshness" role="status">Stats come from public PLAYNC character profiles.</p><p>Public profiles can be cached for up to five minutes. Guild rank, member comments, current location and online status are not available from these profiles.</p><p>Only approved Discord-linked mains and their linked alts appear here. <a href="https://discord.gg/cxMKMYm7Xq">Join or link your character in Discord ↗</a></p></div>
+        <noscript><p>Enable JavaScript to load and sort the guild roster. <a href="/#members">View the guild homepage</a>.</p></noscript>
+      </section>
+    </main>
+    <footer class="site-footer"><span>EXALTED <span class="footer-divider">/</span> AION 2</span><p>A community guild site. AION 2 belongs to NC.</p><a href="/">Back to the guild ↑</a></footer>
+  </div>
+  <script type="module" src="/member-directory.js"></script>
+</body>
+</html>
