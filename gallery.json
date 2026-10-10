@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10T09:02:22.425065+00:00",
+  "updated_at": "2026-10-10T18:18:21.807862+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "4073d39ddc0919cca93575ecb40d1983ef6462869ff03bf8cfccf531798683e2",
+      "title": "Character Selection Screen",
+      "description": "A character selection menu in a grand, ornate hall showing four playable characters with different hair colors and outfits.",
+      "author": "korra",
+      "posted_at": "2026-10-10T18:03:28.020000+00:00",
+      "image": "/assets/gallery/4073d39ddc0919cca93575ecb40d1983ef6462869ff03bf8cfccf531798683e2.webp",
+      "thumbnail": "/assets/gallery/4073d39ddc0919cca93575ecb40d1983ef6462869ff03bf8cfccf531798683e2-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1558540485478318100"
+    },
     {
       "id": "57caf84e5e64928385651144908d4487eee033675db82874a16d905f3f73c2ce",
       "title": "Male Warrior Character Portrait",
