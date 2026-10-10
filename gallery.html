@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101e19"><title>Character Gallery · Exalted</title>
+<meta name="description" content="A closer look at the AION 2 characters of Exalted, shared by our community in Discord.">
+<link rel="canonical" href="https://exaltedguild.gg/gallery">
+<meta property="og:site_name" content="Exalted"><meta property="og:title" content="Character Gallery · Exalted">
+<meta property="og:description" content="The faces, armor, and adventures of our AION 2 community.">
+<meta property="og:url" content="https://exaltedguild.gg/gallery"><meta property="og:type" content="website">
+<meta property="og:image" content="https://exaltedguild.gg/assets/exalted-crest-512.png">
+<link rel="icon" type="image/png" href="/assets/exalted-crest-64.png">
+<link rel="stylesheet" href="/guild.css"><link rel="stylesheet" href="/background.css"><link rel="stylesheet" href="/gallery.css">
+<script type="module" src="/gallery.js"></script>
+</head>
+<body class="aion-world gallery-page">
+<a class="skip-link" href="#main">Skip to gallery</a>
+<div class="page-shell">
+<header class="site-header">
+<a class="brand" href="/" aria-label="Exalted home"><img class="brand-crest" src="/assets/exalted-crest-192.png" alt="" width="56" height="56"><span>EXALTED<small>AION 2 GUILD</small></span></a>
+<nav aria-label="Main navigation"><a href="/#about">The guild</a><a href="/members">Our members</a><a href="/events">Timers &amp; Events</a><a href="/builds">Builds &amp; Guides</a><a href="/creators">Creators</a><a href="/gallery" aria-current="page">Gallery</a><a href="/#rules">Guild rules</a></nav>
+</header>
+<main id="main">
+<section class="gallery-collection" aria-label="Character collection">
+<div id="gallery-state" class="gallery-state" role="status" aria-live="polite"><p id="gallery-state-title">Opening the collection…</p><p id="gallery-state-detail">Gathering the latest character images.</p><button id="gallery-retry" class="gallery-action" type="button" hidden>Try again</button></div>
+<div id="gallery-grid" class="gallery-grid" aria-busy="true"></div>
+<noscript><p class="gallery-state">Enable JavaScript to browse the gallery, or visit #general in Discord.</p></noscript>
+</section>
+</main>
+
+</div>
+<dialog id="gallery-viewer" class="gallery-viewer" aria-label="Image viewer">
+<div class="viewer-panel">
+<div class="viewer-top"><button id="viewer-close" class="viewer-control" type="button" autofocus aria-label="Close image viewer"><span aria-hidden="true">×</span></button></div>
+<div class="viewer-stage"><p id="viewer-status" role="status">Loading image…</p><img id="viewer-image" alt="" hidden><button id="viewer-prev" class="viewer-arrow viewer-prev" type="button" aria-label="Previous image">←</button><button id="viewer-next" class="viewer-arrow viewer-next" type="button" aria-label="Next image">→</button></div>
+</div></dialog>
+</body></html>

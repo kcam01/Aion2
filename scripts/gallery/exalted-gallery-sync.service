@@ -1,0 +1,26 @@
+[Unit]
+Description=Import Exalted character gallery from Discord general
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=kcam
+Group=kcam
+WorkingDirectory=/home/kcam/bots/exalted
+EnvironmentFile=/home/kcam/.config/exalted-bot.env
+EnvironmentFile=/home/kcam/.config/exalted-gallery.env
+Environment="GIT_SSH_COMMAND=/usr/bin/ssh -i /home/kcam/.ssh/exalted-roster_ed25519 -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/home/kcam/.ssh/exalted-roster_known_hosts -o ConnectTimeout=10"
+ExecStart=/home/kcam/bots/exalted/.venv/bin/python -B /home/kcam/bots/exalted/gallery/gallery_sync.py --max-analysis 40 --publish
+TimeoutStartSec=900
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/kcam/bots/exalted/data
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6

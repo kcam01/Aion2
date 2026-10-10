@@ -64,3 +64,7 @@ Run the endpoint regression tests with Node.js 24:
 ```sh
 node --test tests/aion2.test.mjs
 ```
+
+## Character gallery
+
+The `/gallery` page displays AION 2 character images shared in Discord #general, with an images-only layout and full-size viewing. The existing Discord bot identity scans the channel every 15 minutes, uses only a free OpenRouter vision model to identify character images, deduplicates attachments, and publishes optimized WebP assets. See `docs/gallery-maintenance.md` for the importer, private credentials, safe publishing and retry behavior.

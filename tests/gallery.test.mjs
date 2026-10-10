@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateManifest,filterImages,CHANNEL_URL} from '../gallery-data.js';
+const id='a'.repeat(64);
+const sample=()=>({schema_version:1,updated_at:'2026-10-10T00:00:00Z',source:{name:'general',url:CHANNEL_URL},images:[{id,title:'Winged character',description:'A character in gold armor',author:'Guildmate',posted_at:'2026-10-09T12:00:00Z',image:'/assets/gallery/'+id+'.webp',thumbnail:'/assets/gallery/'+id+'-thumb.webp',width:1920,height:1080,source_url:CHANNEL_URL+'/123'}]});
+test('gallery validates local assets and matching source scope',()=>{assert.equal(validateManifest(sample()).images.length,1);for(const field of ['image','thumbnail','source_url']){const data=sample();data.images[0][field]='https://evil.test/x';assert.throws(()=>validateManifest(data));}});
+test('gallery rejects duplicates and invalid metadata',()=>{const data=sample();data.images.push({...data.images[0]});assert.throws(()=>validateManifest(data));for(const [field,value] of [['width',0],['height',NaN],['posted_at','bad'],['author','']]){const bad=sample();bad.images[0][field]=value;assert.throws(()=>validateManifest(bad));}});
+test('gallery search combines terms and sort does not mutate source',()=>{const images=sample().images;images.push({...images[0],id:'b'.repeat(64),author:'Second',posted_at:'2026-10-10T12:00:00Z'});assert.equal(filterImages(images,'guild gold').length,1);assert.equal(filterImages(images,'nomatch').length,0);assert.equal(filterImages(images,'','newest')[0].author,'Second');assert.equal(filterImages(images,'','oldest')[0].author,'Guildmate');assert.equal(images[0].author,'Guildmate');});
