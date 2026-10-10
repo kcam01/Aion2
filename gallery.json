@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10T08:40:13.383029+00:00",
+  "updated_at": "2026-10-10T09:02:22.425065+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
@@ -293,6 +293,18 @@
       "width": 1920,
       "height": 1080,
       "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1556966245331378278"
+    },
+    {
+      "id": "3ae3c6401ec13e125556c4046fff73904c467c6b5c78ef05adbe4cf4f7c18c78",
+      "title": "Male Elf Character in Dark Attire",
+      "description": "A screenshot of a male elf character with pointed ears, wearing black and gold robes, holding a large magical book in a dark, stone-walled environment with game UI visible.",
+      "author": "citylordxie",
+      "posted_at": "2026-10-06T03:15:38.863000+00:00",
+      "image": "/assets/gallery/3ae3c6401ec13e125556c4046fff73904c467c6b5c78ef05adbe4cf4f7c18c78.webp",
+      "thumbnail": "/assets/gallery/3ae3c6401ec13e125556c4046fff73904c467c6b5c78ef05adbe4cf4f7c18c78-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1556867506977771551"
     }
   ]
 }
