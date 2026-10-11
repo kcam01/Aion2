@@ -2683,3 +2683,18 @@ Save a screenshot to `D:\website\aion\output\item-links\`.
 - Confirm the local bot copy matches them.
 - Append a short "Rollout" note to this plan with dates, commit SHAs, test counts (bot and website), screenshots taken, and anything not exercised.
 - Commit the plan update on `main` through a follow-up PR, or include it in the Task 16 PR if that PR is still open.
+
+---
+
+## Rollout (2026-10-11)
+
+- **Tests:** bot 312 (275 existing + 37 new), locally and in the host's staged run for both phases. Website 95 (86 + 9).
+- **Live dry run** (local, nothing published): 9,252 of 9,260 items, 364 list requests, 1,000 details with 0 failures. All 100 shards passed `item-data.js` (largest 95 KB). It caught one bug before release: empty list results carry `facetDistribution: {}`.
+- **Browser:** desktop, 375px and 320px against the dry-run snapshot. Weapon, details-less potion, unknown ID, invalid ID, Retry, broken-icon fallback, keyboard focus, and the gear popup → item page.
+- **Sync phase:** 18:54 UTC. Backup: `backups/pre-item-links-sync-20261011T185452Z`. The timer is enabled; the first scheduled run is 2026-10-12 10:00 UTC (+ up to 5 min).
+- **First full build:** 18:56 UTC. 9,252 items, 9,252 details attempted, 2 failed (published as listing-only records, retried by rotation). `unknown_labels: ["grade:51"]`. Snapshot commit `7803345` (100 `items/*.json`, nothing else).
+- **Website:** PR kcam01/Aion2#1 merged by kcam01 at 19:24 UTC (`fb817a6`), before the snapshot landed. Production was rechecked after `7803345`: `/item?id=110120003` on desktop and 375px, and the KcamYazimoto gear popup → `/item?id=110730048`.
+- **Bot phase:** 21:41 UTC. Backup: `backups/pre-item-links-bot-20261011T214137Z`. `exalted.verify` passed with the link count unchanged; `item` is registered; health is `ready`.
+- **Discord:** `/item` → "ludra" → "Ludra's Blade of Extinction · Greatsword · Unique", posted in #officer-chat. The card matched the spec (Unique colour, icon, levels, 4 stats, footer date, View item button). The title links to `/item?id=110120003`.
+- **Receipts and screenshots:** `output/item-links/`. The local bot copy matches the deployed hashes.
+- **Not exercised in production yet:** the first timer run and rotating refresh; a push retry after a concurrent website commit (unit tested); the "Several items are named…" and "not ready" replies (unit tested); the PLAYNC name for grade 51.
