@@ -68,3 +68,7 @@ node --test tests/aion2.test.mjs
 ## Character gallery
 
 The `/gallery` page displays AION 2 character images shared in Discord #general, with an images-only layout and full-size viewing. The existing Discord bot identity scans the channel every 15 minutes, uses only a free OpenRouter vision model to identify character images, deduplicates attachments, and publishes optimized WebP assets. See `docs/gallery-maintenance.md` for the importer, private credentials, safe publishing and retry behavior.
+
+## Item pages
+
+`/item?id=<id>` shows an AION 2 item's grade, type, levels, base stats, random stat ranges and sell price, with a link to questlog.gg for full details. Discord's `/item` command and the character-sheet gear popup link here. The data lives in `items/00.json` … `items/99.json`. A daily job on the bot host writes them and pushes only when something changed. Grade names follow PLAYNC character sheets. See `docs/items-maintenance.md`.
