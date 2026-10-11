@@ -101,7 +101,7 @@ New module `exalted/items_discord.py`, registered on the guild the same way as `
   - Otherwise, an exact case-insensitive name match used by exactly one item is used.
   - If several items share the name: private reply "Several items are named X — pick one from the suggestions."
   - If nothing matches: private reply "No item called X."
-- **Public reply:** an embed linking to `https://exalted-aion2.vercel.app/item?id=<id>`.
+- **Public reply:** an embed linking to `https://exaltedguild.gg/item?id=<id>`.
   - Title: the item name, linked to the page. Thumbnail: the icon. Colour: the grade.
   - One line: grade, type, item level and required level.
   - Up to four base stats.
