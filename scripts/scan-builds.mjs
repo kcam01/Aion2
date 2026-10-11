@@ -11,7 +11,7 @@ import { readChannelHistory, collectGuideLinks } from './builds-scan-core.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const privateDir = join(root, 'output', 'builds-monitor');
 const guildId = '1556392756836966481', channelId = '1556395669348942025';
-const origin = 'https://exalted-aion2.vercel.app';
+const origin = 'https://exaltedguild.gg';
 const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 let token;
 

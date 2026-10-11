@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { validateSchedule } from '../event-schedule.js';
 
-const origin = process.argv[2] || 'https://exalted-aion2.vercel.app';
+const origin = process.argv[2] || 'https://exaltedguild.gg';
 const normalize = value => value.replace(/\r\n/g, '\n');
 async function get(path) {
   const response = await fetch(new URL(path, origin), { cache: 'no-store', signal: AbortSignal.timeout(20000) });

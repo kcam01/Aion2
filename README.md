@@ -1,6 +1,6 @@
 # Exalted · AION 2
 
-The `main` branch deploys automatically to https://exalted-aion2.vercel.app.
+The `main` branch deploys automatically to https://exaltedguild.gg.
 
 The joining instructions show character-creation availability for NA East / Asmodian / Azphel. The panel refreshes every 30 seconds, with a manual refresh control and source observation time. `/api/server-status` is also used by the Discord bot's `/server-status` command; its optional `server` query accepts the 16 NA East server IDs. The source is the third-party gaming.tools tracker. Online and character creation are separate states; only explicit, fresh creation permission is shown as Open. Data older than two minutes, missing fields, source errors and changed formats show unavailable. Successful responses are cached for at most 20 seconds, errors are not cached. The public status endpoint exposes no Discord or bot state.
 

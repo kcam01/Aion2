@@ -1,6 +1,6 @@
 # Builds & Guides maintenance
 
-Public page: https://exalted-aion2.vercel.app/builds
+Public page: https://exaltedguild.gg/builds
 
 The library collects useful AION 2 links shared in Exalted's `#builds-and-guides` (guild `1556392756836966481`, channel `1556395669348942025`). The hourly Codex heartbeat reads this channel and maintains `builds.json`. It does not send Discord messages. No credentials, message bodies, attachments, Discord usernames or author IDs belong in the public manifest.
 

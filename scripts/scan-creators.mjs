@@ -11,7 +11,7 @@ import { groupCreators, validateCreators } from '../creator-directory.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url)), privateDir=join(root,'output','creators-monitor');
 const guildId='1556392756836966481', channelId='1557808999049592952';
-const origin='https://exalted-aion2.vercel.app';
+const origin='https://exaltedguild.gg';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 async function read(path,fallback) { try { return JSON.parse(await readFile(path,'utf8')); } catch(e) { if(e.code==='ENOENT' && fallback!==undefined) return fallback; throw e; } }
 async function save(name,value) { await mkdir(privateDir,{recursive:true}); const path=join(privateDir,name); await writeFile(path+'.tmp',JSON.stringify(value,null,2)+'\n'); await rename(path+'.tmp',path); }

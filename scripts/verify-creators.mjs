@@ -1,7 +1,7 @@
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {validateCreators} from '../creator-directory.js';
-const origin=(process.argv[2]||'https://exalted-aion2.vercel.app').replace(/\/$/,'');
+const origin=(process.argv[2]||'https://exaltedguild.gg').replace(/\/$/,'');
 const hash=data=>createHash('sha256').update(data.toString().replaceAll('\r\n','\n')).digest('hex');
 for(const file of ['creators.html','creators.css','creators.js','creators.json','creator-directory.js','creator-status-data.js','guild.css','index.html','events.html','builds.html']) {
  const response=await fetch(origin+'/'+(file.endsWith('.html')?file.slice(0,-5):file),{cache:'no-store',signal:AbortSignal.timeout(20000)});
