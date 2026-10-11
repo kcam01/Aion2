@@ -1,0 +1,25 @@
+/* /item page. Rarity colours come from the shared gear classes in style.css. */
+#item{--rarity:#bfc1ce;--rarity-border:#3b3e50;--rarity-bg:#171820;padding-bottom:12px}
+.item-status{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.item-status p{margin:0}
+.item-retry{border:1px solid #5e4e2d;border-radius:8px;background:#1b1710;padding:8px 16px;font-weight:600;font-size:12px;min-height:40px}
+.item-retry:hover{background:#2a2316}
+.item-card{border-color:var(--rarity-border);max-width:880px}
+.item-hero{display:flex;align-items:center;gap:20px;margin-bottom:24px;min-width:0}
+.item-art--large{width:78px;height:78px;display:grid;place-items:center;flex:none}
+.item-art--large img{position:absolute;inset:0}
+.item-initial{font:28px/1 var(--serif);color:var(--rarity)}
+.item-identity{min-width:0}
+.item-identity h1{color:var(--rarity);margin:0 0 6px}
+.item-meta{margin:0;color:var(--muted);font-size:13px}
+.item-section h2{font:normal 20px/1.3 var(--serif);margin:0 0 12px}
+.item-section .section-description{margin-bottom:12px}
+.item-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0 24px;margin:0 0 26px}
+.item-list div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0;border-bottom:1px solid var(--line);min-width:0}
+.item-list dt{color:var(--muted);font-size:12px;min-width:0;overflow-wrap:anywhere}
+.item-list dd{margin:0;font:13px Consolas,monospace;text-align:right;white-space:nowrap}
+@media(max-width:480px){
+  .item-hero{align-items:flex-start;gap:14px}
+  .item-art--large{width:58px;height:58px}
+  .item-list{grid-template-columns:1fr}
+}
