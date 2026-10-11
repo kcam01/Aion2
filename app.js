@@ -1,4 +1,5 @@
 import { getMember, characters, getCharacterFamily, officialProfile } from './members.js';
+import { itemPageUrl } from './item-data.js';
 import { renderCharacterFamily } from './character-family.js';
 import { buildSheet, formatNumber as fmt, appendHistory, parseHistory } from './character-sheet.js';
 
@@ -80,7 +81,14 @@ function inspectItem(item) {
     row.append(el('dt', '', label), el('dd', '', (label === 'Enchantment' ? '+' : '') + value));
     stats.append(row);
   }
-  $('item-details').replaceChildren(summary, stats, el('p', 'data-note', 'Equipped item details shared by PLAYNC. Additional item effects are not included in the public character summary.'));
+  const parts = [summary, stats];
+  if (item.id) {
+    const link = el('a', 'text-button item-page-link', 'View item →');
+    link.href = itemPageUrl(item.id);
+    parts.push(link);
+  }
+  parts.push(el('p', 'data-note', 'Equipped item details shared by PLAYNC. Additional item effects are not included in the public character summary.'));
+  $('item-details').replaceChildren(...parts);
   $('item-dialog').showModal();
 }
 const statPaths = {

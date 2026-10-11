@@ -80,3 +80,13 @@ test('browser history records changed complete observations only, keeps twenty, 
   assert.deepEqual(parseHistory('[{"checkedAt":"invalid","level":1}]'), []);
   assert.equal(appendHistory(Array.from({ length: 20 }, () => first[0]), { ...sheet, level: 30 }).length, 20);
 });
+
+test('gear keeps PLAYNC item IDs only when they are plain digits', () => {
+  const sheet = buildSheet({}, { equipment: { equipmentList: [
+    { id: 110730048, name: 'Mace', slotPosName: 'MainHand', grade: 'Unique' },
+    { id: '1.5', name: 'Helm', slotPosName: 'Helmet' },
+    { id: '<img src=x>', name: 'Torso', slotPosName: 'Torso' },
+    { name: 'Cape', slotPosName: 'Cape' },
+  ] } });
+  assert.deepEqual(sheet.equipment.map(x => x.id), ['110730048', '', '', '']);
+});

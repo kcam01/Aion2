@@ -16,7 +16,9 @@ export function safeImage(value) {
 function item(raw, slot = raw.slotPosName) {
   const index = SLOTS.findIndex(([key]) => key === slot);
   const grade = string(raw.grade);
+  const id = String(raw.id ?? '');
   return {
+    id: /^\d{1,12}$/.test(id) ? id : '',
     name: string(raw.name) || 'Unnamed equipment', slot: SLOTS[index]?.[1] || string(slot) || 'Equipment', order: index < 0 ? 99 : index,
     grade, rarity: ['Common', 'Rare', 'Legend', 'Unique', 'Epic', 'Mythic', 'Special'].includes(grade) ? grade.toLowerCase() : 'common',
     icon: safeImage(raw.icon || raw.iconUrl), enchant: number(raw.enchantLevel), exceed: number(raw.exceedLevel), level: number(raw.level),
