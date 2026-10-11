@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Item · Exalted</title>
+  <meta name="description" content="AION 2 item details for the Exalted guild: grade, type, levels, base stats and random stat ranges.">
+  <meta name="theme-color" content="#0c0d14">
+  <meta property="og:site_name" content="Exalted"><meta property="og:title" content="AION 2 Items · Exalted"><meta property="og:type" content="website">
+  <meta property="og:image" content="https://exalted-aion2.vercel.app/assets/exalted-crest-512.png"><meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/exalted-crest-64.png"><link rel="apple-touch-icon" href="/assets/exalted-crest-192.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preload" as="image" href="/assets/atreia-background.webp" media="(min-width: 761px)">
+  <link rel="preload" as="image" href="/assets/atreia-background-mobile.webp" media="(max-width: 760px)">
+  <link rel="stylesheet" href="/background.css">
+  <link rel="stylesheet" href="/item.css">
+</head>
+<body class="aion-world aion-world--profile">
+  <a class="skip-link" href="#item">Skip to item details</a>
+  <noscript><p class="notice">Enable JavaScript to load item details. <a href="/">Return to Exalted</a>.</p></noscript>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="guild-home" href="/"><span aria-hidden="true">←</span><img src="/assets/exalted-crest-64.png" alt="" width="28" height="28"><span>EXALTED <small>Items</small></span></a>
+      <a id="questlog-link" class="official-link" target="_blank" rel="noopener noreferrer" hidden>View on questlog.gg <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="item">
+      <div id="item-status" class="notice item-status" role="status">
+        <p id="item-message">Loading item…</p>
+        <button type="button" id="retry" class="item-retry" hidden>Retry</button>
+      </div>
+      <article id="item-card" class="panel item-card" aria-labelledby="item-name" hidden>
+        <div class="item-hero">
+          <span class="item-art item-art--large"><span id="item-initial" class="item-initial" aria-hidden="true"></span><img id="item-icon" alt="" width="78" height="78" hidden></span>
+          <div class="item-identity">
+            <h1 id="item-name">Item</h1>
+            <p id="item-meta" class="item-meta"></p>
+          </div>
+        </div>
+        <dl id="item-facts" class="item-list" hidden></dl>
+        <section id="base-stats" class="item-section" aria-labelledby="base-stats-title" hidden>
+          <h2 id="base-stats-title">Base stats</h2>
+          <dl id="base-stat-list" class="item-list"></dl>
+        </section>
+        <section id="random-stats" class="item-section" aria-labelledby="random-stats-title" hidden>
+          <h2 id="random-stats-title">Random stats</h2>
+          <p id="random-stats-note" class="section-description"></p>
+          <dl id="random-stat-list" class="item-list"></dl>
+        </section>
+        <p class="data-note">Item data from questlog.gg, refreshed daily. Grade names match PLAYNC character sheets. <a id="full-details" class="text-button" target="_blank" rel="noopener noreferrer">Full details on questlog.gg ↗</a></p>
+      </article>
+    </main>
+    <footer><a href="/">← Exalted</a><p>Item artwork © NCSOFT. Item data from questlog.gg.</p><span>EXALTED · NA EAST</span></footer>
+  </div>
+  <script type="module" src="/item.js"></script>
+</body>
+</html>
