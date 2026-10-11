@@ -11,7 +11,7 @@ Add a Discord `/item <item>` command with autocomplete. It posts the item in the
 
 questlog.gg's public AION 2 database, which the site already uses for `/api/server-status`. No login or token is required.
 
-- `database.getItems` (`https://questlog.gg/aion-2/api/trpc/database.getItems?input={"language":"en","page":N}`) lists 40 items per page, about 232 pages (~9,300 items). Each entry has `id`, `name`, `icon`, `grade`, `mainCategory`, `subCategory`, `createdAt` and `isDisabled`. The page size is fixed.
+- `database.getItems` (`https://questlog.gg/aion-2/api/trpc/database.getItems?input={"language":"en","page":N}`) lists 40 items per page (9,260 items on 2026-10-11). Each entry has `id`, `name`, `icon`, `grade`, `mainCategory`, `subCategory`, `createdAt` and `isDisabled`. The page size is fixed, and **any single query returns at most 1,000 rows**. Filters: `mainCategory`, `subCategory` and `facets: {grade: <int>}`. `facetDistribution.grade` gives per-grade counts for the other filters. Empty results return `facetDistribution: {}`.
 - `database.getItem` (`input={"language":"en","id":"<id>"}`) returns full details: `minLevelRequirement`, `sellPrice`, `equipmentInfo.itemLevel`, `equipmentInfo.soulbindRandomStatCount`, `itemStats.mainStats` and `itemStats.subStats` (each `id`, `minValue`, `maxValue`).
 - Item IDs match PLAYNC's equipment `id` (for example, Spiritforged Mace is `110730048` in both).
 - The icon path's final segment (e.g. `Icon_WP_GS_0108_T06`) exists on PLAYNC's CDN as `https://assets.playnccdn.com/static-aion2-gamedata/resources/<name>.png`. This was verified for weapon, currency box, reward box and enhancement-stone icons.
@@ -24,16 +24,16 @@ These contracts were checked against live responses on 2026-10-11. They are undo
 
 A new job runs daily on the bot host under its own systemd service and timer, `exalted-item-sync.service` and `exalted-item-sync.timer` (`OnCalendar` 10:00 UTC, `Persistent=true`). It is separate from the bot process, like the roster sync. Its source lives in the bot package: `exalted/item_catalog.py` (questlog client, trimming, labels) and `exalted/item_sync.py` (job entry point, SQLite, shards, publishing).
 
-1. **List crawl:** fetch every `database.getItems` page and skip `isDisabled` items.
-2. **Detail fetch:** fetch `database.getItem` for new IDs and for a rotating seventh of the catalog (by `id mod 7` equal to the day number mod 7). Every item is refreshed at least weekly. If one item's details fail, it keeps its last stored details and is retried the next day. The first run fetches every item (about 2½ hours).
+1. **List crawl:** query each category. Where a category has more than 1,000 items, split it by grade, and split any grade still over 1,000 by type. Skip `isDisabled` items. Items with no type inside an oversized bucket cannot be reached (8 of 9,260 on 2026-10-11), so the crawl must reach at least 99% of questlog's reported total. This takes about 400 list requests a day.
+2. **Detail fetch:** fetch `database.getItem` for new IDs and for a rotating seventh of the catalog (by `id mod 7` equal to the day number mod 7). Every item is refreshed at least weekly. If one item's details fail, it keeps its last stored details and is retried the next day. The first run fetches every item (about 3 hours). Fetching stops early, and nothing is published, once more than 20% of detail requests have failed (checked from the 20th attempt).
 3. **Pacing:** about one request per second, an 8-second timeout per request, and a short backoff after an error. Requests send an honest User-Agent naming the Exalted item sync.
 4. **Trim to essentials:** see the record format below. Stat and type labels come from one mapping in `item_catalog.py`. A stat ID without a label is published as its raw ID and listed in the job log. A type ID without a label is published title-cased and also logged. Every stat and type ID present on 2026-10-11 is mapped, and a test enforces this against recorded fixtures.
-5. **Grade names:** a mapping from questlog grade codes to PLAYNC grade names, confirmed against PLAYNC equipment responses (`41` → `Unique`). A code that cannot be confirmed in PLAYNC data falls back to questlog's label and is logged. `rarity` is always one of the gear-card classes (`common`, `rare`, `legend`, `unique`, `epic`, `mythic`, `special`). A grade name outside that list uses `common`.
+5. **Grade names:** a mapping from questlog grade codes to PLAYNC grade names, confirmed against PLAYNC equipment responses: `11` Common, `21` Rare, `31` Legend, `41` Unique, `71` Special. Code `51` is not in PLAYNC data yet and uses questlog's "Mythic". A code that cannot be confirmed in PLAYNC data falls back to questlog's label and is logged. `rarity` is always one of the gear-card classes (`common`, `rare`, `legend`, `unique`, `epic`, `mythic`, `special`). A grade name outside that list uses `common`.
 6. **Outputs**, both built from the same trimmed data:
    - Website shards `items/00.json` … `items/99.json`. An item's shard is the last two digits of its decimal ID (`110730048` → `items/48.json`). Keys are sorted and output is deterministic. Shards contain no timestamps, so unchanged data produces identical files.
-   - An `items` table in the bot's SQLite database (id, name, type, grade, rarity, icon, item level, required level, first four base stats), plus the date of the last successful publish.
-7. **Guards:** nothing is published if any list page fails, if the item count is more than 5% below the previous successful run, or if any shard fails validation. The last published snapshot stays live and the next run retries.
-8. **Publish only on change:** reuse the roster sync's git publishing helper (`roster_sync.publish_roster`, generalized if needed) to commit `Sync AION 2 item snapshot` to `main` on `git@github.com:kcam01/Aion2.git`, which triggers Vercel. No commit is made when no shard changed. The bot's SQLite table is replaced only after the shards are published or found unchanged. Autocomplete therefore never offers an item the website snapshot lacks, apart from the few minutes a Vercel deployment takes.
+   - A separate read-only index for the bot, `data/items.sqlite3` (id, name, type, grade, rarity, icon, item level, required level, first four base stats, plus the date of the last published change). It is built in a temporary file and atomically replaces the previous one, so the bot's own database is never touched. The job's details cache is a third file, `data/item-details.sqlite3`.
+7. **Guards:** nothing is published if any list request fails, if the crawl reaches less than 99% of questlog's total, if the item count is more than 5% below the previous successful run, if too many detail requests fail, or if any shard fails validation. The last published snapshot stays live and the next run retries.
+8. **Publish only on change:** follow the existing gallery publisher's git pattern (its own bare repository `data/item-sync.git`, a temporary index, a guard that only `items/NN.json` change, and a normal push) to commit `Sync AION 2 item snapshot` to `main` on `git@github.com:kcam01/Aion2.git`, which triggers Vercel. A push rejected by a concurrent website commit is retried up to twice from a fresh fetch. No commit is made when no shard changed. The bot's index is replaced only after the shards are published or found unchanged. Autocomplete therefore never offers an item the website snapshot lacks, apart from the few minutes a Vercel deployment takes.
 
 ### Shard record format
 
@@ -61,7 +61,7 @@ Example (stat values and sell price are illustrative):
 }
 ```
 
-`itemLevel`, `requiredLevel`, `stats`, `randomStats` and `sellPrice` are left out when the item has no such data. Values are formatted by the publisher. Percentage stats are stored in hundredths (`1298` → `13%`) and shown to at most one decimal place. Paired minimum/maximum attack stats are combined as `min ~ max`.
+`itemLevel`, `requiredLevel`, `stats`, `randomStats` and `sellPrice` are left out when the item has no such data. `requiredLevel` is left out at level 1, and `sellPrice` when questlog marks the item unsellable. Values are formatted by the publisher, in a fixed stat order. Percentage stats are stored in hundredths and rounded to three significant figures, matching questlog (`1123` → `11.2%`, `629` → `6.29%`, `1298` → `13%`). Paired minimum/maximum attack stats are combined as `min ~ max`, and ranges use an en dash. Item descriptions are not published: many contain unresolved effect templates.
 
 ## Website item page
 
@@ -90,9 +90,9 @@ Example (stat values and sell price are illustrative):
 
 New module `exalted/items_discord.py`, registered on the guild the same way as `alt_links.py`, available to every member.
 
-- **Option:** `item`, a string with autocomplete.
+- **Option:** `item`, a string with autocomplete. A per-user cooldown of 5 seconds limits repeated public posts.
 - **Autocomplete:**
-  - Case-insensitive search of the SQLite `items` table.
+  - Case-insensitive search of `data/items.sqlite3`, opened read-only per query.
   - Results are ordered by name prefix match, then word-start match, then substring match, then name. At most 25 results are returned.
   - Each label is `Name · Type · Grade`, truncated to 100 characters. The value is the item ID.
   - Empty input returns no suggestions.
