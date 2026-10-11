@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10T23:18:06.195029+00:00",
+  "updated_at": "2026-10-11T16:03:59.813771+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "e90bc9cf2318ec59d0649e390fd84f1b4e6a9a288fb2e41151d1fda5daeceb36",
+      "title": "Character customization menu",
+      "description": "A screenshot of a character customization interface showing a male character with dark curly hair wearing ornate blue, gold, and teal attire.",
+      "author": "citylordxie",
+      "posted_at": "2026-10-11T15:55:53.079000+00:00",
+      "image": "/assets/gallery/e90bc9cf2318ec59d0649e390fd84f1b4e6a9a288fb2e41151d1fda5daeceb36.webp",
+      "thumbnail": "/assets/gallery/e90bc9cf2318ec59d0649e390fd84f1b4e6a9a288fb2e41151d1fda5daeceb36-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1558870766194528358"
+    },
     {
       "id": "880d8fc5499e410b7e3b23d7572118783b9e4a58ceeabc259ced2771fde76974",
       "title": "AION 2 Character Portrait",
