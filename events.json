@@ -69,15 +69,17 @@
       "id": "war-for-atreia-series-3-2026",
       "kind": "drops",
       "title": "War for Atreia · Series 3",
-      "summary": "The final announced creator campaign includes the Leather Crop Fit outfit.",
+      "summary": "The active final creator campaign includes the Leather Crop Fit outfit after four hours of eligible viewing.",
       "start_date": "2026-10-12",
       "end_date": "2026-10-14",
       "claim_by": "2026-10-31T06:59:00Z",
-      "timing_note": "Exact start and end times are TBD. The campaign depends on the creators reaching their point threshold; check for activation before watching.",
-      "rewards": ["30 min: 4 Odyle Energy", "1 hr: Skin Chest x10", "2 hr: 15 Resurrection Spiritstones", "4 hr: Leather Crop Fit"],
-      "participation": "Use the participating creator list and confirm this campaign is active in Twitch Drops.",
+      "timing_note": "Twitch lists Series 3 as open, checked October 12, with a watch window of October 12 at noon through October 15 at 1:59 AM Central. NC's original notice still says exact times are TBD and describes creator unlock conditions; use the participating creators in Twitch's individual campaign. Claim earned rewards in Twitch Inventory by October 31 at 1:59 AM Central.",
+      "rewards": ["30 min: 4 Odyle Energy","1 hr: 1 Skin Chest (10 Skins)","2 hr: 15 Resurrection Stones","4 hr: Leather Crop Fit"],
+      "participation": "Watch a participating live creator listed in Twitch's War for Atreia Series 3 campaign. Confirm your progress is counting and claim each earned reward in Twitch Inventory. Other AION 2 streams do not earn this campaign's rewards.",
       "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/689769594581157299",
-      "action_url": "https://www.warforatreia.com/"
+      "action_url": "https://www.twitch.tv/drops/campaigns",
+      "starts_at": "2026-10-12T17:00:00Z",
+      "ends_at": "2026-10-15T06:59:00Z"
     },
     {
       "id": "daeva-makeover-2026",
