@@ -1,11 +1,35 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11T16:03:59.813771+00:00",
+  "updated_at": "2026-10-12T13:48:12.345819+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "d7c14ef4a31da94f6fbd846222b371372eb7a0ee3d90a390c0eea550e10b1683",
+      "title": "Character Customization Preview",
+      "description": "A close-up screenshot of a female character with blonde hair and freckles during the character creation process, showing various facial feature adjustment sliders.",
+      "author": "korra",
+      "posted_at": "2026-10-12T13:32:58.182000+00:00",
+      "image": "/assets/gallery/d7c14ef4a31da94f6fbd846222b371372eb7a0ee3d90a390c0eea550e10b1683.webp",
+      "thumbnail": "/assets/gallery/d7c14ef4a31da94f6fbd846222b371372eb7a0ee3d90a390c0eea550e10b1683-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1559197188335337494"
+    },
+    {
+      "id": "62b25dd71a14a4f209379a3b95053f6ca088c48ac79484c8a3c50f8ab9bbf7f9",
+      "title": "Character Customization Face Preview",
+      "description": "A screenshot of a female character's face during the character creation process in AION 2, showing various customization sliders and options.",
+      "author": "korra",
+      "posted_at": "2026-10-12T13:32:58.182000+00:00",
+      "image": "/assets/gallery/62b25dd71a14a4f209379a3b95053f6ca088c48ac79484c8a3c50f8ab9bbf7f9.webp",
+      "thumbnail": "/assets/gallery/62b25dd71a14a4f209379a3b95053f6ca088c48ac79484c8a3c50f8ab9bbf7f9-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1559197188335337494"
+    },
     {
       "id": "e90bc9cf2318ec59d0649e390fd84f1b4e6a9a288fb2e41151d1fda5daeceb36",
       "title": "Character customization menu",
