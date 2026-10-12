@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { validateLibrary } from '../guide-library.js';
 
-const origin = process.argv[2] || 'https://exalted-aion2.vercel.app';
+const origin = process.argv[2] || 'https://exaltedguild.gg';
 const files = ['builds.html', 'builds.json', 'builds.js', 'builds.css', 'guide-library.js', 'guild.css'];
 for (const file of files) {
   const response = await fetch(origin + '/' + (file === 'builds.html' ? 'builds' : file), { cache: 'no-store', signal: AbortSignal.timeout(20000) });

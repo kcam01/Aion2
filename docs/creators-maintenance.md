@@ -1,6 +1,6 @@
 # Content creator directory maintenance
 
-Page: https://exalted-aion2.vercel.app/creators
+Page: https://exaltedguild.gg/creators
 
 The authorized source is Exalted guild `1556392756836966481`, channel `1557808999049592952` (`content-creators`). A 15-minute Codex heartbeat maintains the directory. It does not send Discord messages. This workstation must be available for scheduled directory scans; live status checks run independently on Vercel while people view the page.
 
