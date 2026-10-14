@@ -173,6 +173,44 @@
       "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/712288224875118658"
     },
     {
+      "id": "halloween-event-2026",
+      "kind": "in-game",
+      "title": "Trick or Treat · Halloween",
+      "summary": "Collect Pumpkin Coins through attendance and event missions, exchange them for Halloween gifts, and craft Candy Keys with dungeon fragments.",
+      "start_date": "2026-10-13",
+      "end_date": "2026-11-03",
+      "timing_note": "Scheduled after October 13 maintenance through before November 3 maintenance in the published Pacific dates; the European dates are October 14–November 4. Exact event opening and closing times are not announced. Item removal times below are separate from the event window.",
+      "rewards": [
+        "250 Pumpkin Coins: Special Halloween Chest containing the Spooky Scary Skeleton breastplate skin and 10,000 Pet Soul Crystals; level 10+, once per server",
+        "Coin shop: Skin Chests, Resurrection Spiritstones and dungeon tickets; Odyle Energy and Lower Abyss Rift Stones require level 45",
+        "Candy rewards include Growth Pet Chests, Abyss Points, Odyle Energy and consumables"
+      ],
+      "participation": "Claim the 14-day Trick or Treat log in Attendance and complete Season Mission > Event tasks for Pumpkin Coins. Exchange coins at Coin Merchants in Dawn Legion Base or Zumion Village (Elyos), or Safe Haven or Nornir Assembly (Asmodian). Complete Expedition and Transcendence dungeons for Candy Key Fragments; use Event Substance Morphs to craft keys and open town candies.",
+      "details": [
+        "Attendance rewards are once per server; days 7 and 14 grant 100 coins each, other days 35. Event missions reset weekly per server.",
+        "Each red, yellow or blue Candy Key costs 60 fragments, with one craft of each color per server per week.",
+        "Spend event coins before the event closes; the notice says mission rewards are removed after the event period. Rewards arrive immediately in inventory and cannot be traded.",
+        "Halloween Candy, Cookies, Candy Key Fragments and Candy Keys are deleted November 4 at 1:00 AM Central. This is an item-removal time, not a confirmed event cutoff.",
+        "The Special Halloween Chest and the listed expiring Spiritstones, dungeon tickets, Shugo Festival Reward Keys and Odyle Energy are deleted December 16 at 1:00 AM Central. Open or use them before removal; this does not extend event participation."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000024"
+    },
+    {
+      "id": "conquerors-of-the-abyss-2026",
+      "kind": "in-game",
+      "title": "Conquerors of the Abyss",
+      "summary": "Level 45+ characters can buy extra Lower Abyss time with Kina during the scheduled event.",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-27",
+      "timing_note": "Scheduled after October 13 maintenance through before October 27 maintenance in the published Pacific dates; the European dates are October 14–28. Exact event times are not announced. Each purchased stone expires seven days after acquisition.",
+      "rewards": [
+        "Lower Abyss Rift Stone (7 Days) (Bound): 50,000 Kina each",
+        "Each stone restores one hour of Lower Abyss usage time; limit seven per character per week"
+      ],
+      "participation": "At character level 45 or higher, open Shop > Wind Breeze Merchants > Special and purchase the event stones with Kina. Use each stone within seven days of receipt, before it is automatically deleted. Items arrive immediately in inventory and cannot be traded.",
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000025"
+    },
+    {
       "id": "graphics-card-giveaway-2026",
       "kind": "community",
       "title": "AION 2 graphics card giveaway",
