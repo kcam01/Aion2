@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12T13:48:12.345819+00:00",
+  "updated_at": "2026-10-14T02:33:59.393773+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "cf3d628c4b810a0f181132b0f7db5a049db23ae8381de646f1cdb753d23c21a2",
+      "title": "Character with large blue wings",
+      "description": "A 3D rendered game character wearing dark blue and gold robes, featuring massive, spread-out dark blue feathered wings against a grey background.",
+      "author": "citylordxie",
+      "posted_at": "2026-10-14T02:17:13.369000+00:00",
+      "image": "/assets/gallery/cf3d628c4b810a0f181132b0f7db5a049db23ae8381de646f1cdb753d23c21a2.webp",
+      "thumbnail": "/assets/gallery/cf3d628c4b810a0f181132b0f7db5a049db23ae8381de646f1cdb753d23c21a2-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1559751906795065437"
+    },
     {
       "id": "d7c14ef4a31da94f6fbd846222b371372eb7a0ee3d90a390c0eea550e10b1683",
       "title": "Character Customization Preview",
