@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T02:33:59.393773+00:00",
+  "updated_at": "2026-10-16T20:04:05.261138+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "b6296e37b20e269271326aaedbfc5f3ddc3ba7d18dbc0282cac13b307a9f2223",
+      "title": "Character Wing Customization Preview",
+      "description": "A character customization screen showing a character with red and black hair wearing black clothing and large black and red feathered wings.",
+      "author": "korra",
+      "posted_at": "2026-10-16T19:49:12.484000+00:00",
+      "image": "/assets/gallery/b6296e37b20e269271326aaedbfc5f3ddc3ba7d18dbc0282cac13b307a9f2223.webp",
+      "thumbnail": "/assets/gallery/b6296e37b20e269271326aaedbfc5f3ddc3ba7d18dbc0282cac13b307a9f2223-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1560741423282655232"
+    },
     {
       "id": "cf3d628c4b810a0f181132b0f7db5a049db23ae8381de646f1cdb753d23c21a2",
       "title": "Character with large blue wings",
