@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17T17:20:00.388346+00:00",
+  "updated_at": "2026-10-17T18:34:17.009901+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "496ffa2bcffd800f4434718cf16b0877b4d8076efda4739fbb9c3241427fab93",
+      "title": "Character Customization Face Preview",
+      "description": "A screenshot of a character customization screen showing a female character with dark hair, purple eyeshadow, and black lipstick.",
+      "author": "korra",
+      "posted_at": "2026-10-17T18:19:58.164000+00:00",
+      "image": "/assets/gallery/496ffa2bcffd800f4434718cf16b0877b4d8076efda4739fbb9c3241427fab93.webp",
+      "thumbnail": "/assets/gallery/496ffa2bcffd800f4434718cf16b0877b4d8076efda4739fbb9c3241427fab93-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1561081353502724167"
+    },
     {
       "id": "2f240648adec06d7f66fb1d8be3b4d031cb4282ba1480fd46372ab0d080eda4b",
       "title": "AION 2 Character Skill Interface",
