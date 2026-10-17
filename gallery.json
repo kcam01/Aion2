@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17T16:18:51.402351+00:00",
+  "updated_at": "2026-10-17T17:20:00.388346+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "2f240648adec06d7f66fb1d8be3b4d031cb4282ba1480fd46372ab0d080eda4b",
+      "title": "AION 2 Character Skill Interface",
+      "description": "A screenshot of an AION 2 character interface showing a character in dark armor holding a staff, standing next to three small creatures, with various skill icons and ability descriptions displayed on the screen.",
+      "author": "OldManSin",
+      "posted_at": "2026-10-17T17:08:41.448000+00:00",
+      "image": "/assets/gallery/2f240648adec06d7f66fb1d8be3b4d031cb4282ba1480fd46372ab0d080eda4b.webp",
+      "thumbnail": "/assets/gallery/2f240648adec06d7f66fb1d8be3b4d031cb4282ba1480fd46372ab0d080eda4b-thumb.webp",
+      "width": 2400,
+      "height": 1254,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1561063415655571467"
+    },
     {
       "id": "15a263daf9e864603cabc0c8ab849f5fc313de1de3dce1af026a948213ee773c",
       "title": "AION 2 Character in Gribade Highland",
