@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17T15:18:47.423339+00:00",
+  "updated_at": "2026-10-17T16:18:51.402351+00:00",
   "source": {
     "name": "general",
     "url": "https://discord.com/channels/1556392756836966481/1556392761337315329"
   },
   "images": [
+    {
+      "id": "15a263daf9e864603cabc0c8ab849f5fc313de1de3dce1af026a948213ee773c",
+      "title": "AION 2 Character in Gribade Highland",
+      "description": "A gameplay screenshot of an AION 2 character with large white wings standing in a field of white flowers under a blue sky.",
+      "author": "citylordxie",
+      "posted_at": "2026-10-17T16:14:10.194000+00:00",
+      "image": "/assets/gallery/15a263daf9e864603cabc0c8ab849f5fc313de1de3dce1af026a948213ee773c.webp",
+      "thumbnail": "/assets/gallery/15a263daf9e864603cabc0c8ab849f5fc313de1de3dce1af026a948213ee773c-thumb.webp",
+      "width": 1920,
+      "height": 1080,
+      "source_url": "https://discord.com/channels/1556392756836966481/1556392761337315329/1561049695021699163"
+    },
     {
       "id": "2fb4c7b9cbb7bf16bf821d9499e9331732168fa333100420aabeac0a622e2890",
       "title": "AION 2 Character Portrait",
