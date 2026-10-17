@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08T22:04:17.931Z",
+  "updated_at": "2026-10-17T21:28:03.850Z",
   "creators": [
     {
       "id": "creator-07419b33-e5ec-4a2d-8187-bc6908ed204b",
@@ -9,6 +9,23 @@
         "slug": "char-nae-2106-cf9984241c8fee72423e",
         "name": "Fubuki",
         "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952949274",
+        "alts": []
+      },
+      "accounts": [
+        {
+          "platform": "twitch",
+          "handle": "fubukishinko",
+          "url": "https://www.twitch.tv/fubukishinko"
+        }
+      ]
+    },
+    {
+      "id": "creator-b9ab9039-dd81-459c-84f6-d6bb42fbe47d",
+      "displayName": "theraptorprince",
+      "character": {
+        "slug": "char-nae-2106-197bae02e756401e3cad",
+        "name": "Raptorprince",
+        "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952984677",
         "alts": []
       },
       "accounts": [
