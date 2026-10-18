@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08T18:29:10.045Z",
+  "updated_at": "2026-10-18T18:05:53.764Z",
   "links": [
     {
       "id": "aion2hub-event-timer",
@@ -92,6 +92,53 @@
         "Getting started"
       ],
       "shared_at": "2026-10-06T23:57:06.363Z"
+    },
+    {
+      "id": "gaming-tools-server-status",
+      "url": "https://aion2.gaming.tools/server-status",
+      "title": "Global server status",
+      "description": "Community dashboard for AION 2 Global server availability, reported congestion and maintenance notices. Filter by region and server.",
+      "source": "gaming.tools",
+      "category": "tools",
+      "format": "tool",
+      "classes": [],
+      "tags": [
+        "Servers",
+        "Global"
+      ],
+      "shared_at": "2026-10-18T16:59:16.316Z"
+    },
+    {
+      "id": "verteron-cube-map",
+      "url": "https://aion2maps.com/verteron/?L=labels%2Ccube",
+      "title": "Verteron cube map",
+      "description": "Explore Verteron’s hidden cubes, landmarks and gathering locations on a community 3D map built from Global launch client data. Verteron is an Elyos region.",
+      "source": "Aion 2 Maps",
+      "category": "tools",
+      "format": "tool",
+      "classes": [],
+      "tags": [
+        "Maps",
+        "Cubes",
+        "Elyos"
+      ],
+      "shared_at": "2026-10-18T16:59:26.396Z"
+    },
+    {
+      "id": "pet-soul-farming-map",
+      "url": "https://aion2pets.app/map/",
+      "title": "Pet soul farming map",
+      "description": "Find recorded monster spawn locations for pet souls across three regions. Search by pet and region; markers do not guarantee a soul drop.",
+      "source": "AION 2 Pets",
+      "category": "tools",
+      "format": "tool",
+      "classes": [],
+      "tags": [
+        "Pets",
+        "Farming",
+        "Maps"
+      ],
+      "shared_at": "2026-10-18T16:59:35.499Z"
     }
   ]
 }
