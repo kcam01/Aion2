@@ -211,6 +211,25 @@
       "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000025"
     },
     {
+      "id": "rise-to-the-challenge-2026",
+      "kind": "in-game",
+      "title": "Rise to the Challenge",
+      "summary": "Buy weekly Resurrection Spiritstone bundles with Kina to support dungeon challenges.",
+      "start_date": "2026-10-20",
+      "end_date": "2026-12-15",
+      "timing_note": "The event notice schedules opening after October 20 maintenance in Pacific time, while the patch notes list October 21. European dates are October 21–December 16. Purchases end before December 15 maintenance in Pacific time. Exact event times and opening confirmation are not published; the conflicting opening dates remain unresolved. Item removal is a separate deadline.",
+      "rewards": [
+        "Step 1: 30 Resurrection Spiritstones (Season 1) for 25,000 Kina",
+        "Step 2: 30 more Resurrection Spiritstones (Season 1) for 50,000 Kina; weekly limits apply per server"
+      ],
+      "participation": "During the published window, open Shop > Wind Breeze Merchants. Reach the Step 1 purchase limit to unlock Step 2. Rewards arrive immediately in inventory and cannot be traded. Time-limited Season 1 stones are consumed before permanent bound stones.",
+      "details": [
+        "The event's expiring Resurrection Spiritstones are removed December 16 at 2:00 AM Central (00:00 PST / 09:00 CET). Use them before removal; this is not the event purchase cutoff or a later claim window.",
+        "The event notice labels the included items Resurrection Spiritstone (Bound), while the patch notes use Resurrection Spiritstone (Season 1). The notice separately identifies existing permanent bound stones; the event expiry does not imply those permanent stones expire."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000035"
+    },
+    {
       "id": "graphics-card-giveaway-2026",
       "kind": "community",
       "title": "AION 2 graphics card giveaway",
