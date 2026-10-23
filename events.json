@@ -243,6 +243,136 @@
       ],
       "participation": "Use the Gleam Giveaway link in the official notice and complete at least one listed entry action. Playing AION 2 on Steam for one hour awards 10 entries; official community follow/join actions are also listed. NC lists residents of the United States, Canada and Europe as eligible, excluding Belgium, Netherlands, Serbia, Slovakia, Italy and Portugal. Check the full entry rules on the giveaway page.",
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6ab3f7806b722c561dc6a621"
+    },
+    {
+      "id": "ludra-conquest-check-in-2026",
+      "kind": "in-game",
+      "title": "Ludra Conquest Check-In",
+      "summary": "Check in on seven days during the two-week event to earn growth rewards and the Lush Leaf Tiara.",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-17",
+      "ends_at": "2026-11-18T07:59:00Z",
+      "timing_note": "Scheduled November 4 at 8:00 AM through November 18 at 1:59 AM Central (November 4, 06:00–November 17, 23:59 PST). These are published future times, not confirmation that the event is open.",
+      "rewards": [
+        "Day 1: 500,000 Bound Kina",
+        "Day 2: 2,000 Centuryroot Tokens (Shugo Coins)",
+        "Day 3: 3,000 Phantasmal Fragments (Nightmare Coins)",
+        "Day 4: 30,000 Abyss Points",
+        "Day 5: 3,000 Soul Crystals",
+        "Day 6: 1,000,000 Bound Kina",
+        "Day 7: Lush Leaf Tiara (Helmet)"
+      ],
+      "participation": "Log in and check in once per day during the event. Each check-in unlocks the next reward; seven check-ins complete the track during the 14-day window.",
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+    },
+    {
+      "id": "odyle-energy-boost-2026",
+      "kind": "in-game",
+      "title": "Odyle Energy Boost",
+      "summary": "Log in daily for two Odyle Energy delivered to each character through in-game mail.",
+      "start_date": "2026-10-28",
+      "end_date": "2026-11-10",
+      "timing_note": "The notice schedules October 28 after maintenance through November 10 before maintenance in its Pacific column; the European closing date is November 11. Exact maintenance times are not given. Each mail expires seven days after receipt, so there is no single confirmed claim deadline.",
+      "rewards": [
+        "2 Odyle Energy per character per day"
+      ],
+      "participation": "Log in once per day during the scheduled event, open in-game mail and claim the two Odyle Energy. Collect each mail within seven days of receiving it.",
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+    },
+    {
+      "id": "ludra-twitch-drops-2026",
+      "kind": "drops",
+      "title": "Ludra Twitch Drops",
+      "summary": "A scheduled 14-hour reward track includes Dotted Glasses and the Black Conical Hat.",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-17",
+      "ends_at": "2026-11-18T07:59:00Z",
+      "timing_note": "Scheduled November 4 at 8:00 AM through November 18 at 1:59 AM Central (November 4, 06:00–November 17, 23:59 PST). These are published future times, not confirmation that the event is open. Campaign activation and participating channels are not yet verified. No separate Twitch Inventory claim deadline is published; the October 31 deadline for earlier launch campaigns does not apply to this campaign.",
+      "rewards": [
+        "1 hr: 15 Resurrection Spiritstones (Bound)",
+        "2 hr: 3 Skin Chests (10 Times) (Bound)",
+        "3 hr: 3 Mysterious Pet Chests (Bound)",
+        "4 hr: 10 Battle Enhance Scrolls (Bound)",
+        "5 hr: 3 Customization Vouchers (Bound)",
+        "6 hr: 20 Artisan's Roasted Fogus (Bound)",
+        "7 hr: 1 Appearance Change Voucher (Bound)",
+        "8 hr: 15 Soul Codex (Bound)",
+        "9 hr: 6 Odyle Energy (Bound)",
+        "10 hr: 1 Content Usage Ticket Selection Chest (Bound)",
+        "11 hr: 6 Soul Codex: Reset (Bound)",
+        "12 hr: Dotted Glasses",
+        "13 hr: 2 Rare Theostone Chests (Bound)",
+        "14 hr: Black Conical Hat (Skin: Helm)"
+      ],
+      "participation": "When the published watch window begins, find this campaign in Twitch Drops and use its participating-channel link. Confirm the campaign is enabled and progress is counting, then claim each earned reward in Twitch Inventory. A later claim cutoff has not been announced.",
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb",
+      "action_url": "https://www.twitch.tv/drops/campaigns"
+    },
+    {
+      "id": "ludra-first-clear-2026",
+      "kind": "in-game",
+      "title": "Ludra Hunt",
+      "summary": "Earn regional first-clear titles or the Ludra Hunter title by defeating the returning raid during the event.",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-24",
+      "timing_note": "Scheduled November 4 after maintenance through November 24 before maintenance in Pacific time; the European closing date is November 25. Exact raid/event opening and closing times are not announced. The separate check-in and Drops opening time is not a confirmed raid opening time.",
+      "rewards": [
+        "First hard-mode party per region: Conqueror of Ludra",
+        "Hard-mode parties 2–5 per region: Champion of Ludra",
+        "Hard-mode parties 6–20 per region: Challenger of Ludra",
+        "All other players clearing normal or hard mode: Ludra Hunter"
+      ],
+      "participation": "Prepare item level 2,800 for normal mode or 3,000 for hard mode. Defeat Ludra during the scheduled event; the first 20 hard-mode parties in each region qualify for ranked titles. NA East and NA West are separate eligible regions.",
+      "details": [
+        "Ranked titles have a purple decorative effect. Clears outside the event period do not qualify.",
+        "NC says titles will be sent no later than December 3 at 1:59 AM Central (December 2, 23:59 PST). This is a delivery deadline, not an extended clear or claim window."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+    },
+    {
+      "id": "ludra-outfit-contest-2026",
+      "kind": "community",
+      "title": "Ludra Outfit Contest",
+      "summary": "Create a Ludra-inspired outfit and submit one unedited in-game screenshot to the official Discord contest.",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-17",
+      "ends_at": "2026-11-18T07:59:00Z",
+      "timing_note": "Scheduled November 4 at 8:00 AM through November 18 at 1:59 AM Central (November 4, 06:00–November 17, 23:59 PST). These are published future times, not confirmation that the event is open.",
+      "rewards": [
+        "1st place: 6,000 Quna",
+        "2nd place: 3,000 Quna",
+        "3rd place: 1,000 Quna",
+        "Community's Choice: 3,000 Quna",
+        "Participation: 2 Dye Tokens"
+      ],
+      "participation": "Submit one in-game screenshot per player in the official AION 2 Discord event submission area. Include region, server and character name. Editing and AI images are not allowed. Use outfit combinations, dyes and the environment to represent Ludra.",
+      "details": [
+        "Community managers select the top three for originality and creativity; Discord upvotes select Community's Choice. No duplicate winners.",
+        "NC says prizes will be mailed by November 26 at 1:59 AM Central (November 25, 23:59 PST); this is a reward-delivery deadline, not the submission cutoff."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+    },
+    {
+      "id": "daeva-bootcamp-2026",
+      "kind": "community",
+      "title": "Daeva Bootcamp",
+      "summary": "Clear eligible dungeons toward shared milestones that unlock mailed rewards for all Global players.",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-17",
+      "ends_at": "2026-11-18T07:59:00Z",
+      "timing_note": "Scheduled November 4 at 8:00 AM through November 18 at 1:59 AM Central (November 4, 06:00–November 17, 23:59 PST). These are published future times, not confirmation that the event is open.",
+      "rewards": [
+        "500,000 clears: 2 Instant Clear Tickets, 1 Intermediate Training Arcana, 5 Resurrection Stones",
+        "1,250,000 clears: 2 Instant Clear Tickets, 1 Intermediate Training Arcana, 5 Resurrection Stones",
+        "3,000,000 clears: 2 Instant Clear Tickets, 2 Intermediate Training Arcana, 5 Resurrection Stones",
+        "5,000,000 clears: 3 Instant Clear Tickets, 2 Intermediate Training Arcana, 10 Resurrection Stones",
+        "7,000,000 clears: 5 Instant Clear Tickets, 3 Intermediate Training Arcana, 10 Resurrection Stones"
+      ],
+      "participation": "Clear Conquest (Normal/Hard): Krao Cave, Draupnir, Urugugu Canyon or Vakron Sky Island; or Transcendence (all stages): Shattered Arkanis or Deus Research Base. Europe, NA East, NA West, South America and Asia contribute. Collect milestone rewards from in-game account mail.",
+      "details": [
+        "Rewards are sent as milestones are reached and no later than November 19 at 1:59 AM Central (November 18, 23:59 PST). This is a delivery deadline; no separate mail-expiry deadline is published."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
     }
   ]
 }
