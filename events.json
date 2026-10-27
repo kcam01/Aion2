@@ -269,14 +269,14 @@
       "id": "odyle-energy-boost-2026",
       "kind": "in-game",
       "title": "Odyle Energy Boost",
-      "summary": "Log in daily for two Odyle Energy delivered to each character through in-game mail.",
+      "summary": "Log in daily for four Odyle Energy delivered once per account through in-game mail.",
       "start_date": "2026-10-28",
       "end_date": "2026-11-10",
       "timing_note": "The notice schedules October 28 after maintenance through November 10 before maintenance in its Pacific column; the European closing date is November 11. Exact maintenance times are not given. Each mail expires seven days after receipt, so there is no single confirmed claim deadline.",
       "rewards": [
-        "2 Odyle Energy per character per day"
+        "4 Odyle Energy per account per day"
       ],
-      "participation": "Log in once per day during the scheduled event, open in-game mail and claim the two Odyle Energy. Collect each mail within seven days of receiving it.",
+      "participation": "Log in once per day during the scheduled event, open in-game mail and claim four Odyle Energy. Delivery is limited to once per account per day. Collect each mail within seven days of receiving it.",
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
     },
     {
