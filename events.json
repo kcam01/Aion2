@@ -202,13 +202,18 @@
       "summary": "Level 45+ characters can buy extra Lower Abyss time with Kina during the scheduled event.",
       "start_date": "2026-10-13",
       "end_date": "2026-10-27",
-      "timing_note": "Scheduled after October 13 maintenance through before October 27 maintenance in the published Pacific dates; the European dates are October 14–28. Exact event times are not announced. Each purchased stone expires seven days after acquisition.",
+      "timing_note": "Event purchases end when scheduled maintenance begins October 27 at 11:30 PM PDT, which is October 28 at 1:30 AM CDT in Chicago. This anchors the event notice's before-maintenance closing date; the published October 13-27 Pacific / October 14-28 European date ranges remain unchanged. The opening time is unconfirmed. Each purchased stone expires seven days after acquisition. Maintenance timing is subject to official changes.",
       "rewards": [
         "Lower Abyss Rift Stone (7 Days) (Bound): 50,000 Kina each",
         "Each stone restores one hour of Lower Abyss usage time; limit seven per character per week"
       ],
       "participation": "At character level 45 or higher, open Shop > Wind Breeze Merchants > Special and purchase the event stones with Kina. Use each stone within seven days of receipt, before it is automatically deleted. Items arrive immediately in inventory and cannot be traded.",
-      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000025"
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000025",
+      "ends_at": "2026-10-28T06:30:00Z",
+      "details": [
+        "The exact purchase cutoff follows the official October 27/28 maintenance notice. Stone expiry is individual and does not extend event purchases."
+      ],
+      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6ae0ae606cfe4756db5b8f5a"
     },
     {
       "id": "rise-to-the-challenge-2026",
@@ -272,7 +277,7 @@
       "summary": "Log in daily for four Odyle Energy delivered once per account through in-game mail.",
       "start_date": "2026-10-28",
       "end_date": "2026-11-10",
-      "timing_note": "The notice schedules October 28 after maintenance through November 10 before maintenance in its Pacific column; the European closing date is November 11. Exact maintenance times are not given. Each mail expires seven days after receipt, so there is no single confirmed claim deadline.",
+      "timing_note": "The notice schedules October 28 after maintenance through November 10 before maintenance in its Pacific column; the European closing date is November 11. The opening follows maintenance; its completion and the closing maintenance time are not confirmed. Each mail expires seven days after receipt, so there is no single confirmed claim deadline.",
       "rewards": [
         "4 Odyle Energy per account per day"
       ],
