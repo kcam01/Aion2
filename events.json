@@ -378,6 +378,49 @@
         "Rewards are sent as milestones are reached and no later than November 19 at 1:59 AM Central (November 18, 23:59 PST). This is a delivery deadline; no separate mail-expiry deadline is published."
       ],
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+    },
+    {
+      "id": "atreias-call-attendance-2026",
+      "kind": "in-game",
+      "title": "Atreia's Call: 28-day attendance",
+      "summary": "Log in on 28 days to collect growth items, dungeon tickets and Odyle Energy.",
+      "start_date": "2026-10-28",
+      "end_date": "2026-12-02",
+      "timing_note": "Scheduled to begin after October 28 maintenance; completion and event activation are unconfirmed. The event directory publishes October 28-December 2, while the article lists both December 1 and December 2 maintenance as its closing date without identifying the regions. This conflict is unresolved; no exact participation or later claim cutoff is confirmed.",
+      "rewards": [
+        "Days 7, 14, 21 and 28: 2 Odyle Energy (Bound) each",
+        "Days 6, 13, 20 and 27: 2,000 Soul Crystals (Bound) each",
+        "Days 10 and 24: 1 Content Usage Ticket Selection Chest (Bound) each; days 11 and 25: 2 Unknown Fissure Challenge Tickets (Bound) each",
+        "Other days award Resurrection Spiritstones, Artisan's Roasted Fogus, Soul Codex: Reset, Life Crystals and Battle Enhance Scrolls (all Bound)"
+      ],
+      "participation": "After the event opens, log in and use In-game menu > Attendance to claim the daily reward. Rewards are once per server, immediately delivered to inventory and non-tradable. Attendance resets at 12:00 AM Pacific, which is 2:00 AM in Chicago.",
+      "details": [
+        "The 28-day track is a separate attendance log from the earlier launch and Halloween attendance campaigns.",
+        "Event Odyle Energy, Unknown Fissure Challenge Tickets and Content Usage Ticket Selection Chests are removed December 16 at 2:00 AM CST in Chicago (12:00 AM PST). Use them before removal; this is not the participation cutoff or an extended claim window.",
+        "The closing dates and weekday labels in the notice disagree. Confirm the displayed in-game deadline; do not assume the later date is guaranteed."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000042"
+    },
+    {
+      "id": "prelude-to-flight-daeva-pass-2026",
+      "kind": "in-game",
+      "title": "Daeva Pass: Prelude to Flight",
+      "summary": "Complete missions for a free Basic reward track; an optional Premium track costs 1,000 Quna per character.",
+      "start_date": "2026-10-28",
+      "end_date": "2026-12-02",
+      "timing_note": "The published sales window is October 28 at 12:00 AM PDT through December 2 at 12:00 AM PST (2:00 AM Chicago on both dates). Availability during maintenance is unconfirmed. The gameplay section instead ends purchases, missions and claims at December 1 PST / December 2 CET maintenance; later notes allow Season 1 claims until December 15 PST maintenance. These conflicting cutoffs remain unresolved. No exact event or claim deadline is asserted here.",
+      "rewards": [
+        "Free Basic track: Small Odyle Energy, Unknown Fissure and Nightmare Dungeon Challenge Tickets, Battle Enhance Scrolls and Resurrection Spiritstones (Bound)",
+        "Optional Premium: Odyle Energy and larger consumable quantities, plus 20 Battle Enhance Scrolls (Bound) on purchase",
+        "Premium grants 1,500 Daeva Pass Shop Coins: Season 1 at levels 2, 7, 12, 17, 22, 27, 32, 37, 42 and 47; the official table lists cosmetics and Pet: Swift Lugi exchanges"
+      ],
+      "participation": "Once available, open In-game menu > Subscribe, use the free Basic track and complete missions for Pass EXP. Claim earned rewards in that menu. The optional Premium purchase and its rewards apply only to the purchasing character; each pass is limited to one per character.",
+      "details": [
+        "Earn up to 15,000 Pass EXP per character per week. Rewards progress through level 50, followed by repeatable rewards. Missions include defeating monsters, gathering, crafting, dungeon clears and gear actions.",
+        "The notice gives December 15 PST maintenance for Season 1 coin use and the Pass Shop. It also gives that date for reward claims, conflicting with the earlier December 1/2 claim cutoff. Confirm the in-game deadline and do not assume the later claim date is guaranteed.",
+        "Small Odyle Energy, Unknown Fissure Challenge Tickets and Nightmare Dungeon Challenge Tickets from this pass are removed December 16 at 2:00 AM CST in Chicago (12:00 AM PST). Item removal is separate from pass participation, reward claims and coin use."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6acf216828c7452635072d9c"
     }
   ]
 }
