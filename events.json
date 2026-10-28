@@ -426,12 +426,13 @@
       "id": "global-halloween-drops-2026",
       "kind": "drops",
       "title": "Global Halloween Twitch Drops",
-      "summary": "A scheduled eight-hour watch track awards the Chubby Panda helm, vouchers and growth consumables.",
+      "summary": "Watch participating AION 2 streams to earn the Chubby Panda helm, vouchers and growth consumables over an eight-hour reward track.",
       "start_date": "2026-10-28",
       "end_date": "2026-11-03",
+      "starts_at": "2026-10-28T17:00:00Z",
       "ends_at": "2026-11-04T07:59:00Z",
       "claim_by": "2026-11-18T07:59:00Z",
-      "timing_note": "Published watch window: October 28 at 12:00 PM CDT through November 4 at 1:59 AM CST in Chicago (October 28, 10:00 PDT to November 3, 23:59 PST). Activation is not yet verified; this campaign is not currently shown in the Twitch campaign listing. When the scheduled window begins, confirm the campaign is enabled and your progress is counting. The later Inventory claim deadline does not extend watching.",
+      "timing_note": "Twitch lists Halloween Celebration under Open Drop Campaigns. Watch window: October 28 at 12:00 PM CDT through November 4 at 1:59 AM CST in Chicago (October 28, 10:00 PDT to November 3, 23:59 PST). The later November 18 at 1:59 AM CST Inventory claim deadline does not extend watching.",
       "rewards": [
         "1 hour: 15 Resurrection Spiritstones (Bound)",
         "2 hours: 1 Appearance Change Voucher (Bound)",
@@ -439,7 +440,7 @@
         "6 hours: 4 Odyle Energy (Bound)",
         "8 hours: 1 Chubby Panda (Helm)"
       ],
-      "participation": "NC lists all channels. During the published window, watch participating AION 2 streams with Drops enabled and confirm this campaign appears and progress counts in Twitch Inventory. Claim each earned reward in Inventory before November 18 at 1:59 AM CST in Chicago.",
+      "participation": "Use the participating-channel link in Twitch Drops for Halloween Celebration, choose an AION 2 stream with Drops enabled and check that progress is counting in Twitch Inventory. Only one stream earns progress at a time. Claim each earned reward in Inventory before November 18 at 1:59 AM CST in Chicago.",
       "details": [
         "Finish eligible viewing before November 4 at 1:59 AM CST. Claiming earned rewards is a separate step and is allowed only until the later published Inventory deadline.",
         "This is a separate campaign from the earlier launch/War for Atreia Drops and the upcoming Ludra Drops. The October 31 claim deadline for the older campaigns does not apply here."
