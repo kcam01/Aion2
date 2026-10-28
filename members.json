@@ -262,7 +262,19 @@
       "serverName": "Azphel",
       "region": "nae",
       "profileId": "Zsn8h9AG5LlhlxxIRVIxDtcM9_DYs-XXOIYcePj3U_Q=",
-      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952931178"
+      "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300952931178",
+      "alts": [
+        {
+          "slug": "char-nae-2106-8217530621be76d54df7",
+          "name": "Epickness",
+          "className": "Chanter",
+          "serverId": "2106",
+          "serverName": "Azphel",
+          "region": "nae",
+          "profileId": "Zsn8h9AG5LlhlxxIRVIxDsaeArdfPFtc-Sk4pHUo7bQ=",
+          "portrait": "https://profileimg.plaync.com/game_profile_images/aion2global/images?gameServerKey=2106&charKey=592786300953036448"
+        }
+      ]
     },
     {
       "slug": "char-nae-2106-59fce062104dd76682b9",
