@@ -288,44 +288,46 @@
       "id": "ludra-twitch-drops-2026",
       "kind": "drops",
       "title": "Ludra Twitch Drops",
-      "summary": "A scheduled 14-hour reward track includes Dotted Glasses and the Black Conical Hat.",
+      "summary": "Ten scheduled reward tiers over 14 watch hours include three supply chests, Dotted Glasses and the Black Conical Hat.",
       "start_date": "2026-11-04",
       "end_date": "2026-11-17",
       "ends_at": "2026-11-18T07:59:00Z",
       "timing_note": "Scheduled November 4 at 8:00 AM through November 18 at 1:59 AM Central (November 4, 06:00–November 17, 23:59 PST). These are published future times, not confirmation that the event is open. Campaign activation and participating channels are not yet verified. No separate Twitch Inventory claim deadline is published; the October 31 deadline for earlier launch campaigns does not apply to this campaign.",
       "rewards": [
-        "1 hr: 15 Resurrection Spiritstones (Bound)",
+        "1 hr: 1 Battle Support Chest (Bound)",
         "2 hr: 3 Skin Chests (10 Times) (Bound)",
         "3 hr: 3 Mysterious Pet Chests (Bound)",
-        "4 hr: 10 Battle Enhance Scrolls (Bound)",
-        "5 hr: 3 Customization Vouchers (Bound)",
-        "6 hr: 20 Artisan's Roasted Fogus (Bound)",
-        "7 hr: 1 Appearance Change Voucher (Bound)",
-        "8 hr: 15 Soul Codex (Bound)",
-        "9 hr: 6 Odyle Energy (Bound)",
+        "4 hr: 1 Customization Chest (Bound)",
+        "6 hr: 1 Soul Codex Chest (Bound)",
+        "8 hr: 6 Odyle Energy (Bound)",
         "10 hr: 1 Content Usage Ticket Selection Chest (Bound)",
-        "11 hr: 6 Soul Codex: Reset (Bound)",
         "12 hr: Dotted Glasses",
         "13 hr: 2 Rare Theostone Chests (Bound)",
         "14 hr: Black Conical Hat (Skin: Helm)"
       ],
       "participation": "When the published watch window begins, find this campaign in Twitch Drops and use its participating-channel link. Confirm the campaign is enabled and progress is counting, then claim each earned reward in Twitch Inventory. A later claim cutoff has not been announced.",
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb",
-      "action_url": "https://www.twitch.tv/drops/campaigns"
+      "action_url": "https://www.twitch.tv/drops/campaigns",
+      "details": [
+        "October 30 revision: the underlying items are unchanged, with some rewards combined into chests and earned at earlier watch thresholds.",
+        "Battle Support Chest: 15 Resurrection Spiritstones, 10 Battle Enhance Scrolls and 20 Artisan's Roasted Fogus (all Bound).",
+        "Customization Chest: 3 Customization Vouchers and 1 Appearance Change Voucher (all Bound).",
+        "Soul Codex Chest: 15 Soul Codex and 6 Soul Codex: Reset (all Bound)."
+      ]
     },
     {
       "id": "ludra-first-clear-2026",
       "kind": "in-game",
       "title": "Ludra Hunt",
-      "summary": "Earn regional first-clear titles or the Ludra Hunter title by defeating the returning raid during the event.",
+      "summary": "Earn regional first-clear titles or Ludra's Nemesis by defeating the returning raid during the event.",
       "start_date": "2026-11-04",
       "end_date": "2026-11-24",
       "timing_note": "Scheduled November 4 after maintenance through November 24 before maintenance in Pacific time; the European closing date is November 25. Exact raid/event opening and closing times are not announced. The separate check-in and Drops opening time is not a confirmed raid opening time.",
       "rewards": [
-        "First hard-mode party per region: Conqueror of Ludra",
-        "Hard-mode parties 2–5 per region: Champion of Ludra",
-        "Hard-mode parties 6–20 per region: Challenger of Ludra",
-        "All other players clearing normal or hard mode: Ludra Hunter"
+        "First hard-mode party per region: The First to Slay Ludra",
+        "Hard-mode parties 2–5 per region: Ludra's Conqueror",
+        "Hard-mode parties 6–20 per region: Ludra's Vanquisher",
+        "All other players clearing normal or hard mode: Ludra's Nemesis"
       ],
       "participation": "Prepare item level 2,800 for normal mode or 3,000 for hard mode. Defeat Ludra during the scheduled event; the first 20 hard-mode parties in each region qualify for ranked titles. NA East and NA West are separate eligible regions.",
       "details": [
