@@ -85,13 +85,13 @@
       "id": "daeva-makeover-2026",
       "kind": "community",
       "title": "Daeva Makeover",
-      "summary": "Show your character design in the official community character creation event.",
+      "summary": "NC has announced the four character design winners and corrected the participation reward.",
       "start_date": "2026-09-30",
       "end_date": "2026-10-19",
-      "timing_note": "Submission dates are published; exact opening and closing times are not specified.",
-      "rewards": ["Category prizes: 6,000 Quna", "Participation: 2 Dye Tokens"],
-      "participation": "Submit two forward-facing Closet screenshots, one headshot and one full body, in the official AION 2 Discord event channel. Include your region, server and character name. The official announcement links to the submission channel.",
-      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/680761758839734417"
+      "timing_note": "Entries closed October 19. NC lists November 6 for reward delivery and gives no separate claim deadline.",
+      "rewards": ["Four category winners: 6,000 Quna each", "Participation: 2 Customization Vouchers (Bound)"],
+      "participation": "If you entered the contest, check your in-game mail for the participation reward. The results notice lists the four category winners.",
+      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675135430408018894"
     },
     {
       "id": "guides-for-glory-2026",
@@ -133,14 +133,15 @@
       "id": "beauty-of-atreia-2026",
       "kind": "community",
       "title": "Beauty of Atreia",
-      "summary": "A screenshot celebration of Atreia’s world, characters and pets, followed by a community vote.",
+      "summary": "Choose your favorite screenshot in each of three categories: The World, Character and Pets.",
       "start_date": "2026-10-05",
       "end_date": "2026-11-09",
-      "timing_note": "Published dates only. Each theme has its own submission window; the final week is voting.",
-      "rewards": ["Weekly top picks: 2 Shop Tokens and 7 Dye Tokens", "Community vote winners: 7 Dye Tokens"],
-      "details": ["October 5–11: The World", "October 12–18: Characters", "October 19–25: Pets", "November 2–9: Community Vote"],
-      "participation": "Post a screenshot matching the current theme in the official AION 2 Discord event channel, or on X/Instagram with #BeautyOfAtreia. Include your region, server and character name.",
-      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/680761758839734417"
+      "confirmed_open": true,
+      "timing_note": "Voting runs November 2–9; NC gives no closing hour. For reward mail, the launch overview lists November 9 and the results notice lists November 13. Neither is a claim deadline.",
+      "rewards": ["Weekly winners: 2 Shop Tokens and 7 Dye Tokens each", "Three community favorites: 7 additional Dye Tokens each"],
+      "details": ["October 5–11: The World", "October 12–18: Characters", "October 19–25: Pets", "November 2–9: Community vote", "November 10: Community favorites announced in the results notice"],
+      "participation": "View the five finalists in each category in the results notice, then follow its official AION 2 Discord link to vote. Screenshot submissions have closed.",
+      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675135430408018892"
     },
     {
       "id": "launch-attendance-2026",
