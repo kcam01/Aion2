@@ -138,10 +138,11 @@
       "end_date": "2026-11-09",
       "confirmed_open": true,
       "timing_note": "Voting runs November 2–9; NC gives no closing hour. For reward mail, the launch overview lists November 9 and the results notice lists November 13. Neither is a claim deadline.",
-      "rewards": ["Weekly winners: 2 Shop Tokens and 7 Dye Tokens each", "Three community favorites: 7 additional Dye Tokens each"],
+      "rewards": ["15 weekly picks: 2 Shop Tokens and 7 Customization Vouchers (Bound) each", "Three community favorites: 7 additional Customization Vouchers (Bound) each"],
       "details": ["October 5–11: The World", "October 12–18: Characters", "October 19–25: Pets", "November 2–9: Community vote", "November 10: Community favorites announced in the results notice"],
       "participation": "View the five finalists in each category in the results notice, then follow its official AION 2 Discord link to vote. Screenshot submissions have closed.",
-      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675135430408018892"
+      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/680761758839734417",
+      "action_url": "https://steamcommunity.com/games/3393110/announcements/detail/675135430408018892"
     },
     {
       "id": "launch-attendance-2026",
