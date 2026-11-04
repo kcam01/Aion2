@@ -257,7 +257,7 @@
       "id": "ludra-conquest-check-in-2026",
       "kind": "in-game",
       "title": "Ludra Conquest Check-In",
-      "summary": "Check in on seven days during the two-week event to earn growth rewards and the Lush Leaf Tiara.",
+      "summary": "Check in on seven days during the two-week event to earn growth rewards and a tiara on day seven.",
       "start_date": "2026-11-04",
       "end_date": "2026-11-17",
       "ends_at": "2026-11-18T07:59:00Z",
@@ -269,10 +269,11 @@
         "Day 4: 30,000 Abyss Points",
         "Day 5: 3,000 Soul Crystals",
         "Day 6: 1,000,000 Bound Kina",
-        "Day 7: Lush Leaf Tiara (Helmet)"
+        "Day 7: One helm. The November 4 patch notes call it Fresh Leaf Tiara; the Ludra event announcement calls it Lush Leaf Tiara."
       ],
       "participation": "Log in and check in once per day during the event. Each check-in unlocks the next reward; seven check-ins complete the track during the 14-day window.",
-      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675136702174461957",
+      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
     },
     {
       "id": "odyle-energy-boost-2026",
