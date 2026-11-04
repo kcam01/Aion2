@@ -324,22 +324,24 @@
       "id": "ludra-first-clear-2026",
       "kind": "in-game",
       "title": "Ludra Hunt",
-      "summary": "Earn regional first-clear titles or Ludra's Nemesis by defeating the returning raid during the event.",
+      "summary": "Ludra Hunt is open. Clear the Sanctuary raid for a title, or race for a ranked Hard-mode clear in your region.",
       "start_date": "2026-11-04",
       "end_date": "2026-11-24",
-      "timing_note": "Scheduled November 4 after maintenance through November 24 before maintenance in Pacific time; the European closing date is November 25. Exact raid/event opening and closing times are not announced. The separate check-in and Drops opening time is not a confirmed raid opening time.",
+      "confirmed_open": true,
+      "timing_note": "NC announced the Hunt after the November 4 maintenance. Clear Ludra before the November 24 maintenance in Pacific time (November 25 in Europe). NC has not published the exact closing time.",
       "rewards": [
         "First hard-mode party per region: The First to Slay Ludra",
         "Hard-mode parties 2–5 per region: Ludra's Conqueror",
         "Hard-mode parties 6–20 per region: Ludra's Vanquisher",
         "All other players clearing normal or hard mode: Ludra's Nemesis"
       ],
-      "participation": "Prepare item level 2,800 for normal mode or 3,000 for hard mode. Defeat Ludra during the scheduled event; the first 20 hard-mode parties in each region qualify for ranked titles. NA East and NA West are separate eligible regions.",
+      "participation": "Enter at item level 2,800 for Normal or 3,000 for Hard. The first 20 parties to clear Hard in each region qualify for ranked titles. NA East and NA West rank separately.",
       "details": [
         "Ranked titles have a purple decorative effect. Clears outside the event period do not qualify.",
         "NC says titles will be sent no later than December 3 at 1:59 AM Central (December 2, 23:59 PST). This is a delivery deadline, not an extended clear or claim window."
       ],
-      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675136064593071680",
+      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
     },
     {
       "id": "ludra-outfit-contest-2026",
