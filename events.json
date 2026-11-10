@@ -282,12 +282,14 @@
       "summary": "Log in daily for four Odyle Energy delivered once per account through in-game mail.",
       "start_date": "2026-10-28",
       "end_date": "2026-11-10",
-      "timing_note": "The notice schedules October 28 after maintenance through November 10 before maintenance in its Pacific column; the European closing date is November 11. Exact opening and closing maintenance times are not confirmed; event activation remains unverified. Each mail expires seven days after receipt, so there is no single confirmed claim deadline.",
+      "timing_note": "The scheduled login window ends at game-server maintenance on November 11 at 12:30 AM CST (Chicago), matching November 10 at 22:30 PST / November 11 at 07:30 CET. The event lists October 28 after maintenance as its opening date; its exact opening and activation remain unverified. Each delivered mail expires seven days after receipt, so there is no single later claim deadline. NC may revise the maintenance schedule.",
       "rewards": [
         "4 Odyle Energy per account per day"
       ],
       "participation": "Log in once per day during the scheduled event, open in-game mail and claim four Odyle Energy. Delivery is limited to once per account per day. Collect each mail within seven days of receiving it.",
-      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb",
+      "ends_at": "2026-11-11T06:30:00Z",
+      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6af35ba0577e8c01355e0408"
     },
     {
       "id": "ludra-twitch-drops-2026",
