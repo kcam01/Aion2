@@ -465,6 +465,25 @@
       ],
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adb63578af865061f6b12b8",
       "action_url": "https://www.twitch.tv/drops/inventory"
+    },
+    {
+      "id": "abyss-points-boost-2026",
+      "kind": "in-game",
+      "title": "Abyss Points Boost",
+      "summary": "A scheduled triple-points boost for Outer Abyss monster drops and two Battlefield Victory reward sources.",
+      "start_date": "2026-11-17",
+      "end_date": "2026-12-16",
+      "timing_note": "Published schedule: after November 17 maintenance through before December 16 maintenance (PST); the CET notice dates are November 18 through December 17. Exact opening and closing times are unconfirmed. Official maintenance notices disagree on completion, so activation is not verified.",
+      "rewards": [
+        "3× Abyss Points from Outer Abyss monster drops",
+        "3× Abyss Points from Battlefield Victory Participation Rewards",
+        "3× Abyss Points from Battlefield Victory Mission Rewards"
+      ],
+      "participation": "During the event window, defeat Outer Abyss monsters or earn the listed Battlefield Victory rewards. Abyss Point acquisition limits remain unchanged; Outer Abyss PvP points are excluded.",
+      "source_url": "https://aion2.plaync.com/en-us/board/update/view?articleId=6afd5b00ebccad0e4b5bad8b",
+      "details": [
+        "This event does not publish a separate reward claim deadline."
+      ]
     }
   ]
 }
