@@ -473,7 +473,7 @@
       "summary": "A scheduled triple-points boost for Outer Abyss monster drops and two Battlefield Victory reward sources.",
       "start_date": "2026-11-17",
       "end_date": "2026-12-16",
-      "timing_note": "Published schedule: after November 17 maintenance through before December 16 maintenance (PST); the CET notice dates are November 18 through December 17. Exact opening and closing times are unconfirmed. Official maintenance notices disagree on completion, so activation is not verified.",
+      "timing_note": "Both sources list after November 17 maintenance to before December 16 maintenance (PST). For CET, the patch notes say November 18 to December 17, while the event page says November 17 to December 17. The CET opening date conflicts; exact times and activation remain unconfirmed, and maintenance notices also disagree on completion.",
       "rewards": [
         "3× Abyss Points from Outer Abyss monster drops",
         "3× Abyss Points from Battlefield Victory Participation Rewards",
@@ -483,7 +483,36 @@
       "source_url": "https://aion2.plaync.com/en-us/board/update/view?articleId=6afd5b00ebccad0e4b5bad8b",
       "details": [
         "This event does not publish a separate reward claim deadline."
-      ]
+      ],
+      "action_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=6afd5b00ebccad0e4b5bad90"
+    },
+    {
+      "id": "korea-game-awards-gift-2026",
+      "kind": "in-game",
+      "title": "Korea Game Awards Appreciation Gift",
+      "summary": "Redeem THANKSFROMAION2 for thirteen bound reward types, including pet and skin chests, Sync Stones, vouchers and growth supplies.",
+      "start_date": "2026-11-18",
+      "end_date": "2027-03-02",
+      "starts_at": "2026-11-18T09:00:00Z",
+      "ends_at": "2027-03-03T07:00:00Z",
+      "timing_note": "Coupon redemption runs November 18, 2026 at 3:00 AM CST through March 3, 2027 at 1:00 AM CST in Chicago. The official Pacific dates are November 18, 2026 through March 2, 2027. The Appearance Change Voucher item name includes 30 Days; this does not replace the coupon redemption deadline.",
+      "rewards": [
+        "10 Sync Stones (Unique) (Bound)",
+        "15 Soul Codex: Reset (Bound)",
+        "100 Growth Pet Chests (Bound)",
+        "10 Skin Chests (10 times) (Bound)",
+        "5 Odyle Energy (Bound)",
+        "1 Appearance Change Voucher (30 Days) (Bound)",
+        "3 Customization Vouchers (Bound)",
+        "20 Instant Clear Tickets: Nightmare (Bound)",
+        "20 Battle Enhance Scrolls (Bound)",
+        "100 Life Crystals (Bound)",
+        "20 Superior Speed Scrolls (Bound)",
+        "20 Superior Courage Scrolls (Bound)",
+        "20 Superior Benediction Scrolls (Bound)"
+      ],
+      "participation": "In game, open Settings → Miscellaneous → Account → Enter Coupon, enter THANKSFROMAION2 and confirm. Available on all servers, once per account. All items are bound and cannot be traded.",
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6afd74bfadd8ebf0b13a732a"
     }
   ]
 }
