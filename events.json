@@ -335,7 +335,8 @@
       "start_date": "2026-11-04",
       "end_date": "2026-11-24",
       "confirmed_open": true,
-      "timing_note": "NC announced the Hunt after the November 4 maintenance. Clear Ludra before the November 24 maintenance in Pacific time (November 25 in Europe). NC has not published the exact closing time.",
+      "ends_at": "2026-11-25T06:30:00Z",
+      "timing_note": "Clear Ludra before maintenance begins November 25 at 12:30 AM Central (November 24, 22:30 PST / November 25, 07:30 CET). NC's November 24 maintenance notice confirms this cutoff; players disconnect when maintenance starts. The scheduled time is subject to official change.",
       "rewards": [
         "First hard-mode party per region: The First to Slay Ludra",
         "Hard-mode parties 2–5 per region: Ludra's Conqueror",
@@ -349,7 +350,7 @@
         "NC says titles will be sent no later than December 3 at 1:59 AM Central (December 2, 23:59 PST). This is a delivery deadline, not an extended clear or claim window."
       ],
       "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675136064593071680",
-      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
+      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6b041cb0fc9aef09c918ecab"
     },
     {
       "id": "ludra-outfit-contest-2026",
