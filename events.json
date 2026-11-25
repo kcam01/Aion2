@@ -331,26 +331,25 @@
       "id": "ludra-first-clear-2026",
       "kind": "in-game",
       "title": "Ludra Hunt",
-      "summary": "Ludra Hunt is open. Clear the Sanctuary raid for a title, or race for a ranked Hard-mode clear in your region.",
+      "summary": "Ludra Hunt is open and extended. Clear the Sanctuary raid with an eligible group to earn a title or compete for a ranked Hard-mode clear.",
       "start_date": "2026-11-04",
-      "end_date": "2026-11-24",
+      "end_date": "2026-12-15",
       "confirmed_open": true,
-      "ends_at": "2026-11-25T06:30:00Z",
-      "timing_note": "Clear Ludra before maintenance begins November 25 at 12:30 AM Central (November 24, 22:30 PST / November 25, 07:30 CET). NC's November 24 maintenance notice confirms this cutoff; players disconnect when maintenance starts. The scheduled time is subject to official change.",
+      "timing_note": "NC extended the Hunt to before December 15 maintenance in Pacific time (December 16 in CET), replacing the November 24/25 cutoff. The new exact closing time is unconfirmed. The November 24 update explicitly covers NA East, NA West, Europe and South America.",
       "rewards": [
         "First hard-mode party per region: The First to Slay Ludra",
         "Hard-mode parties 2–5 per region: Ludra's Conqueror",
         "Hard-mode parties 6–20 per region: Ludra's Vanquisher",
         "All other players clearing normal or hard mode: Ludra's Nemesis"
       ],
-      "participation": "Enter at item level 2,800 for Normal or 3,000 for Hard. The first 20 parties to clear Hard in each region qualify for ranked titles. NA East and NA West rank separately.",
+      "participation": "Enter at item level 2,800 for Normal or 3,000 for Hard. The first 20 eligible parties to clear Hard in each region qualify for ranked titles. NA East and NA West rank separately. For NA East, NA West, Europe and South America, NC will remove Hunt placements for teams containing an RMT participant. Players who did not participate in RMT can requalify with a new group.",
       "details": [
         "On November 4, the official AION 2 Global Discord announced that Ludra Support Supplies had been sent. Check your in-game mail for the supplies. The announcement gave no claim deadline.",
         "Ranked titles have a purple decorative effect. Clears outside the event period do not qualify.",
-        "NC says titles will be sent no later than December 3 at 1:59 AM Central (December 2, 23:59 PST). This is a delivery deadline, not an extended clear or claim window."
+        "NC now schedules Hunt title delivery during the December 22 maintenance (published Pacific date); no exact delivery time is confirmed. This is reward distribution, not a claim deadline."
       ],
-      "source_url": "https://steamcommunity.com/games/3393110/announcements/detail/675136064593071680",
-      "action_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6b041cb0fc9aef09c918ecab"
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb",
+      "action_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000049"
     },
     {
       "id": "ludra-outfit-contest-2026",
@@ -371,7 +370,7 @@
       "participation": "Eligible regions: Europe, NA East, NA West and South America. Submit one in-game screenshot per player in the official AION 2 Discord event submission area. Include region, server and character name. Editing and AI images are not allowed. Use outfit combinations, dyes and the environment to represent Ludra.",
       "details": [
         "Community managers select the top three for originality and creativity; Discord upvotes select Community's Choice. No duplicate winners.",
-        "NC says prizes will be mailed by November 26 at 1:59 AM Central (November 25, 23:59 PST); this is a reward-delivery deadline, not the submission cutoff."
+        "NC now schedules contest prizes by December 12 at 1:59 AM CST in Chicago (December 11, 23:59 PST). This is a reward-delivery deadline; submissions remain closed and no separate claim deadline is published."
       ],
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb"
     },
