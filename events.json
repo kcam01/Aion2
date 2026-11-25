@@ -514,6 +514,100 @@
       ],
       "participation": "In game, open Settings → Miscellaneous → Account → Enter Coupon, enter THANKSFROMAION2 and confirm. Available on all servers, once per account. All items are bound and cannot be traded.",
       "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6afd74bfadd8ebf0b13a732a"
+    },
+    {
+      "id": "november-25-twitch-drops-2026",
+      "kind": "drops",
+      "title": "Daevasgiving Twitch Drops",
+      "summary": "A scheduled 10-hour watch track with customization items, Soul Codex resets and Unique Sync Stones. Campaign activation is unconfirmed.",
+      "start_date": "2026-11-25",
+      "end_date": "2026-12-09",
+      "ends_at": "2026-12-10T07:59:00Z",
+      "claim_by": "2026-12-24T07:59:00Z",
+      "claim_label": "Twitch Inventory claim deadline",
+      "timing_note": "Published watch window: November 25 at 8:00 AM CST through December 10 at 1:59 AM CST in Chicago (November 25, 06:00–December 9, 23:59 PST). NC and the patch notes agree on these times. These are scheduled times; campaign activation and progress tracking have not been verified.",
+      "rewards": [
+        "30 min: 15 Resurrection Spiritstones (Bound)",
+        "1 hr: 15 Artisan's Roasted Fogus (Bound)",
+        "2 hr: 3 Customization Vouchers (Bound)",
+        "4 hr: 1 Appearance Change Voucher (7 Days) (Bound)",
+        "6 hr: 20 Battle Enhance Scrolls (Bound)",
+        "8 hr: 3 Soul Codex: Reset (Bound)",
+        "10 hr: 6 Sync Stones (Unique) (Bound)"
+      ],
+      "participation": "NC lists All Channels. During the published window, choose a participating AION 2 Twitch stream with Drops enabled. Confirm the Daevasgiving campaign is enabled and progress is counting in Twitch Inventory; claim each earned reward there.",
+      "details": [
+        "Watching ends December 10 at 1:59 AM CST. Claim already-earned Twitch rewards before December 24 at 1:59 AM CST; the later inventory claim deadline does not extend watching.",
+        "The official reward name includes Appearance Change Voucher (7 Days). No separate calendar deadline for using that item is supplied; do not confuse its duration with the Twitch claim deadline."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6b0544009d40bac525ed406c",
+      "action_url": "https://www.twitch.tv/drops/inventory"
+    },
+    {
+      "id": "bountiful-dawn-attendance-2026",
+      "kind": "in-game",
+      "title": "Bountiful Dawn: 14-day attendance",
+      "summary": "Log in for a 14-day reward track. Official sources disagree on the final attendance date; confirm the in-game cutoff.",
+      "start_date": "2026-11-25",
+      "end_date": "2026-12-16",
+      "timing_note": "Scheduled after November 25 maintenance; activation is unconfirmed. The event page ends before December 16 maintenance (PST) / December 17 (CET), while the November 25 patch notes end before December 15 (PST) / December 16 (CET). The range shown follows the event page, but the conflict is unresolved: do not rely on the later date. No exact closing or separate claim time is confirmed.",
+      "rewards": [
+        "Days 7 and 14: 2 Odyle Energy (Bound) each",
+        "Days 6 and 13: 2,000 Soul Crystals (Bound) each",
+        "Days 3 and 10: 3 Soul Codex: Reset (Bound) each",
+        "Other days: Resurrection Spiritstones, Artisan's Roasted Fogus, Life Crystals and Battle Enhance Scrolls (all Bound)"
+      ],
+      "participation": "When the event is available, open In-game menu > Attendance and claim the daily reward. Rewards are once per server, non-tradable and immediately delivered to inventory. The published daily reset is 12:00 AM PST / 09:00 CET, or 2:00 AM CST in Chicago.",
+      "details": [
+        "Two official end-date pairs are retained above. Check the in-game deadline and plan around the earlier published closing date until NC clarifies.",
+        "This is a separate track from Atreia's Call and the earlier launch attendance rewards."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000062",
+      "action_url": "https://aion2.plaync.com/en-us/board/update/view?articleId=6b0695806b68bef8bae9148e"
+    },
+    {
+      "id": "bountiful-feast-of-thanks-2026",
+      "kind": "in-game",
+      "title": "Bountiful Feast of Thanks",
+      "summary": "Complete missions on a 20-level event pass. NC lists the Basic and Premium tracks at 100 Kina each, once per server.",
+      "start_date": "2026-11-25",
+      "end_date": "2026-12-15",
+      "timing_note": "Scheduled after November 25 maintenance through before December 15 maintenance (PST) / December 16 (CET). The event page and patch notes agree. Exact opening, closing and activation remain unconfirmed; no later claim deadline is published.",
+      "rewards": [
+        "Basic: Resurrection Spiritstone (Bound) at each level",
+        "Premium highlights: Growth Pet Chests, Soul Codex: Reset, Centuryroot Tokens, Skin Chests and Nightmare Dungeon Challenge Tickets",
+        "Repeatable Resurrection Spiritstone rewards after level 20"
+      ],
+      "participation": "Once available, characters level 10 or higher can open Subscribe > Daeva Pass > Bountiful Feast of Thanks. NC lists Basic and Premium at 100 Kina each and each purchase once per server; activating Premium grants both reward tracks. Complete missions for Pass EXP and claim unlocked rewards in the pass menu.",
+      "details": [
+        "Earn up to 15,000 Pass EXP per server each week through monsters, gathering, crafting, Expedition/Transcendence clears and gear actions.",
+        "The track has 20 levels and repeatable rewards afterward. Optional level purchases cost 50 Quna per level; they are not required to earn mission EXP.",
+        "Rewards are non-tradable and arrive immediately in inventory."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000066",
+      "action_url": "https://aion2.plaync.com/en-us/board/update/view?articleId=6b0695806b68bef8bae9148e"
+    },
+    {
+      "id": "november-25-raid-event-2026",
+      "kind": "in-game",
+      "title": "Corroded Decontamination Facility",
+      "summary": "A scheduled Sanctuary event with normalized stats: defeat Bargott and exchange event coins for progression rewards.",
+      "start_date": "2026-11-25",
+      "end_date": "2026-12-15",
+      "timing_note": "Scheduled after November 25 maintenance through before December 15 maintenance (PST) / December 16 (CET). Exact event times and activation remain unconfirmed. Coin deletion dates are published separately and do not extend participation.",
+      "rewards": [
+        "5,000 Corroded Decontamination Facility Coins from the reward cube after defeating Bargott",
+        "Coin exchanges include Fire Temple and Ferocious Horn Den Gear Change Vouchers, Unique Sync Stones, Abyss Points, Revelation Philosopher's Stones, Wrathful Material Selection Chests, Radiant Odyle and Soul Crystals"
+      ],
+      "participation": "Once available, enter Main Menu > Sanctuary > Corroded Decontamination Facility at item level 2,100 or higher. The notice lists seven entries per week and normalized player stats. Defeat Bargott, open the reward cube, then spend coins through Event Substance Morphs; exchange limits apply weekly per server.",
+      "details": [
+        "The official cube-cost text says \"x Odyle energy\" without a number. Check the in-game cost before opening; no amount is asserted here.",
+        "Coins reset and are removed every Wednesday during scheduled maintenance. Spend them before the reset. The removal table lists December 2, 9 and 16 after maintenance as PST/CET dates; exact times are unpublished.",
+        "Example weekly exchanges: 1 Unique Sync Stone for 500 coins, up to five; 100,000 Abyss Points for 700 coins, once. Each Gear Change Voucher costs 500 coins, up to two of each type.",
+        "All event rewards are non-tradable and delivered immediately to inventory. No later reward-claim window is published."
+      ],
+      "source_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=6b069580e01c11ad96d82865",
+      "action_url": "https://aion2.plaync.com/en-us/board/update/view?articleId=6b0695806b68bef8bae9148e"
     }
   ]
 }
