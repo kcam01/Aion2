@@ -331,7 +331,7 @@
       "id": "ludra-first-clear-2026",
       "kind": "in-game",
       "title": "Ludra Hunt",
-      "summary": "Ludra Hunt is open and extended. Clear the Sanctuary raid with an eligible group to earn a title or compete for a ranked Hard-mode clear.",
+      "summary": "Ludra Hunt remains open with title spots available. Hall of Fame results are final; Hunt rankings will follow after the event and RMT review.",
       "start_date": "2026-11-04",
       "end_date": "2026-12-15",
       "confirmed_open": true,
@@ -342,13 +342,14 @@
         "Hard-mode parties 6–20 per region: Ludra's Vanquisher",
         "All other players clearing normal or hard mode: Ludra's Nemesis"
       ],
-      "participation": "Enter at item level 2,800 for Normal or 3,000 for Hard. The first 20 eligible parties to clear Hard in each region qualify for ranked titles. NA East and NA West rank separately. For NA East, NA West, Europe and South America, NC will remove Hunt placements for teams containing an RMT participant. Players who did not participate in RMT can requalify with a new group.",
+      "participation": "Enter at item level 2,800 for Normal or 3,000 for Hard. The first 20 eligible parties to clear Hard in each region qualify for ranked titles. NA East and NA West rank separately. For NA East, NA West, Europe and South America, teams containing an RMT participant do not qualify for Hunt placements. Players who did not participate in RMT can requalify with a new group.",
       "details": [
         "On November 4, the official AION 2 Global Discord announced that Ludra Support Supplies had been sent. Check your in-game mail for the supplies. The announcement gave no claim deadline.",
         "Ranked titles have a purple decorative effect. Clears outside the event period do not qualify.",
-        "NC now schedules Hunt title delivery during the December 22 maintenance (published Pacific date); no exact delivery time is confirmed. This is reward distribution, not a claim deadline."
+        "NC now schedules Hunt title delivery during the December 22 maintenance (published Pacific date); no exact delivery time is confirmed. This is reward distribution, not a claim deadline.",
+        "NC has removed teams containing an RMT participant from the Ludra Hall of Fame in every region; the remaining Hall of Fame teams are final. This is separate from Hunt rankings: Hunt title spots remain open, and results will be revealed after the event ends and teams are cleared of RMT usage."
       ],
-      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6adbaeb06cfe4756db5b8efb",
+      "source_url": "https://aion2.plaync.com/en-us/board/notice/view?articleId=6b079e1563dd78f52230e0fe",
       "action_url": "https://aion2.plaync.com/en-us/eventon/board/event_notice/view?articleId=50000049"
     },
     {
